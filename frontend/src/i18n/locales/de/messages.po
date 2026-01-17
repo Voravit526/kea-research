@@ -1,0 +1,707 @@
+# KEA Frontend Translations
+# Language: de
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Datei anhängen"
+
+#. Attachment menu - attach image
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Bild anhängen"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Suche verwenden"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Vektordatenbank"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Wikipedia-Link"
+
+#. Attachment menu - YouTube link
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube Link"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Noch keine gespeicherten Chats"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "Klicken Sie auf das Lesezeichensymbol eines Chats, um ihn hier zu speichern."
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "Gespeicherte Chats"
+
+#. Remove bookmark button title
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "Lesezeichen entfernen"
+
+#. Add attachment button title
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Anhang hinzufügen"
+
+#. Copy to clipboard button title
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "In die Zwischenablage kopieren"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Als Markdown herunterladen"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Chat erweitern"
+
+#. Listen/TTS button title
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Hören"
+
+#. Chat input placeholder
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "Ihre Nachricht…"
+
+#. Research button
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Recherchieren"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Gespeicherte Entwürfe"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Senden"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Stop"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Spracheingabe"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "Willkommen bei KEA Research, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Stellen Sie alle Ihre Fragen und erhalten Sie KI-gestützte Recherchen mit Websuche, Faktenprüfung und mehr."
+
+#. Cancel button
+#, fuzzy
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "Alles löschen"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "Schließen"
+
+#. Save changes button
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#. Coming soon badge
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Bald"
+
+#. 404 error - back to home button
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Zurück zur Startseite"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Seite nicht gefunden"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Die gesuchte Seite existiert nicht oder wurde verschoben."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Wählen Sie das Exportformat für Ihren Chatverlauf."
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "Export"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Formatierte Ausgabe, in Browsern anzeigbar"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "Für Backup/Import, einschließlich Metadaten"
+
+#. Format label
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "Export-Format"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Empfohlen – für Menschen lesbar, Formatierung bleibt erhalten"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Klartext (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Einfache, universelle Kompatibilität"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Metadaten hinzufügen (Chattitel, Exportdatum)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Zeitstempel hinzufügen"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Optionen"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Export wird vorbereitet..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "Chat exportieren"
+
+#. Copyright footer
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Chat"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Chat-Export"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Chat nicht gefunden"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Komprimierung..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "Möchten Sie wirklich den gesamten Speicher löschen? Dadurch werden alle Ihre Chats, Nachrichten und benutzerdefinierten Daten gelöscht. Dieser Vorgang kann nicht rückgängig gemacht werden."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Geben Sie die URL des Wikipedia-Artikels ein:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "YouTube-Video-URL eingeben:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "Fehler"
+
+#. Export date label
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "Datum des Exports"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Export fehlgeschlagen: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Erfolgreich exportiert als {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Bitte geben Sie eine gültige Wikipedia-URL ein."
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Bitte geben Sie eine gültige YouTube-URL ein."
+
+#. Message label
+#, fuzzy
+msgctxt "js.message"
+msgid "Message"
+msgstr "Nachricht"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Nachrichten"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Kein Chat zum Exportieren vorhanden. Beginnen Sie zuerst eine Konversation."
+
+#. Assistant role label
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Assistent"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "Benutzer"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Speicher erfolgreich geleert!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Der Speicher konnte nicht geleert werden. Bitte versuchen Sie es erneut."
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "Zeit"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Ohne Titel"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Hochgeladen"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA-Forschung"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Lesezeichen"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "Chat exportieren"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Abmelden"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Seitenleiste ein- oder ausblenden"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Profilbild"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Nichts"
+
+#. Calculating storage
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Berechnet..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Chat-Hintergrund"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "Alle Speicher löschen"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "Angehängte Bilder komprimieren"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Reduziert die Dateigröße von im Chat angehängten Bildern (JPEG, PNG, WebP werden unterstützt)."
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Aktuelle Nutzung:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Sprache"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Max"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Qualität"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Nachricht mit Eingabetaste senden"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Drücken Sie {modKey}+Eingabetaste zum Senden, Eingabetaste für eine neue Zeile"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Drücken Sie die Eingabetaste zum Senden, Umschalt+Eingabe für eine neue Zeile."
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Speichergrenze"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Aussehen"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Allgemein"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Speicherung"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Text-zu-Sprache"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Theme"
+
+#. Theme option - auto
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Auto"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Dunkel"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "Hell"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Einstellungen"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Text-to-Speech-Funktion demnächst verfügbar"
+
+#. TTS - Device label
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Gerät"
+
+#. TTS - Device Auto option
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Automatisch (empfohlen)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Automatische Erkennung der WebGPU-Unterstützung, andernfalls Verwendung der CPU"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Die Text-to-Speech-Funktion wurde vom Administrator deaktiviert."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Text-zu-Sprache aktivieren"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "AI-Antworten laut vorlesen"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Sprache"
+
+#. TTS - British English
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Englisch (UK)"
+
+#. TTS - American English
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "Englisch (US)"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "Vorschau-Stimme"
+
+#. TTS - Speed label
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#. TTS - Voice label
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Stimme"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (Hohe Qualität)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (Beste Qualität)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (Gute Qualität)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Benutzerdefinierten Avatar hochladen"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Benutzerdefinierten Hintergrund hochladen"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "Benutzername"
+
+#. Username placeholder
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Geben Sie Ihren Namen ein"
+
+#. Delete chat confirmation
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "Diese Unterhaltung löschen?"
+
+#. New research button
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Neue Recherche"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Bisher keine Konversationen"

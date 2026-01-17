@@ -1,0 +1,38 @@
+---
+interface Props {
+  t: (key: string, vars?: Record<string, string | number>) => string;
+}
+
+const { t } = Astro.props;
+---
+
+<div class="modal fade" id="bookmarksModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">
+          <i class="bi bi-journal-bookmark-fill text-kea"></i> {t('bookmarks.title') || 'Bookmarked Chats'}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        {/* Empty state */}
+        <div id="bookmarksEmpty" class="text-center py-4">
+          <i class="bi bi-bookmark text-muted icon-xl"></i>
+          <p class="text-muted mt-2 mb-0">{t('bookmarks.empty') || 'No bookmarked chats yet'}</p>
+          <small class="text-muted">{t('bookmarks.emptyHint') || 'Click the bookmark icon on a chat to save it here'}</small>
+        </div>
+
+        {/* Bookmarks list - scrollable when many items */}
+        <div class="list-group list-group-flush" id="bookmarksList" style="max-height: 50vh; overflow-y: auto;">
+          {/* Dynamically populated by bookmarks.ts */}
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">
+          {t('common.close') || 'Close'}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

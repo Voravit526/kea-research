@@ -1,0 +1,747 @@
+# KEA Frontend Translations
+# Language: be
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Далучыць файл"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Далучыць выяву"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Выкарыстаць пошук"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Вектарная база даных"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Спасылка на Вікіпедыю"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "Спасылка на YouTube"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Пакуль няма захаваных чатаў"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "Націсніце на значок закладкі ў чаце, каб захаваць яго тут."
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "Закладкі чатаў"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "Выдаліць закладку"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Дадаць прыкладанне"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "Скапіраваць у буфер абмену"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Спампаваць як Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Расшырыць чат"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Слухай"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "Напішыце сваё паведамленне..."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Даследаванне"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Захаваныя чарнавікі"
+
+#. Send button
+#, fuzzy
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Даслаць"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Спыніць"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Галасавы ўвод"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "Вітаем у KEA research, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Спытайце што заўгодна і атрымайце даследаванне на аснове штучнага інтэлекту з вэб-пошукам, праверкай фактаў і многім іншым."
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Адмена"
+
+#. Clear all button
+#, fuzzy
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "Вычысціць усё"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "Зачыніць"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "Захаваць змены"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Неўзабаве"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Вярнуцца на галоўную"
+
+#. 404 error - page not found title
+#, fuzzy
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Старонка не знойдзена"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Старонкі, якую вы шукаеце, не існуе або яна перанесена."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Выберыце фармат экспарту для гісторыі вашых чатаў."
+
+#. Export button
+#, fuzzy
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "Экспарт"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Стылізаваны вывад, які можна праглядаць у браўзерах"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "Для рэзервовага капіравання/імпарту ўключае метаданыя"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "Экспартны фармат"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Маркдаун (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Рэкамендавана - чытэльнае для чалавека, захоўвае афармленне"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Просты тэкст (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Простая, універсальная сумяшчальнасць"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Уключыць метаданыя (назва чата, дата экспарту)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Уключаць часовыя штампы"
+
+#. Options label
+#, fuzzy
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Варыянты"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Падрыхтоўка экспарту..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "Экспарт чата"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Усе правы абаронены"
+
+#. Chat label
+#, fuzzy
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Чат"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Экспарт чата"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Чат не знойдзены"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Сціскаецца..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "Ці ўпэўнены вы, што хочаце ачысціць усю памяць? Гэта выдаліць усе вашыя чаты, паведамленні і ўласныя актывы. Гэтае дзеянне нельга адмяніць."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Увядзіце URL-адрас артыкула Вікіпедыі:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "Увядзіце URL відэа YouTube:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "Памылка"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "Дата экспарту"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Экспарт праваліўся: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Паспяхова экспартавана як {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Калі ласка, увядзіце сапраўдны URL Вікіпедыі."
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Калі ласка, увядзіце сапраўдны URL YouTube."
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "Паведамленне"
+
+#. Messages count label
+#, fuzzy
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Паведамленні"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Няма чата для экспарту. Спачатку пачніце размову."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Памочнік"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "Карыстальнік"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Сховішча паспяхова ачышчана!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Не ўдалося ачысціць сховішча. Калі ласка, паспрабуйце зноў."
+
+#. Time label
+#, fuzzy
+msgctxt "js.time"
+msgid "Time"
+msgstr "Час"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Без назвы"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Запампавана"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "Даследаванні KEA"
+
+#. Bookmarks navbar button title
+#, fuzzy
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Закладкі"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "Экспарт чата"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Выйсці"
+
+#. Sidebar toggle button title
+#, fuzzy
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Уключыць/выключыць бакавую панэль"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Аватар"
+
+#. No background option
+#, fuzzy
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Няма"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Разлічваецца..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Фон чата"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "Вычысціць усе сховішчы"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "Сціснуць прыкладзеныя выявы"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Змяншае памер файлаў з выявамі, прымацаванымі ў чаце (падтрымліваюцца JPEG, PNG, WebP)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Бягучае выкарыстанне:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Мова"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Макс."
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Якасць"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Адправіць паведамленне пры націсканні Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Націсніце {modKey}+Enter, каб адправіць, Enter, каб пачаць новы радок."
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Націсніце Enter, каб адправіць, Shift+Enter для новага радка."
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Ліміт захоўвання"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Выгляд"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Агульнае"
+
+#. Tab - Storage
+#, fuzzy
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Сховішча"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Тэкст у голас"
+
+#. Theme label
+#, fuzzy
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Тэма"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Аўта"
+
+#. Theme option - dark
+#, fuzzy
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Цёмны"
+
+#. Theme option - light
+#, fuzzy
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "Светлы"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Налады"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Тэкст-у-мову хутка"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Прылада"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Аўто (Рэкамендавана)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "ЦП (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Аўтаматычна вызначае падтрымку WebGPU, пераходзіць на працэсар."
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Тэкста-галасавое адлюстраванне адключана адміністратарам."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Уключыць тэкста-гавор"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "Чытаць адказы штучнага інтэлекту ўслых"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Мова"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Брытанская англійская"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "Амерыканскі англійскі"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "Папярэдні прагляд голасу"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Хуткасць"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Голас"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Бела (Высокая якасць)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (Найлепшая якасць)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Ніколь (Добрая якасць)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Загрузіць уласны аватар"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Загрузіць уласны фон"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "Імя карыстальніка"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Увядзіце ваша імя"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "Выдаліць гэтую размову?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Новае даследаванне"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Пакуль няма размоў"

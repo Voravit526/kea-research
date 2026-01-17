@@ -1,0 +1,718 @@
+# KEA Frontend Translations
+# Language: th
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "แนบไฟล์"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "แนบรูปภาพ"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "ใช้การค้นหา"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "ฐานข้อมูลเวกเตอร์"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "ลิงก์วิกิพีเดีย"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "ลิงก์ YouTube"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "ยังไม่มีแชทที่บันทึกไว้"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "คลิกไอคอนที่คั่นหน้าในแชทเพื่อบันทึกไว้ที่นี่"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "บันทึกการสนทนา"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "ลบที่คั่นหน้า"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "เพิ่มไฟล์แนบ"
+
+#. Copy to clipboard button title
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "คัดลอกลงคลิปบอร์ด"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "ดาวน์โหลดเป็น Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "ขยายแชท"
+
+#. Listen/TTS button title
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "ฟัง"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "พิมพ์ข้อความของคุณ..."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "ค้นคว้า"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "บันทึกฉบับร่าง"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "ส่ง"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "หยุด"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "การป้อนเสียง"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "ยินดีต้อนรับสู่การวิจัยของ KEA, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "ถามอะไรก็ได้และรับการวิจัยที่ขับเคลื่อนด้วย AI พร้อมการค้นหาเว็บ การตรวจสอบข้อเท็จจริง และอื่นๆ อีกมากมาย"
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "ล้างข้อมูล"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "ปิด"
+
+#. Save changes button
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "บันทึกการเปลี่ยนแปลง"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "เร็ว ๆ นี้"
+
+#. 404 error - back to home button
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "กลับหน้าหลัก"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "ไม่พบหน้านี้"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "หน้าที่คุณกำลังค้นหาไม่มีอยู่หรือถูกย้ายไปแล้ว"
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "เลือกฟอร์แมตการส่งออกสำหรับประวัติการแชทของคุณ"
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "ส่งออก"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "รูปแบบการแสดงผล สามารถดูได้ในเบราว์เซอร์"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "สำหรับการสำรองข้อมูล/นำเข้า รวมถึงข้อมูลเมตา"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "รูปแบบการส่งออก"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "แนะนำ - อ่านได้เหมือนมนุษย์, รักษาการจัดรูปแบบ"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "ข้อความธรรมดา (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "ความเข้ากันได้สากลที่เรียบง่าย"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "รวมข้อมูลเมตา (ชื่อแชท, วันที่ส่งออก)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "รวมเวลาที่บันทึกไว้"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "ตัวเลือก"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "กำลังเตรียมส่งออก..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "ส่งออกแชท"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "สงวนลิขสิทธิ์"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "แชท"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "ส่งออกแชท"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "ไม่พบแชท"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "กำลังบีบอัด..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการล้างพื้นที่จัดเก็บทั้งหมด? การดำเนินการนี้จะลบแชท ข้อความ และไฟล์ที่กำหนดเองทั้งหมดของคุณ ไม่สามารถย้อนกลับได้"
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "ป้อน URL บทความวิกิพีเดีย:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "ป้อน URL วิดีโอ YouTube:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "ผิดพลาด"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "วันที่ส่งออก"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "การส่งออกล้มเหลว: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "ส่งออกสำเร็จแล้วเป็น {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "กรุณากรอก URL ของวิกิพีเดียที่ถูกต้อง"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "กรุณากรอก URL ของ YouTube ที่ถูกต้อง"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "ข้อความ"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "ไม่มีแชทให้ส่งออก กรุณาเริ่มการสนทนาก่อน"
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "ผู้ช่วย"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "ผู้ใช้งาน"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "การล้างข้อมูลสำเร็จแล้ว!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "ไม่สามารถล้างข้อมูลที่จัดเก็บได้ กรุณาลองอีกครั้ง"
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "เวลา"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "ยังไม่กำหนดชื่อ"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "อัปโหลดแล้ว"
+
+#. Page title
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "คั่นหน้า"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "ส่งออกแชท"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "แสดง/ซ่อนแถบด้านข้าง"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "อวตาร"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "ไม่มี"
+
+#. Calculating storage
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "คำนวณ ..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "พื้นหลังการแชท"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "ล้างข้อมูลทั้งหมด"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "บีบอัดไฟล์ภาพที่แนบมา"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "ลดขนาดไฟล์ของภาพที่แนบในแชท (รองรับ JPEG, PNG, WebP)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "การใช้งานปัจจุบัน:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "ภาษา"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "สูงสุด"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "คุณภาพ"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "ส่งข้อความเมื่อกด Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "กด {modKey}+Enter เพื่อส่ง, Enter เพื่อขึ้นบรรทัดใหม่"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "กด Enter เพื่อส่ง, Shift+Enter สำหรับบรรทัดใหม่"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "ขีดจำกัดการจัดเก็บ"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "รูปโฉมภายนอก"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "ทั่วไป"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "เก็บ"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "ข้อความเป็นเสียงพูด"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "ธีม"
+
+#. Theme option - auto
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "อัตโนมัติ"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "เข้ม"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "สว่าง"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "กำลังจะมาถึงเร็ว ๆ นี้ ระบบอ่านข้อความเป็นเสียง"
+
+#. TTS - Device label
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "อุปกรณ์"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "อัตโนมัติ (แนะนำ)"
+
+#. TTS - Device CPU option
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "ระบบจะตรวจจับการรองรับ WebGPU โดยอัตโนมัติ และจะเปลี่ยนไปใช้ CPU หากไม่สามารถรองรับได้"
+
+#. TTS - Device GPU option
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "การแปลงข้อความเป็นเสียงถูกปิดใช้งานโดยผู้ดูแลระบบ"
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "เปิดใช้งานการแปลงข้อความเป็นเสียง"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "อ่านคำตอบจาก AI ออกเสียงดัง"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "ภาษา"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "ภาษาอังกฤษบริติช"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "ภาษาอังกฤษอเมริกัน"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "ตัวอย่างเสียง"
+
+#. TTS - Speed label
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "ความเร็ว"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "เสียง"
+
+#. TTS - Voice Bella
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (คุณภาพสูง)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (คุณภาพดีที่สุด)"
+
+#. TTS - Voice Nicole
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (คุณภาพดี)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "อัปโหลดอวาตาร์ที่กำหนดเอง"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "อัปโหลดพื้นหลังที่กำหนดเอง"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "กรุณากรอกชื่อของคุณ"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "ลบการสนทนานี้หรือไม่?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "การวิจัยใหม่"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "ยังไม่มีบทสนทนา"

@@ -1,0 +1,711 @@
+# KEA Frontend Translations
+# Language: sv
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Lägg till fil"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Bifoga bild"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Använd sökfunktionen"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Vektordatabas"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Wikipedia-länk"
+
+#. Attachment menu - YouTube link
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube-länk"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Inga bokmärkta chattar ännu"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "Klicka på bokmärkesikonen i en chatt för att spara den här."
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "Bokmärkta chattar"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "Ta bort bokmärke"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Lägg till bilaga"
+
+#. Copy to clipboard button title
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "Kopiera till urklipp"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Ladda ner som Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Expandera chatt"
+
+#. Listen/TTS button title
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Lyssna"
+
+#. Chat input placeholder
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "Skriv ditt meddelande…"
+
+#. Research button
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Utforska"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Sparade utkast"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Skicka"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Stoppa"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Röstinmatning"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "Välkommen till KEA:s forskning, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Fråga vad som helst och få AI-driven forskning med webbsökning, faktagranskning och mycket mer."
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "Rensa allt"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "Stäng"
+
+#. Save changes button
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+#. Coming soon badge
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Snart"
+
+#. 404 error - back to home button
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Tillbaka till startsidan"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Sidan hittades inte"
+
+#. 404 error - page not found description
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Sidan du letar efter finns inte eller har flyttats."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Välj exportformat för din chattlogg."
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "Exportera"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Formaterad utdata, kan visas i webbläsare"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "För säkerhetskopiering/import, inkluderar metadata"
+
+#. Format label
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "Exportformat"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Rekommenderas – Läsbar för människor, bevarar formateringen"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Vanlig text (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Enkel, universell kompatibilitet"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Inkludera metadata (chattitel, exportdatum)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Inkludera tidsstämplar"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Alternativ"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Förbereder export..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "Exportera chatt"
+
+#. Copyright footer
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Alla rättigheter reserverade"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Chatt"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Chattexport"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Chatten hittades inte"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Komprimerar..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "Är du säker på att du vill rensa allt lagringsutrymme? Detta kommer att radera alla dina chattar, meddelanden och anpassade tillgångar. Denna åtgärd kan inte ångras."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Ange URL till Wikipedia-artikel:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "Ange YouTube-videons URL:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "Fel"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "Exportdatum"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Export misslyckades: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Exporterades framgångsrikt som {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Ange en giltig Wikipedia-URL"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Ange en giltig YouTube-URL"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "Meddelande"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Meddelanden"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Ingen chatt att exportera. Starta en konversation först."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Assistent"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "Användare"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Lagringen har rensats!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Det gick inte att rensa lagringsutrymmet. Försök igen."
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "Tid"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Saknar rubrik"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Uppladdat"
+
+#. Page title
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Bokmärken"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "Exportera chatt"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Logga ut"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Visa/dölj sidofält"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Avatar"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Ingen"
+
+#. Calculating storage
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Beräknar..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Chattbakgrund"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "Rensa allt lagringsutrymme"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "Komprimera bifogade bilder"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Minskar filstorleken på bilder som bifogas i chatten (JPEG, PNG, WebP stöds)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Nuvarande användning:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Språk"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Max"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Kvalitet"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Skicka meddelande med Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Tryck på {modKey}+Enter för att skicka, Enter för ny rad"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Tryck på Enter för att skicka, Skift+Enter för ny rad"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Lagringsgräns"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Utseende"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Allmänt"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Lagring"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Text-till-tal"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Tema"
+
+#. Theme option - auto
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Auto"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Mörk"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "Ljus"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Inställningar"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Text-till-tal kommer snart"
+
+#. TTS - Device label
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Enhet"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Auto (rekommenderas)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Automatisk detektering av WebGPU-stöd, faller tillbaka till CPU"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Text-till-tal har inaktiverats av administratören."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Aktivera text-till-tal"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "Läs upp AI-svar högt"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Språk"
+
+#. TTS - British English
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Brittisk engelska"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "amerikansk engelska"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "Förhandsgranska röst"
+
+#. TTS - Speed label
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Hastighet"
+
+#. TTS - Voice label
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Röst"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (hög kvalitet)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (bästa kvalitet)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (Bra kvalitet)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Ladda upp anpassad avatar"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Ladda upp anpassad bakgrund"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "Användarnamn"
+
+#. Username placeholder
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Skriv ditt namn"
+
+#. Delete chat confirmation
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "Ta bort denna konversation?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Ny forskning"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Inga konversationer ännu"

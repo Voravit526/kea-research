@@ -1,0 +1,757 @@
+# KEA Frontend Translations
+# Language: kn
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "ಫೈಲ್ ಲಗತ್ತಿಸಿ"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "ಚಿತ್ರವನ್ನು ಲಗತ್ತಿಸಿ"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "ಹುಡುಕಾಟ ಬಳಸಿ"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "ವೆಕ್ಟರ್ ಡೇಟಾಬೇಸ್"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "ವಿಕಿಪೀಡಿಯಾ ಲಿಂಕ್"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube ಲಿಂಕ್"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "ಇನ್ನೂ ಯಾವುದೇ ಬುಕ್‌ಮಾರ್ಕ್ ಮಾಡಿದ ಚಾಟ್‌ಗಳಿಲ್ಲ."
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "ಚಾಟ್ ಅನ್ನು ಇಲ್ಲಿ ಉಳಿಸಲು ಅದರಲ್ಲಿರುವ ಬುಕ್‌ಮಾರ್ಕ್ ಐಕಾನ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "ಬುಕ್‌ಮಾರ್ಕ್ ಮಾಡಿದ ಚಾಟ್‌ಗಳು"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "ಬುಕ್‌ಮಾರ್ಕ್ ತೆಗೆದುಹಾಕಿ"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "ಲಗತ್ತು ಸೇರಿಸಿ"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "ಮಾರ್ಕ್‌ಡೌನ್ ಆಗಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "ಚಾಟ್ ವಿಸ್ತರಿಸಿ"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "ಆಲಿಸಿ"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಟೈಪ್ ಮಾಡಿ..."
+
+#. Research button
+msgctxt "chat.research"
+msgid "Research"
+msgstr "ಸಂಶೋಧಿಸಿ"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "ಉಳಿಸಿದ ಡ್ರಾಫ್ಟ್‌ಗಳು"
+
+#. Send button
+#, fuzzy
+msgctxt "chat.send"
+msgid "Send"
+msgstr "ಕಳುಹಿಸಿ"
+
+#. Stop listening button title
+#, fuzzy
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "ನಿಲ್ಲಿಸಿ"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "ಧ್ವನಿ ಇನ್ಪುಟ್"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "KEA ಸಂಶೋಧನೆಗೆ ಸುಸ್ವಾಗತ, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "ವೆಬ್ ಹುಡುಕಾಟ, ಸತ್ಯ ಪರಿಶೀಲನೆ ಮತ್ತು ಇನ್ನೂ ಹೆಚ್ಚಿನವುಗಳೊಂದಿಗೆ ಏನು ಬೇಕಾದರೂ ಕೇಳಿ ಮತ್ತು AI-ಚಾಲಿತ ಸಂಶೋಧನೆಯನ್ನು ಪಡೆಯಿರಿ."
+
+#. Cancel button
+#, fuzzy
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "ರದ್ದುಮಾಡಿ"
+
+#. Clear all button
+#, fuzzy
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ"
+
+#. Close button
+#, fuzzy
+msgctxt "common.close"
+msgid "Close"
+msgstr "ಮುಚ್ಚಿ"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "ಶೀಘ್ರದಲ್ಲೇ"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ"
+
+#. 404 error - page not found title
+#, fuzzy
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "ಪುಟ ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "ನೀವು ಹುಡುಕುತ್ತಿರುವ ಪುಟ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ ಅಥವಾ ಅದನ್ನು ಸರಿಸಲಾಗಿದೆ."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "ನಿಮ್ಮ ಚಾಟ್ ಇತಿಹಾಸಕ್ಕಾಗಿ ರಫ್ತು ಸ್ವರೂಪವನ್ನು ಆರಿಸಿ."
+
+#. Export button
+#, fuzzy
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "ರಫ್ತು ಮಾಡಿ"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "ಶೈಲಿಯ ಔಟ್‌ಪುಟ್, ಬ್ರೌಸರ್‌ಗಳಲ್ಲಿ ವೀಕ್ಷಿಸಬಹುದು"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "ಜೆಎಸ್ಒಎನ್ (.ಜೆಸನ್)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "ಬ್ಯಾಕಪ್/ಆಮದುಗಾಗಿ, ಮೆಟಾಡೇಟಾವನ್ನು ಒಳಗೊಂಡಿದೆ"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "ರಫ್ತು ಸ್ವರೂಪ"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "ಮಾರ್ಕ್‌ಡೌನ್ (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ - ಮನುಷ್ಯರು ಓದಬಲ್ಲರು, ಫಾರ್ಮ್ಯಾಟಿಂಗ್ ಅನ್ನು ಸಂರಕ್ಷಿಸುತ್ತದೆ"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "ಸರಳ ಪಠ್ಯ (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "ಸರಳ, ಸಾರ್ವತ್ರಿಕ ಹೊಂದಾಣಿಕೆ"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "ಮೆಟಾಡೇಟಾ ಸೇರಿಸಿ (ಚಾಟ್ ಶೀರ್ಷಿಕೆ, ರಫ್ತು ದಿನಾಂಕ)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "ಸಮಯಸ್ಟ್ಯಾಂಪ್‌ಗಳನ್ನು ಸೇರಿಸಿ"
+
+#. Options label
+#, fuzzy
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "ಆಯ್ಕೆಗಳು"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "ಚಾಟ್ ರಫ್ತು ಮಾಡಿ"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+
+#. Chat label
+#, fuzzy
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "ಚಾಟ್ ಮಾಡಿ"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "ಚಾಟ್ ರಫ್ತು"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "ಚಾಟ್ ಕಂಡುಬಂದಿಲ್ಲ."
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "ಸಂಕುಚಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "ನೀವು ಎಲ್ಲಾ ಸಂಗ್ರಹಣೆಯನ್ನು ತೆರವುಗೊಳಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ? ಇದು ನಿಮ್ಮ ಎಲ್ಲಾ ಚಾಟ್‌ಗಳು, ಸಂದೇಶಗಳು ಮತ್ತು ಕಸ್ಟಮ್ ಸ್ವತ್ತುಗಳನ್ನು ಅಳಿಸುತ್ತದೆ. ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "ವಿಕಿಪೀಡಿಯಾ ಲೇಖನದ URL ಅನ್ನು ನಮೂದಿಸಿ:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "YouTube ವೀಡಿಯೊ URL ಅನ್ನು ನಮೂದಿಸಿ:"
+
+#. Error status
+#, fuzzy
+msgctxt "js.error"
+msgid "Error"
+msgstr "ದೋಷ"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "ರಫ್ತು ದಿನಾಂಕ"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "ರಫ್ತು ವಿಫಲವಾಗಿದೆ: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "{filename} ಎಂದು ಯಶಸ್ವಿಯಾಗಿ ರಫ್ತು ಮಾಡಲಾಗಿದೆ."
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ವಿಕಿಪೀಡಿಯಾ URL ಅನ್ನು ನಮೂದಿಸಿ."
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ YouTube URL ಅನ್ನು ನಮೂದಿಸಿ."
+
+#. Message label
+#, fuzzy
+msgctxt "js.message"
+msgid "Message"
+msgstr "ಸಂದೇಶ"
+
+#. Messages count label
+#, fuzzy
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "ಸಂದೇಶಗಳು"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "ರಫ್ತು ಮಾಡಲು ಯಾವುದೇ ಚಾಟ್ ಇಲ್ಲ. ಮೊದಲು ಸಂಭಾಷಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "ಸಹಾಯಕ"
+
+#. User role label
+#, fuzzy
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "ಬಳಕೆದಾರ"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "ಸಂಗ್ರಹಣೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ತೆರವುಗೊಳಿಸಲಾಗಿದೆ!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "ಸಂಗ್ರಹಣೆಯನ್ನು ತೆರವುಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+
+#. Time label
+#, fuzzy
+msgctxt "js.time"
+msgid "Time"
+msgstr "ಸಮಯ"
+
+#. Untitled chat
+#, fuzzy
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "ಶೀರ್ಷಿಕೆರಹಿತ"
+
+#. Uploaded status
+#, fuzzy
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ"
+
+#. Page title
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+#, fuzzy
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "ಚಾಟ್ ರಫ್ತು ಮಾಡಿ"
+
+#. Logout button title
+#, fuzzy
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "ಲಾಗ್ಔಟ್"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "ಸೈಡ್‌ಬಾರ್ ತೋರಿಸಿ/ಮರೆಮಾಡಿ"
+
+#. Avatar label
+#, fuzzy
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "ಅವತಾರ್"
+
+#. No background option
+#, fuzzy
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "ಯಾವುದೂ ಇಲ್ಲ"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "ಲೆಕ್ಕ ಹಾಕಲಾಗುತ್ತಿದೆ..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "ಚಾಟ್ ಹಿನ್ನೆಲೆ"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "ಎಲ್ಲಾ ಸಂಗ್ರಹಣೆಯನ್ನು ತೆರವುಗೊಳಿಸಿ"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "ಲಗತ್ತಿಸಲಾದ ಚಿತ್ರಗಳನ್ನು ಕುಗ್ಗಿಸಿ"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "ಚಾಟ್‌ನಲ್ಲಿ ಲಗತ್ತಿಸಲಾದ ಚಿತ್ರಗಳ ಫೈಲ್ ಗಾತ್ರವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ (JPEG, PNG, WebP ಬೆಂಬಲಿತವಾಗಿದೆ)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "ಪ್ರಸ್ತುತ ಬಳಕೆ:"
+
+#. Language label
+#, fuzzy
+msgctxt "settings.language"
+msgid "Language"
+msgstr "ಭಾಷೆ"
+
+#. Max dimension label
+#, fuzzy
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "ಗರಿಷ್ಠ"
+
+#. Quality label
+#, fuzzy
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "ಗುಣಮಟ್ಟ"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "ಎಂಟರ್ ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "ಕಳುಹಿಸಲು {modKey}+Enter ಒತ್ತಿರಿ, ಹೊಸ ಸಾಲಿಗೆ Enter ಒತ್ತಿರಿ."
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "ಕಳುಹಿಸಲು Enter ಒತ್ತಿ, ಹೊಸ ಸಾಲಿಗೆ Shift+Enter ಒತ್ತಿ"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "ಸಂಗ್ರಹಣಾ ಮಿತಿ"
+
+#. Tab - Appearance
+#, fuzzy
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "ಗೋಚರತೆ"
+
+#. Tab - General
+#, fuzzy
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "ಜನರಲ್"
+
+#. Tab - Storage
+#, fuzzy
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "ಸಂಗ್ರಹಣೆ"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "ಪಠ್ಯದಿಂದ ಭಾಷಣಕ್ಕೆ"
+
+#. Theme label
+#, fuzzy
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "ಥೀಮ್"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "ಆಟೋ"
+
+#. Theme option - dark
+#, fuzzy
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "ಕತ್ತಲೆ"
+
+#. Theme option - light
+#, fuzzy
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "ಬೆಳಕು"
+
+#. Modal title
+#, fuzzy
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "ಪಠ್ಯದಿಂದ ಭಾಷಣ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "ಸಾಧನ"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "ಸ್ವಯಂ (ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ)"
+
+#. TTS - Device CPU option
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "WebGPU ಬೆಂಬಲವನ್ನು ಸ್ವಯಂ ಪತ್ತೆ ಮಾಡುತ್ತದೆ, CPU ಗೆ ಹಿಂತಿರುಗುತ್ತದೆ"
+
+#. TTS - Device GPU option
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "ನಿರ್ವಾಹಕರು ಪಠ್ಯದಿಂದ ಭಾಷಣವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ್ದಾರೆ."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "ಪಠ್ಯದಿಂದ ಭಾಷಣವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "AI ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಗಟ್ಟಿಯಾಗಿ ಓದಿ"
+
+#. TTS - Language label
+#, fuzzy
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "ಭಾಷೆ"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "ಬ್ರಿಟಿಷ್ ಇಂಗ್ಲಿಷ್"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "ಅಮೇರಿಕನ್ ಇಂಗ್ಲಿಷ್"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "ಧ್ವನಿ ಪೂರ್ವವೀಕ್ಷಣೆ ಮಾಡಿ"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "ವೇಗ"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "ಧ್ವನಿ"
+
+#. TTS - Voice Bella
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (ಉತ್ತಮ ಗುಣಮಟ್ಟ)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (ಅತ್ಯುತ್ತಮ ಗುಣಮಟ್ಟ)"
+
+#. TTS - Voice Nicole
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (ಉತ್ತಮ ಗುಣಮಟ್ಟ)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "ಕಸ್ಟಮ್ ಅವತಾರ್ ಅನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "ಕಸ್ಟಮ್ ಹಿನ್ನೆಲೆಯನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "ಬಳಕೆದಾರ ಹೆಸರು"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "ಈ ಸಂಭಾಷಣೆಯನ್ನು ಅಳಿಸುವುದೇ?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "ಹೊಸ ಸಂಶೋಧನೆ"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "ಇನ್ನೂ ಯಾವುದೇ ಸಂಭಾಷಣೆಗಳಿಲ್ಲ."

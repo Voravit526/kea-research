@@ -1,0 +1,14 @@
+{
+  "name": "kea-frontend",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run po2json && astro dev",
+    "build": "npm run po2json && astro build",
+    "preview": "astro preview",
+    "po2json": "node scripts/po2json.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/node": "^9.0.0"
+  }
+}

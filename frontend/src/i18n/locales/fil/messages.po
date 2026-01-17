@@ -1,0 +1,761 @@
+# KEA Frontend Translations
+# Language: fil
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Ikabit ang File"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Ikabit ang Larawan"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Gamitin ang Paghahanap"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Database ng Vector"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Link ng Wikipedia"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "Link sa YouTube"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Wala pang naka-bookmark na mga chat"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "I-click ang icon ng bookmark sa isang chat para i-save ito rito"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "Mga Naka-bookmark na Chat"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "Alisin ang bookmark"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Magdagdag ng kalakip"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "Kopyahin sa clipboard"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "I-download bilang Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Palawakin ang chat"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Makinig"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "I-type ang iyong mensahe..."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Magsaliksik"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Mga Na-save na Draft"
+
+#. Send button
+#, fuzzy
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Ipadala"
+
+#. Stop listening button title
+#, fuzzy
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Huminto"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Pag-input ng boses"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "Maligayang pagdating sa pananaliksik ng KEA, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Magtanong ng kahit ano at kumuha ng pananaliksik na pinapagana ng AI gamit ang paghahanap sa web, pagsusuri ng katotohanan, at higit pa"
+
+#. Cancel button
+#, fuzzy
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Kanselahin"
+
+#. Clear all button
+#, fuzzy
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "I-clear lahat"
+
+#. Close button
+#, fuzzy
+msgctxt "common.close"
+msgid "Close"
+msgstr "Isara"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "I-save ang Mga Pagbabago"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Malapit na"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Bumalik sa Home"
+
+#. 404 error - page not found title
+#, fuzzy
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Hindi Natagpuan ang Pahina"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Ang pahinang iyong hinahanap ay wala o nailipat na."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Pumili ng format ng pag-export para sa iyong history ng chat."
+
+#. Export button
+#, fuzzy
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "I-export"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Naka-istilong output, makikita sa mga browser"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "Para sa backup/import, kasama ang metadata"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "Format ng Pag-export"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Inirerekomenda - Nababasa ng tao, pinapanatili ang formatting"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Simpleng Teksto (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Simple, unibersal na pagkakatugma"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Isama ang metadata (pamagat ng chat, petsa ng pag-export)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Isama ang mga timestamp"
+
+#. Options label
+#, fuzzy
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Mga pagpipilian"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Inihahanda ang pag-export..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "I-export ang Chat"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Lahat ng karapatan ay nakalaan"
+
+#. Chat label
+#, fuzzy
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Chat"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Pag-export ng Chat"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Hindi natagpuan ang chat"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Nagko-compress..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "Sigurado ka bang gusto mong i-clear ang lahat ng storage? Tatanggalin nito ang lahat ng iyong mga chat, mensahe, at custom asset. Hindi na maaaring bawiin ang aksyon na ito."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Ilagay ang URL ng artikulo sa Wikipedia:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "Ilagay ang URL ng bidyo sa YouTube:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "Error"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "Petsa ng Pag-export"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Nabigo ang pag-export: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Matagumpay na na-export bilang {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Mangyaring maglagay ng wastong URL ng Wikipedia"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Mangyaring maglagay ng wastong URL ng YouTube"
+
+#. Message label
+#, fuzzy
+msgctxt "js.message"
+msgid "Message"
+msgstr "Mensahe"
+
+#. Messages count label
+#, fuzzy
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Mga Mensahe"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Walang chat na ie-export. Magsimula muna ng pag-uusap."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Katulong"
+
+#. User role label
+#, fuzzy
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "Gumagamit"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Matagumpay na na-clear ang storage!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Nabigong linisin ang storage. Pakisubukang muli."
+
+#. Time label
+#, fuzzy
+msgctxt "js.time"
+msgid "Time"
+msgstr "Oras"
+
+#. Untitled chat
+#, fuzzy
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Walang pamagat"
+
+#. Uploaded status
+#, fuzzy
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Na-upload"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "Pananaliksik sa KEA"
+
+#. Bookmarks navbar button title
+#, fuzzy
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Mga bookmark"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "I-export ang Chat"
+
+#. Logout button title
+#, fuzzy
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Mag-logout"
+
+#. Sidebar toggle button title
+#, fuzzy
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Ipakita/Itago ang Sidebar"
+
+#. Avatar label
+#, fuzzy
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Avatar"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Wala"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Kinakalkula..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Background ng Pakikipag-chat"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "I-clear ang Lahat ng Imbakan"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "I-compress ang mga nakalakip na larawan"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Binabawasan ang laki ng file ng mga larawang nakalakip sa chat (sinusuportahan ng JPEG, PNG, WebP)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Kasalukuyang Paggamit:"
+
+#. Language label
+#, fuzzy
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Wika"
+
+#. Max dimension label
+#, fuzzy
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Max"
+
+#. Quality label
+#, fuzzy
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Kalidad"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Magpadala ng mensahe gamit ang Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Pindutin ang {modKey}+Enter para ipadala, Enter para sa bagong linya"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Pindutin ang Enter para magpadala, Shift+Enter para sa bagong linya"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Limitasyon sa Imbakan"
+
+#. Tab - Appearance
+#, fuzzy
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Hitsura"
+
+#. Tab - General
+#, fuzzy
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Pangkalahatan"
+
+#. Tab - Storage
+#, fuzzy
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Storage"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Text-to-Speech"
+
+#. Theme label
+#, fuzzy
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Tema"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Auto"
+
+#. Theme option - dark
+#, fuzzy
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Madilim"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "Maliwanag"
+
+#. Modal title
+#, fuzzy
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Mga setting"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Malapit na ang Text-to-Speech"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Aparato"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Awtomatiko (Inirerekomenda)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Awtomatikong nade-detect ang suporta ng WebGPU, babalik sa CPU"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Hindi pinagana ng administrator ang Text-to-Speech."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Paganahin ang Text-to-Speech"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "Basahin nang malakas ang mga tugon ng AI"
+
+#. TTS - Language label
+#, fuzzy
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Wika"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Ingles na Briton"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "Amerikanong Ingles"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "I-preview ang Boses"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Bilis"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Boses"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (Mataas na Kalidad)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (Pinakamahusay na Kalidad)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (Magandang Kalidad)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Mag-upload ng Pasadyang Avatar"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Mag-upload ng Pasadyang Background"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "Username"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Ilagay ang iyong pangalan"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "Burahin ang pag-uusap na ito?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Bagong pananaliksik"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Wala pang mga pag-uusap"

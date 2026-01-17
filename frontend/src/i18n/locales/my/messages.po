@@ -1,0 +1,746 @@
+# KEA Frontend Translations
+# Language: my
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "ဖိုင်ပူးတွဲပါ"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "ပုံကို ပူးတွဲပါ"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "ရှာဖွေမှုကို အသုံးပြုပါ"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "ဗက်တာဒေတာဘေ့စ်"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "ဝီကီပီးဒီးယားလင့်ခ်"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube လင့်ခ်"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "မှတ်သားထားသော ချတ်များ မရှိသေးပါ"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "ဤနေရာတွင် သိမ်းဆည်းရန် ချတ်ပေါ်ရှိ စာညှပ်အိုင်ကွန်ကို နှိပ်ပါ"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "မှတ်သားထားသော ချတ်များ"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "စာညှပ်ကို ဖယ်ရှားပါ"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "ပူးတွဲပါဖိုင်ထည့်ရန်"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "ကလစ်ဘုတ်သို့ ကူးယူပါ"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Markdown အဖြစ် ဒေါင်းလုဒ်လုပ်ပါ"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "ချတ်ကို ချဲ့ထွင်ပါ"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "နားထောင်ပါ"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "သင့်မက်ဆေ့ချ်ကို ရိုက်ထည့်ပါ..."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "သုတေသနပြုပါ"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "သိမ်းဆည်းထားသော မူကြမ်းများ"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "ပို့ပါ"
+
+#. Stop listening button title
+#, fuzzy
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "ရပ်"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "အသံထည့်သွင်းမှု"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "KEA သုတေသနသို့ ကြိုဆိုပါတယ်၊ {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "ဘာမဆိုမေးပြီး ဝဘ်ရှာဖွေမှု၊ အချက်အလက်စစ်ဆေးခြင်းနှင့် အခြားအရာများဖြင့် AI ဖြင့် မောင်းနှင်သော သုတေသနကို ရယူလိုက်ပါ"
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "မလုပ်ဆောင်တော့ပါ"
+
+#. Clear all button
+#, fuzzy
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "အားလုံး ရှင်းရန်"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "ပိတ်သည်"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "ပြောင်းလဲမှုများကို သိမ်းဆည်းပါ"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "မကြာခင်မှာပဲ"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "မူလစာမျက်နှာသို့ ပြန်သွားပါ"
+
+#. 404 error - page not found title
+#, fuzzy
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "စာမျက်နှာ ရှာမတွေ့ပါ"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "သင်ရှာဖွေနေသော စာမျက်နှာသည် မရှိပါ သို့မဟုတ် ရွှေ့ပြောင်းပြီးဖြစ်သည်။"
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "သင့်ရဲ့ချတ်မှတ်တမ်းအတွက် ထုတ်ယူမှုဖော်မတ်ကို ရွေးချယ်ပါ။"
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "တင်ပို့"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "ပုံစံထုတ်ထားသော output၊ browser များတွင် ကြည့်ရှုနိုင်သည်"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "အရန်ကူးယူခြင်း/တင်သွင်းခြင်းအတွက်၊ မက်တာဒေတာ ပါဝင်သည်"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "တင်ပို့မှုပုံစံ"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "အကြံပြုထားသည် - လူဖတ်နိုင်သည်၊ ဖော်မတ်ကို ထိန်းသိမ်းထားသည်"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "ရိုးရိုးစာသား (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "ရိုးရှင်းပြီး လူတိုင်းနှင့် လိုက်ဖက်ညီမှု"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "မက်တာဒေတာ (ချက်တင်ခေါင်းစဉ်၊ တင်ပို့သည့်ရက်စွဲ) ပါဝင်ပါ"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "အချိန်တံဆိပ်များ ထည့်သွင်းပါ"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "ရွေးချယ်ချက်များ"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "ပို့ကုန်ပြင်ဆင်နေသည်..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "ချတ်ကို ထုတ်ယူပါ"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "မူပိုင်ခွင့်ကိုလက်ဝယ်ထားသည်"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "ပြောဆိုဆက်သွယ်ရန်ကိရိယာများ"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "ချတ်ထုတ်ယူမှု"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "ချတ်ကို ရှာမတွေ့ပါ"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "ချုံ့နေသည်..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "သိုလှောင်မှုအားလုံးကို ရှင်းလင်းချင်တာ သေချာလား။ ဒါက သင့်ရဲ့ချတ်တွေ၊ မက်ဆေ့ချ်တွေနဲ့ စိတ်ကြိုက်ပိုင်ဆိုင်မှုအားလုံးကို ဖျက်ပစ်ပါလိမ့်မယ်။ ဒီလုပ်ဆောင်ချက်ကို ပြန်ပြင်လို့မရပါဘူး။"
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "ဝီကီပီးဒီးယားဆောင်းပါး URL ကို ရိုက်ထည့်ပါ-"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "YouTube ဗီဒီယို URL ကို ထည့်သွင်းပါ-"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "အမှား"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "တင်ပို့သည့်ရက်စွဲ"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "တင်ပို့မှု မအောင်မြင်ပါ- {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "{filename} အဖြစ် အောင်မြင်စွာ ထုတ်ယူပြီးပါပြီ"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "ကျေးဇူးပြု၍ မှန်ကန်သော ဝီကီပီးဒီးယား URL ကို ထည့်သွင်းပါ"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "ကျေးဇူးပြု၍ မှန်ကန်သော YouTube URL ကို ထည့်သွင်းပါ"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "ကို Message"
+
+#. Messages count label
+#, fuzzy
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "မက်ဆေ့ချ်များ"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "ထုတ်ယူရန် ချတ်မရှိပါ။ စကားဝိုင်းတစ်ခု အရင်စတင်ပါ။"
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "လက်ထောက်"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "အသုံးပြုသူ"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "သိုလှောင်မှုကို အောင်မြင်စွာ ရှင်းလင်းပြီးပါပြီ။"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "သိုလှောင်မှုကို ရှင်းလင်း၍မရပါ။ ထပ်မံကြိုးစားပါ။"
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "အချိန်"
+
+#. Untitled chat
+#, fuzzy
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "ခေါင်းစဉ်မဲ့"
+
+#. Uploaded status
+#, fuzzy
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "အပ်လုဒ်လုပ်ထားသည်"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "မှတ်သားချက်"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "ချတ်ကို ထုတ်ယူပါ"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "အကောင့်ထွက်ရန်"
+
+#. Sidebar toggle button title
+#, fuzzy
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "ဘေးဘားကို ပြ/ဝှက်ပါ"
+
+#. Avatar label
+#, fuzzy
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "ဗီတာ"
+
+#. No background option
+#, fuzzy
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "မရှိပါ"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "တွက်ချက်နေသည်..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "ချတ်နောက်ခံ"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "သိုလှောင်မှုအားလုံးကို ရှင်းလင်းပါ"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "ပူးတွဲပါပုံများကို ချုံ့ပါ"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "ချတ်တွင် တွဲထားသော ပုံများ၏ ဖိုင်အရွယ်အစားကို လျှော့ချပေးသည် (JPEG၊ PNG၊ WebP ကို ပံ့ပိုးပေးသည်)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "လက်ရှိအသုံးပြုမှု-"
+
+#. Language label
+#, fuzzy
+msgctxt "settings.language"
+msgid "Language"
+msgstr "ဘာသာစကား"
+
+#. Max dimension label
+#, fuzzy
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "မက်စ်"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "အရည်အသွေး"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Enter မှာ မက်ဆေ့ချ်ပို့ပါ"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "ပို့ရန် {modKey}+Enter နှိပ်ပါ၊ စာကြောင်းအသစ်အတွက် Enter နှိပ်ပါ"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "ပို့ရန် Enter နှိပ်ပါ၊ စာကြောင်းအသစ်အတွက် Shift+Enter နှိပ်ပါ"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "သိုလှောင်မှု ကန့်သတ်ချက်"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "အသွင်အပြင်"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "အထွေထွေ"
+
+#. Tab - Storage
+#, fuzzy
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "သိုလှောင်မှု"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "စာသားမှ အသံသို့ ပြောင်းခြင်း"
+
+#. Theme label
+#, fuzzy
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "အပြင်အဆင်"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "အော်တို"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "အနက်"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "ဖြူ"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "ပြင်ဆင်ချက်များ"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "စာသားမှ စကားပြောသို့ မကြာမီလာမည်"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "ကိရိယာ"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "အော်တို (အကြံပြုထားသည်)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "WebGPU ပံ့ပိုးမှုကို အလိုအလျောက် သိရှိပြီး CPU သို့ ပြန်လည်ရောက်ရှိစေသည်"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "စာသားမှ စကားပြောသို့ ပြောင်းခြင်းကို စီမံခန့်ခွဲသူမှ ပိတ်လိုက်ပါပြီ။"
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "စာသားမှ အသံသို့ ပြောင်းခြင်းကို ဖွင့်ပါ"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "AI တုံ့ပြန်မှုများကို အသံထွက်ဖတ်ပါ"
+
+#. TTS - Language label
+#, fuzzy
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "ဘာသာစကား"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "ဗြိတိသျှ အင်္ဂလိပ်"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "အမေရိကန် အင်္ဂလိပ်"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "အသံကို အစမ်းကြည့်ရှုပါ"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "မြန်နှုန်း"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "စကားသံ"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (အရည်အသွေးမြင့်)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (အကောင်းဆုံး အရည်အသွေး)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (အရည်အသွေးကောင်း)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "စိတ်ကြိုက်ပုံတူကို အပ်လုဒ်လုပ်ပါ"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "စိတ်ကြိုက်နောက်ခံကို အပ်လုဒ်လုပ်ပါ"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "အသုံးပြုသူအမည်"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "သင့်နာမည်ကို ရိုက်ထည့်ပါ"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "ဤစကားဝိုင်းကို ဖျက်မလား။"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "သုတေသနအသစ်"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "စကားပြောဆိုမှုများ မရှိသေးပါ"

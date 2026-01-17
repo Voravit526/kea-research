@@ -1,0 +1,732 @@
+# KEA Frontend Translations
+# Language: az
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Faylı əlavə et"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Şəkil əlavə et"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Axtarışdan istifadə edin"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Vektor verilənlər bazası"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Vikipediya linki"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube linki"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Hələ heç bir söhbət nişanlanmayıb"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "Bir söhbətdə yer imi ikonuna klikləyin ki, onu burada saxlayasınız."
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "İşarələnmiş söhbətlər"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "İşarəni sil"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Əlavəni əlavə et"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "Kəsib yapışdırma lövhəsinə kopyalayın"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Markdown kimi yüklə"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Söhbəti genişləndirin"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Dinlə"
+
+#. Chat input placeholder
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "Məsajınız...."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Tədqiqat"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Yadda saxlanmış qaralamalar"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Göndər"
+
+#. Stop listening button title
+#, fuzzy
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Dayan"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Səsli giriş"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "KEA tədqiqatlarına xoş gəlmisiniz, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Hər şeyi soruşun və veb axtarışı, fakt yoxlaması və daha çoxunu əhatə edən süni intellekt əsaslı tədqiqat əldə edin."
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Ləğv et"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "Hamısını təmizlə"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "Bağla"
+
+#. Save changes button
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "Dəyişiklikləri Yadda Saxla"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Tezliklə"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Əsas səhifəyə qayıt"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Səhifə Tapılmadı"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Axtardığınız səhifə mövcud deyil və ya köçürülüb."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Söhbət tarixçəniz üçün ixrac formatını seçin."
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "İxrac"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Üslublaşdırılmış çıxış, brauzerlərdə görünə bilən"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "Ehtiyat nüsxə/idxal üçün metadata daxildir"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "İxrac formatı"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Tövsiyə olunur - İnsan oxunaqlıdır, formatı qoruyur"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Sadə mətn (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Sadə, universal uyğunluq"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Mətadata daxil edin (söhbətin başlığı, ixrac tarixi)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Vaxt damğalarını daxil edin"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Seçimlər"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Eksport hazırlanır..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "Söhbəti ixrac et"
+
+#. Copyright footer
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Bütün hüquqları qorunur"
+
+#. Chat label
+#, fuzzy
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Söhbət"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Söhbətin ixracı"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Söhbət tapılmadı"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Sıxılır..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "Bütün yaddaşı təmizləmək istədiyinizə əminsinizmi? Bu, bütün söhbətlərinizi, mesajlarınızı və xüsusi aktivlərinizi siləcək. Bu əməliyyat geri qaytarıla bilməz."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Vikipediya məqaləsinin URL-ni daxil edin:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "YouTube video URL-ni daxil edin:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "Xəta"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "İxrac Tarixi"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Eksport uğursuz oldu: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Uğurla ixrac edildi {filename} kimi"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Zəhmət olmasa etibarlı Wikipedia URL-ni daxil edin"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Zəhmət olmasa etibarlı YouTube URL-ni daxil edin"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "Mesaj"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Çatdan ixrac etmək üçün heç nə yoxdur. Əvvəl söhbətə başlayın."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Köməkçi"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "İstifadəçi"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Saxlama uğurla təmizləndi!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Yaddaşı təmizləmək mümkün olmadı. Zəhmət olmasa yenidən cəhd edin."
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "Vaxt"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Başlıqsız"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Yükləndi"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA tədqiqatı"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Seçilmişlər"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "Söhbəti ixrac et"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Çıxış"
+
+#. Sidebar toggle button title
+#, fuzzy
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Yan panelin açılıb-bağlanmasını təmin edin"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Avatar"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Heç biri"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Hesablama..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Söhbət fonu"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "Bütün saxlama yerlərini təmizlə"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "Əlavə edilmiş şəkilləri sıxın"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Söhbətə əlavə olunmuş şəkillərin fayl ölçüsünü azaldır (JPEG, PNG, WebP dəstəklənir)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Cari İstifadə:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Dil"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Maks"
+
+#. Quality label
+#, fuzzy
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Keyfiyyət"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Giriş düyməsini basdıqda mesaj göndər"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Göndərmək üçün {modKey}+Enter, yeni sətr üçün Enter"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Göndərmək üçün Enter düyməsini basın, yeni sətr üçün Shift+Enter"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Saxlama həddi"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Görünüş"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Ümumi"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Yaddaş"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Mətndən-səsə"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Mövzü"
+
+#. Theme option - auto
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Automat"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Qaranlıq"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "İşıqlı"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Ayarlar"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Mətn-dan-səs funksiyası tezliklə"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Cihaz"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Avtomatik (tövsiyə olunur)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "Mərkəzi prosessor (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Avtomatik WebGPU dəstəyini aşkar edir, CPU-ya keçir."
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Mətnin səsləndirilməsi administrator tərəfindən söndürülüb."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Mətnin səsə çevrilməsini aktivləşdirin"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "Süni intellekt cavablarını ucadan oxuyun"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Dil"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Britaniya ingiliscəsi"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "Amerika ingiliscəsi"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "Səs nümunəsi"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Sürət"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Səs"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (Yüksək keyfiyyətli)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (Ən yüksək keyfiyyət)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nikol (Yaxşı keyfiyyət)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Fərdi avatar yükləyin"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Fərdi fon yükləyin"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "İstifadəçi adı"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Adınızı daxil edin"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "Bu söhbəti silmək?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Yeni tədqiqat"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Hələ heç bir söhbət yoxdur"

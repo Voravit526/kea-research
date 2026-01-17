@@ -1,0 +1,714 @@
+# KEA Frontend Translations
+# Language: zh-HK
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "附件檔案"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "附加圖片"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "使用搜尋"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "向量資料庫"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "維基百科連結"
+
+#. Attachment menu - YouTube link
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "YouTube 連結"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "尚未儲存任何聊天記錄"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "點擊對話中的書籤圖示即可將其儲存於此處"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "已加入書籤的對話"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "移除書籤"
+
+#. Add attachment button title
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "添加附件"
+
+#. Copy to clipboard button title
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "複製到剪貼簿"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "下載為 Markdown 格式"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "展開對話"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "聽著"
+
+#. Chat input placeholder
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "輸入你的信息..."
+
+#. Research button
+msgctxt "chat.research"
+msgid "Research"
+msgstr "探索"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "已儲存草稿"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "發送"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "停止"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "語音輸入"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "歡迎來到KEA研究，{userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "隨時提問，即可獲得由人工智慧驅動的研究成果，包含網路搜尋、事實查核等多元服務"
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "取消"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "全部清除"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "關閉"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#. Coming soon badge
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "不久"
+
+#. 404 error - back to home button
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "返回首頁"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "找不到網頁"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "您尋找的頁面不存在或已被移轉。"
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "選擇您的聊天記錄輸出格式。"
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "匯出"
+
+#. HTML format
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML（.html）"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "樣式化輸出，可在瀏覽器中檢視"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "用於備份/匯入，包含元數據"
+
+#. Format label
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "匯出格式"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "推薦 - 符合人類閱讀習慣，保留格式"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "純文字 (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "簡單、通用相容性"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "包含元數據（對話標題、匯出日期）"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "包含時間戳記"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "選項"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "正在準備輸出..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "匯出聊天記錄"
+
+#. Copyright footer
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "版權所有"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "聊天"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "聊天匯出"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "未找到對話"
+
+#. Compressing status
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "正在壓縮..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "您確定要清除所有儲存空間嗎？此操作將刪除所有聊天記錄、訊息及自訂資產。此操作無法撤銷。"
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "輸入維基百科條目網址："
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "輸入 YouTube 影片網址："
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "錯誤"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "輸出日期"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "匯出失敗：{error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "已成功匯出為 {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "請輸入有效的維基百科網址"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "請輸入有效的 YouTube 網址"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "訊息"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "訊息"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "沒有可匯出的對話。請先開始對話。"
+
+#. Assistant role label
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "助理"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "使用者"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "儲存空間已成功清除！"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "清除儲存空間失敗。請重試。"
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "時間"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "無標題"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "已上傳"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "書籤"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "匯出聊天記錄"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "登出"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "顯示/隱藏側邊欄"
+
+#. Avatar label
+#, fuzzy
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "頭像"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "無"
+
+#. Calculating storage
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "計算中..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "聊天背景"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "清除所有儲存空間"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "壓縮附件圖片"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "減少聊天中附加圖片的檔案大小（支援JPEG、PNG、WebP格式）"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "當前使用量："
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "語言"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "最大"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "質量"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "按下 Enter 鍵發送訊息"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "按下 {modKey} + Enter 鍵發送，Enter 鍵換行"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "按 Enter 鍵發送，Shift+Enter 鍵換行"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "儲存空間上限"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "外觀"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "一般"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "儲存空間"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "文字轉語音"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "佈景主題"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "自動"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "深色"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "淺色"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "設定"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "文字轉語音功能即將推出"
+
+#. TTS - Device label
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "裝置"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "自動（推薦）"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU（WASM）"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "自動偵測 WebGPU 支援狀態，若未支援則回退至 CPU 執行"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU（WebGPU）"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "文字轉語音功能已被管理員停用。"
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "啟用文字轉語音功能"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "朗讀人工智慧的回應"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "語言"
+
+#. TTS - British English
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "英國英文"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "美式英語"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "預覽語音"
+
+#. TTS - Speed label
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "速度"
+
+#. TTS - Voice label
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "語音"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella（高品質）"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart（頂級品質）"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole（優質）"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "上傳自訂頭像"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "上傳自訂背景"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "使用者名稱"
+
+#. Username placeholder
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "輸入您的名字"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "刪除此對話？"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "新研究"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "尚未有對話"

@@ -1,0 +1,760 @@
+# KEA Frontend Translations
+# Language: ga
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+#, fuzzy
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "Ceangail Comhad"
+
+#. Attachment menu - attach image
+#, fuzzy
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "Ceangail Íomhá"
+
+#. Attachment menu - use search
+#, fuzzy
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "Úsáid Cuardaigh"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "Bunachar Sonraí Veicteoir"
+
+#. Attachment menu - Wikipedia link
+#, fuzzy
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "Nasc Vicipéid"
+
+#. Attachment menu - YouTube link
+#, fuzzy
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "Nasc YouTube"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "Gan aon chomhráite leabharmharcáilte go fóill"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "Cliceáil ar dheilbhín leabharmharcanna ar chomhrá chun é a shábháil anseo"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "Comhráite Leabharmharcáilte"
+
+#. Remove bookmark button title
+#, fuzzy
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "Bain leabharmharc"
+
+#. Add attachment button title
+#, fuzzy
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "Cuir ceangaltán leis"
+
+#. Copy to clipboard button title
+#, fuzzy
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "Cóipeáil chuig an ghearrthaisce"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "Íoslódáil mar Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "Leathnaigh an comhrá"
+
+#. Listen/TTS button title
+#, fuzzy
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "Éist"
+
+#. Chat input placeholder
+#, fuzzy
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "Clóscríobh do theachtaireacht..."
+
+#. Research button
+#, fuzzy
+msgctxt "chat.research"
+msgid "Research"
+msgstr "Déan Taighde"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "Dréachtaí Sábháilte"
+
+#. Send button
+#, fuzzy
+msgctxt "chat.send"
+msgid "Send"
+msgstr "Seol"
+
+#. Stop listening button title
+#, fuzzy
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "Stop"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "Ionchur gutha"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "Fáilte go taighde KEA, {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "Cuir ceist ar rud ar bith agus faigh taighde faoi thiomáint AI le cuardach gréasáin, seiceáil fíricí, agus tuilleadh"
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#. Clear all button
+#, fuzzy
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "Glan gach rud"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "Dún"
+
+#. Save changes button
+#, fuzzy
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "Sábháil Athruithe"
+
+#. Coming soon badge
+#, fuzzy
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "Go luath"
+
+#. 404 error - back to home button
+#, fuzzy
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "Ar ais Abhaile"
+
+#. 404 error - page not found title
+#, fuzzy
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "Leathanach Gan Aimsiú"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Níl an leathanach atá á lorg agat ann nó tá sé bogtha."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "Roghnaigh formáid easpórtála do do stair comhrá."
+
+#. Export button
+#, fuzzy
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "Easpórtáil"
+
+#. HTML format
+#, fuzzy
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "Aschur stílithe, infheicthe i mbrabhsálaithe"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "Le haghaidh cúltaca/allmhairithe, áirítear meiteashonraí"
+
+#. Format label
+#, fuzzy
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "Formáid Easpórtála"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "Molta - Inléite ag daoine, coinníonn sé an fhormáidiú"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "Gnáth-théacs (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "Comhoiriúnacht shimplí, uilíoch"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "Cuir meiteashonraí san áireamh (teideal an chomhrá, dáta an easpórtála)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "Cuir stampaí ama san áireamh"
+
+#. Options label
+#, fuzzy
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "Roghanna"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "Ag ullmhú easpórtála..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "Easpórtáil Comhrá"
+
+#. Copyright footer
+#, fuzzy
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "Gach ceart ar cosaint"
+
+#. Chat label
+#, fuzzy
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "Comhrá"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "Easpórtáil Comhrá"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "Níor aimsíodh an comhrá"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "Ag comhbhrú..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "An bhfuil tú cinnte gur mian leat an stóras go léir a ghlanadh? Scriosfaidh sé seo do chomhráite, do theachtaireachtaí agus do shócmhainní saincheaptha go léir. Ní féidir an gníomh seo a chealú."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "Cuir isteach URL an ailt Vicipéide:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "Cuir isteach URL an fhíseáin YouTube:"
+
+#. Error status
+#, fuzzy
+msgctxt "js.error"
+msgid "Error"
+msgstr "Earráid"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "Dáta Easpórtála"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "Theip ar an easpórtáil: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "Easpórtáladh go rathúil mar {filename}"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "Cuir isteach URL bailí Vicipéide le do thoil"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "Cuir isteach URL bailí YouTube le do thoil"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "Teachtaireacht"
+
+#. Messages count label
+#, fuzzy
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "Teachtaireachtaí"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "Níl aon chomhrá le heaspórtáil. Tosaigh comhrá ar dtús."
+
+#. Assistant role label
+#, fuzzy
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "Cúntóir"
+
+#. User role label
+#, fuzzy
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "Úsáideoir"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "Glanadh an stóras go rathúil!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "Theip ar an stóráil a ghlanadh. Déan iarracht arís."
+
+#. Time label
+#, fuzzy
+msgctxt "js.time"
+msgid "Time"
+msgstr "Am"
+
+#. Untitled chat
+#, fuzzy
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "Gan Teideal"
+
+#. Uploaded status
+#, fuzzy
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "Uaslódáilte"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "KEA research"
+
+#. Bookmarks navbar button title
+#, fuzzy
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "Leabharmharcanna"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "Easpórtáil Comhrá"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "Logáil Amach"
+
+#. Sidebar toggle button title
+#, fuzzy
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "Taispeáin/Folaigh an Barra Taobh"
+
+#. Avatar label
+#, fuzzy
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "Avatár"
+
+#. No background option
+#, fuzzy
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "Dada"
+
+#. Calculating storage
+#, fuzzy
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "Ag ríomh..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "Cúlra Comhrá"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "Glan an Stóráil Uile"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "Comhbhrúigh íomhánna ceangailte"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "Laghdaíonn sé méid comhaid íomhánna atá ceangailte sa chomhrá (tacaítear le JPEG, PNG, WebP)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "Úsáid Reatha:"
+
+#. Language label
+#, fuzzy
+msgctxt "settings.language"
+msgid "Language"
+msgstr "Teanga"
+
+#. Max dimension label
+#, fuzzy
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "Uasmhéid"
+
+#. Quality label
+#, fuzzy
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "Cáilíocht"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "Seol teachtaireacht le Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "Brúigh {modKey}+Enter le seoladh, Enter le haghaidh líne nua"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "Brúigh Enter le seoladh, Shift+Enter le haghaidh líne nua"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "Teorainn Stórála"
+
+#. Tab - Appearance
+#, fuzzy
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "Dealramh"
+
+#. Tab - General
+#, fuzzy
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "Ginearálta"
+
+#. Tab - Storage
+#, fuzzy
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "Stóras"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "Téacs-go-Caint"
+
+#. Theme label
+#, fuzzy
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "Téama"
+
+#. Theme option - auto
+#, fuzzy
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "Uathoibríoch"
+
+#. Theme option - dark
+#, fuzzy
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "Dorcha"
+
+#. Theme option - light
+#, fuzzy
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "Geal"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "Socruithe"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "Téacs-go-Caint ag teacht go luath"
+
+#. TTS - Device label
+#, fuzzy
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "Gléas"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "Uathoibríoch (Molta)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "CPU (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "Braitheann tacaíocht WebGPU go huathoibríoch, téann sé ar ais chuig an LAP"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "Tá Téacs-go-Caint díchumasaithe ag an riarthóir."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "Cumasaigh Téacs-go-Caint"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "Léigh freagraí AI os ard"
+
+#. TTS - Language label
+#, fuzzy
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "Teanga"
+
+#. TTS - British English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "Béarla na Breataine"
+
+#. TTS - American English
+#, fuzzy
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "Béarla Meiriceánach"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "Réamhamharc ar an nGuth"
+
+#. TTS - Speed label
+#, fuzzy
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "Luas"
+
+#. TTS - Voice label
+#, fuzzy
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "Guth"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "Bella (Ardchaighdeán)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (An Caighdeán is Fearr)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "Nicole (Ardchaighdeán)"
+
+#. Upload custom avatar
+#, fuzzy
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "Uaslódáil Avatar Saincheaptha"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "Uaslódáil Cúlra Saincheaptha"
+
+#. Username label
+#, fuzzy
+msgctxt "settings.username"
+msgid "Username"
+msgstr "Ainm úsáideora"
+
+#. Username placeholder
+#, fuzzy
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "Cuir isteach d'ainm"
+
+#. Delete chat confirmation
+#, fuzzy
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "An bhfuil tú ag iarraidh an comhrá seo a scriosadh?"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "Taighde nua"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "Gan aon chomhráite fós"

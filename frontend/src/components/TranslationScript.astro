@@ -1,0 +1,40 @@
+---
+import { getClientTranslations } from '../i18n/translations';
+import type { SupportedLocale } from '../i18n';
+
+interface Props {
+  locale: SupportedLocale;
+}
+
+const { locale } = Astro.props;
+
+// Load translations needed for client-side JavaScript
+const jsTranslations = getClientTranslations(locale, ['js.', 'chat.']);
+---
+
+<script define:vars={{ locale, translations: jsTranslations }}>
+  // Global i18n object for client-side translations
+  window.__i18n = {
+    locale: locale,
+    translations: translations,
+
+    /**
+     * Translate a key with optional variable interpolation
+     * @param {string} key - Translation key (e.g., "js.confirmClearStorage")
+     * @param {Object} vars - Variables to interpolate
+     * @returns {string} - Translated string
+     */
+    t(key, vars = {}) {
+      const template = this.translations[key] || key;
+
+      // Single-pass interpolation using regex callback (more efficient)
+      if (Object.keys(vars).length === 0) return template;
+      return template.replace(/\{(\w+)\}/g, (match, varKey) => {
+        return vars[varKey] !== undefined ? String(vars[varKey]) : match;
+      });
+    }
+  };
+
+  // Convenience global function
+  window.t = (key, vars) => window.__i18n.t(key, vars);
+</script>

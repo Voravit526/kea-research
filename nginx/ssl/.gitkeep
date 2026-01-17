@@ -1,0 +1,7 @@
+# Custom SSL Certificates
+#
+# Place your certificate files here:
+#   fullchain.crt  - Certificate + intermediates
+#   private.key    - Private key
+#
+# Auto-detected on container start.

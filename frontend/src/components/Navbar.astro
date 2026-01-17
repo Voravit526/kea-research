@@ -1,0 +1,55 @@
+---
+interface Props {
+  t: (key: string, vars?: Record<string, string | number>) => string;
+}
+
+const { t } = Astro.props;
+---
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <div class="container-fluid">
+    <button class="btn btn-link text-body-secondary p-0 me-2" id="sidebarToggle" title={t('navbar.toggleSidebar')}>
+      <i class="bi bi-layout-sidebar-inset fs-5"></i>
+    </button>
+    <a class="navbar-brand fw-semibold" href="/">
+      <img src="https://cdn.jsdelivr.net/gh/keabase/web@main/dist/img/logo/KEA-research-logo-light.svg" alt={t('meta.title')} height="36" id="navbarLogo">
+    </a>
+
+    {/* Provider Set Selector */}
+    <div class="dropdown ms-2" id="providerSetSelector">
+      <button class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center gap-1"
+              type="button" id="providerSetDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-collection"></i>
+        <span id="activeSetName">Cloud AI</span>
+      </button>
+      <ul class="dropdown-menu" id="providerSetMenu" aria-labelledby="providerSetDropdown">
+        <li class="dropdown-item text-muted">Loading...</li>
+      </ul>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <div class="d-flex align-items-center gap-3">
+        {/* Bookmarks Button */}
+        <button class="btn btn-link text-body-secondary p-0"
+                id="bookmarksBtn" title={t('navbar.bookmarks') || 'Bookmarks'}
+                data-bs-toggle="modal" data-bs-target="#bookmarksModal">
+          <i class="bi bi-journal-bookmark fs-5" id="bookmarksIcon"></i>
+        </button>
+        <button class="btn btn-link text-body-secondary p-0" data-bs-toggle="modal" data-bs-target="#exportModal" title={t('navbar.exportChat')}>
+          <i class="bi bi-download fs-5"></i>
+        </button>
+        <div id="navbarAvatar" class="rounded-circle bg-kea-subtle d-flex align-items-center justify-content-center fs-5" style="width: 36px; height: 36px;"></div>
+        <button class="btn btn-link text-body-secondary p-0" data-bs-toggle="modal" data-bs-target="#settingsModal">
+          <i class="bi bi-gear fs-5"></i>
+        </button>
+        <button class="btn btn-link text-body-secondary p-0 d-none" id="logoutBtn" title={t('navbar.logout') || 'Logout'}>
+          <i class="bi bi-box-arrow-right fs-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

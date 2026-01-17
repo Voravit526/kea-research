@@ -1,0 +1,34 @@
+---
+interface Props {
+  t: (key: string, vars?: Record<string, string | number>) => string;
+}
+
+const { t } = Astro.props;
+
+const startYear = 2025;
+const currentYear = new Date().getFullYear();
+const yearText = currentYear > startYear ? `${startYear}-${currentYear}` : `${startYear}`;
+---
+
+<div class="col-lg-2 bg-body-secondary border-end d-flex flex-column p-3 h-100" id="sidebarNav">
+  <div class="d-lg-none mb-3">
+    <button class="btn btn-link text-body-secondary p-0" id="sidebarClose">
+      <i class="bi bi-x-lg fs-4"></i>
+    </button>
+  </div>
+  <button class="btn btn-kea w-100 mb-3 rounded-4" id="newChatBtn">
+    <i class="bi bi-search"></i> {t('sidebar.newResearch')}
+  </button>
+
+  <div class="list-group list-group-flush flex-grow-1 overflow-auto" id="chatHistoryList">
+    {/* Chat history loaded dynamically by sidebar.ts */}
+    <div class="text-center text-muted small py-3" id="chatHistoryEmpty">
+      {t('sidebar.noConversations')}
+    </div>
+  </div>
+
+  <div class="mt-auto pt-3 border-top text-center">
+    <small class="text-body-secondary d-block" id="copyrightYear">&copy; {yearText}</small>
+    <small class="text-body-secondary d-block"><a href="https://keabase.com" target="_blank" class="link-kea">KEABase</a>. {t('footer.allRightsReserved')}</small>
+  </div>
+</div>

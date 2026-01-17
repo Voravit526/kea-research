@@ -1,0 +1,49 @@
+---
+/**
+ * Provider Section Component
+ * Displays provider sets as tabs with their providers
+ */
+---
+
+<div class="col-12">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="mb-0">
+      <i class="bi bi-cpu me-2"></i>AI Providers
+    </h5>
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createSetModal">
+        <i class="bi bi-folder-plus me-1"></i>Create Custom Set
+      </button>
+      <button class="btn btn-primary btn-sm d-none" id="addProviderBtn" data-bs-toggle="modal" data-bs-target="#addProviderModal">
+        <i class="bi bi-plus-lg me-1"></i>Add Provider
+      </button>
+    </div>
+  </div>
+
+  {/* Loading State */}
+  <div id="provider-sets-loading" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-muted mt-2">Loading provider sets...</p>
+  </div>
+
+  {/* Tab Navigation - populated by JavaScript */}
+  <ul class="nav nav-tabs mb-4 d-none" id="providerSetTabs" role="tablist">
+    {/* Tab items will be dynamically generated */}
+  </ul>
+
+  {/* Tab Content - populated by JavaScript */}
+  <div class="tab-content d-none" id="providerSetContent">
+    {/* Tab panes will be dynamically generated */}
+  </div>
+
+  {/* Empty State - no sets */}
+  <div id="provider-sets-empty" class="text-center py-5 d-none">
+    <i class="bi bi-inbox text-muted" style="font-size: 3rem;"></i>
+    <p class="text-muted mt-2">No provider sets configured</p>
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProviderModal">
+      <i class="bi bi-plus-lg me-1"></i>Add Your First Provider
+    </button>
+  </div>
+</div>

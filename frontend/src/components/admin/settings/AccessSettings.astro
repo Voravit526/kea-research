@@ -1,0 +1,42 @@
+---
+/**
+ * Access Settings Component
+ * Toggle controls for guest access and TTS
+ */
+---
+
+<div class="col-12 mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="mb-0">
+      <i class="bi bi-gear me-2"></i>Access Settings
+    </h5>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-check form-switch mb-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="guestAccessToggle"
+          data-action="settings:toggle-guest"
+        >
+        <label class="form-check-label" for="guestAccessToggle">
+          Allow guest access (no login required for chat)
+        </label>
+        <div class="form-text">When enabled, anyone can use the chat without logging in.</div>
+      </div>
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="ttsEnabledToggle"
+          data-action="settings:toggle-tts"
+        >
+        <label class="form-check-label" for="ttsEnabledToggle">
+          <i class="bi bi-volume-up me-1"></i>Enable Text-to-Speech (TTS)
+        </label>
+        <div class="form-text">When enabled, users can listen to AI responses using the speaker button.</div>
+      </div>
+    </div>
+  </div>
+</div>

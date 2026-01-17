@@ -1,0 +1,36 @@
+---
+/**
+ * Admin Navbar Component
+ * Top navigation with theme toggle, links, and logout
+ */
+---
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin">
+      <img src="https://cdn.jsdelivr.net/gh/keabase/web@main/dist/img/logo/KEA-research-logo-light.svg" alt="KEA Research" height="28" id="navbarLogo">
+    </a>
+    <div class="d-flex align-items-center gap-2">
+      {/* Theme Toggle */}
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Theme">
+          <i class="bi bi-circle-half" id="themeIcon"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+          <li><button class="dropdown-item" data-theme="light"><i class="bi bi-sun me-2"></i>Light</button></li>
+          <li><button class="dropdown-item" data-theme="dark"><i class="bi bi-moon me-2"></i>Dark</button></li>
+          <li><button class="dropdown-item active" data-theme="auto"><i class="bi bi-circle-half me-2"></i>Auto</button></li>
+        </ul>
+      </div>
+      <a href="/" class="btn btn-outline-primary btn-sm" title="Go to Research" target="_blank">
+        <i class="bi bi-chat-dots me-1"></i>Research
+      </a>
+      <button class="btn btn-outline-secondary btn-sm" id="reload-btn" title="Reload Providers">
+        <i class="bi bi-arrow-clockwise"></i>
+      </button>
+      <button class="btn btn-outline-danger btn-sm" id="logout-btn">
+        <i class="bi bi-box-arrow-right me-1"></i>Logout
+      </button>
+    </div>
+  </div>
+</nav>

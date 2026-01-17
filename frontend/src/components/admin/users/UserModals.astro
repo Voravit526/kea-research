@@ -1,0 +1,86 @@
+---
+/**
+ * User Modals Component
+ * Add and Edit user modals
+ */
+---
+
+{/* Add User Modal */}
+<div class="modal fade" id="addUserModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="add-user-form">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="user-username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="user-username" required minlength="3" maxlength="50" placeholder="e.g., john">
+          </div>
+          <div class="mb-3">
+            <label for="user-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="user-password" required minlength="8" placeholder="Min 8 characters">
+            <div class="form-text">
+              Min 8 chars. Use: a-z, A-Z, 0-9, <code>!@#$%^&amp;*()_+-=[]{}|;:',.<>?/~\`</code>
+            </div>
+            <div class="invalid-feedback" id="user-password-error"></div>
+          </div>
+          <div class="mb-3">
+            <label for="user-display-name" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="user-display-name" required minlength="1" maxlength="100" placeholder="e.g., John Doe">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="add-user-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Add User</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{/* Edit User Modal */}
+<div class="modal fade" id="editUserModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="edit-user-form">
+        <input type="hidden" id="edit-user-id">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="edit-user-display-name" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="edit-user-display-name" maxlength="100">
+          </div>
+          <div class="mb-3">
+            <label for="edit-user-password" class="form-label">New Password</label>
+            <input type="password" class="form-control" id="edit-user-password" minlength="8" placeholder="Leave empty to keep current">
+            <div class="form-text">
+              Leave empty to keep current password.<br>
+              Min 8 chars. Use: a-z, A-Z, 0-9, <code>!@#$%^&amp;*()_+-=[]{}|;:',.<>?/~\`</code>
+            </div>
+            <div class="invalid-feedback" id="edit-user-password-error"></div>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="edit-user-active" checked>
+            <label class="form-check-label" for="edit-user-active">Account active</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="edit-user-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Save Changes</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

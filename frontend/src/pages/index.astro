@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Sidebar from '../components/Sidebar.astro';
+import ChatArea from '../components/ChatArea.astro';
+import SettingsModal from '../components/SettingsModal.astro';
+import ExportModal from '../components/ExportModal.astro';
+import BookmarksModal from '../components/BookmarksModal.astro';
+
+import { detectLocale } from '../i18n';
+import { createTranslator } from '../i18n/translations';
+
+const locale = detectLocale(Astro.request);
+const t = createTranslator(locale);
+---
+
+<BaseLayout>
+  <Navbar t={t} />
+
+  <div class="container-fluid p-0 flex-grow-1 overflow-hidden">
+    <div class="row h-100 g-0 m-0">
+      <Sidebar t={t} />
+      <ChatArea t={t} />
+    </div>
+  </div>
+
+  <ExportModal t={t} />
+  <SettingsModal t={t} locale={locale} />
+  <BookmarksModal t={t} />
+
+  {/* Client-side scripts */}
+  <script src="../scripts/db.ts"></script>
+  <script src="../scripts/storage.ts"></script>
+  <script src="../scripts/theme.ts"></script>
+  <script src="../scripts/image.ts"></script>
+  <script src="../scripts/export.ts"></script>
+  <script src="../scripts/sidebar.ts"></script>
+  <script src="../scripts/attachments.ts"></script>
+  <script src="../scripts/message-actions.ts"></script>
+  <script src="../scripts/tts.ts"></script>
+  <script src="../scripts/voice-input.ts"></script>
+  <script src="../scripts/bookmarks.ts"></script>
+  <script src="../scripts/chat.ts"></script>
+  <script src="../scripts/settings-modal.ts"></script>
+  <script src="../scripts/export-modal.ts"></script>
+  <script src="../scripts/init.ts"></script>
+</BaseLayout>

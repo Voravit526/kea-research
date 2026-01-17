@@ -1,0 +1,64 @@
+services:
+  nginx:
+    container_name: kea-research-nginx
+    build: ./nginx
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - letsencrypt:/etc/letsencrypt
+    environment:
+      - DOMAIN=${DOMAIN:-localhost}
+      - ACME_EMAIL=${ACME_EMAIL:-}
+      - USE_OWN_CERT=${USE_OWN_CERT:-false}
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+    networks:
+      - kea-research
+
+  frontend:
+    container_name: kea-research-frontend
+    build: ./frontend
+    expose:
+      - "4321"
+    restart: unless-stopped
+    networks:
+      - kea-research
+
+  backend:
+    container_name: kea-research-backend
+    build: ./backend
+    expose:
+      - "8000"
+    volumes:
+      - kea-research-data:/app/data
+    environment:
+      # Admin password (REQUIRED - app will not start without this)
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      # API Keys for initial seeding (after first run, managed via admin panel)
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - XAI_API_KEY=${XAI_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      # Default models for initial seeding
+      - CLAUDE_MODEL=${CLAUDE_MODEL:-claude-sonnet-4-5-20250929}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-5.2}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-pro}
+      - MISTRAL_MODEL=${MISTRAL_MODEL:-mistral-large-latest}
+      - GROK_MODEL=${GROK_MODEL:-grok-4-1-fast-non-reasoning}
+    restart: unless-stopped
+    networks:
+      - kea-research
+
+volumes:
+  letsencrypt:
+  kea-research-data:
+
+networks:
+  kea-research:
+    driver: bridge

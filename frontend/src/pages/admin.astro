@@ -1,0 +1,68 @@
+---
+/**
+ * KEA Admin Panel
+ * Modular admin page composed from components
+ */
+
+// Layout
+import AdminLayout from '../layouts/AdminLayout.astro';
+
+// Components
+import AdminNavbar from '../components/admin/AdminNavbar.astro';
+import AdminSidebar from '../components/admin/AdminSidebar.astro';
+import AdminLoginForm from '../components/admin/AdminLoginForm.astro';
+import ProviderSection from '../components/admin/providers/ProviderSection.astro';
+import ProviderModals from '../components/admin/providers/ProviderModals.astro';
+import UserSection from '../components/admin/users/UserSection.astro';
+import UserModals from '../components/admin/users/UserModals.astro';
+import AccessSettings from '../components/admin/settings/AccessSettings.astro';
+import Toast from '../components/admin/shared/Toast.astro';
+import ConfirmDialog from '../components/admin/shared/ConfirmDialog.astro';
+---
+
+<AdminLayout title="KEA Research Admin">
+  {/* Login View */}
+  <AdminLoginForm slot="login" />
+
+  {/* Navbar */}
+  <AdminNavbar slot="navbar" />
+
+  {/* Main Content with Sidebar */}
+  <div class="d-flex">
+    {/* Sidebar Navigation */}
+    <AdminSidebar />
+
+    {/* Content Area */}
+    <main class="flex-grow-1 py-4 px-4">
+      {/* Providers Section */}
+      <section id="providers-section">
+        <ProviderSection />
+      </section>
+
+      {/* Users Section */}
+      <section id="users-section">
+        <UserSection />
+      </section>
+
+      {/* Settings Section */}
+      <section id="settings-section">
+        <AccessSettings />
+      </section>
+    </main>
+  </div>
+
+  {/* Modals */}
+  <Fragment slot="modals">
+    <ProviderModals />
+    <UserModals />
+    <ConfirmDialog />
+  </Fragment>
+
+  {/* Toast */}
+  <Toast slot="toast" />
+</AdminLayout>
+
+{/* Admin Script */}
+<script>
+  import '../scripts/admin/index';
+</script>

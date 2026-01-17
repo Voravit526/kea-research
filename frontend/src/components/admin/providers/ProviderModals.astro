@@ -1,0 +1,250 @@
+---
+/**
+ * Provider Modals Component
+ * Add and Edit provider modals
+ */
+---
+
+{/* Add Provider Modal */}
+<div class="modal fade" id="addProviderModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Provider</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="add-provider-form">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="provider-type" class="form-label">Provider Type</label>
+            <select class="form-select" id="provider-type" required>
+              <option value="">Select provider type...</option>
+              <option value="openai">OpenAI</option>
+              <option value="anthropic">Anthropic (Claude)</option>
+              <option value="google">Google (Gemini)</option>
+              <option value="mistral">Mistral</option>
+              <option value="xai">xAI (Grok)</option>
+              <option value="openrouter">OpenRouter</option>
+              <option value="openai-compatible">OpenAI-Compatible (Ollama, LM Studio, etc.)</option>
+            </select>
+          </div>
+          {/* Hidden - auto-generated from provider_type + random suffix */}
+          <input type="hidden" id="provider-name">
+          <div class="mb-3">
+            <label for="provider-display-name" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="provider-display-name" required placeholder="e.g., GPT-4o, Local Ollama">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Icon (SVG)</label>
+            <div class="d-flex gap-2 align-items-start">
+              <span class="input-group-text icon-preview" id="provider-icon-preview">
+                <i class="bi bi-robot"></i>
+              </span>
+              <div class="flex-grow-1">
+                <textarea class="form-control font-monospace" id="provider-icon" rows="3" placeholder="<svg ...></svg>"></textarea>
+                <div class="form-text">
+                  Paste SVG code. <a href="https://icons.getbootstrap.com" target="_blank" rel="noopener">Copy SVG from Bootstrap Icons</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3" id="api-key-group">
+            <label for="provider-api-key" class="form-label">API Key</label>
+            <input type="password" class="form-control" id="provider-api-key" placeholder="sk-...">
+            <div class="form-text">Required for cloud providers, optional for local</div>
+          </div>
+          <div class="mb-3 d-none" id="base-url-group">
+            <label for="provider-base-url" class="form-label">Base URL</label>
+            <input type="url" class="form-control" id="provider-base-url" placeholder="http://localhost:11434/v1">
+            <div class="form-text">Required for OpenAI-compatible providers</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="add-provider-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Add Provider</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{/* Edit Provider Modal */}
+<div class="modal fade" id="editProviderModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Provider</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="edit-provider-form">
+        <input type="hidden" id="edit-provider-id">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="edit-provider-display-name" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="edit-provider-display-name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Icon (SVG)</label>
+            <div class="d-flex gap-2 align-items-start">
+              <span class="input-group-text icon-preview" id="edit-provider-icon-preview">
+                <i class="bi bi-robot"></i>
+              </span>
+              <div class="flex-grow-1">
+                <textarea class="form-control font-monospace" id="edit-provider-icon" rows="3" placeholder="<svg ...></svg>"></textarea>
+                <div class="form-text">
+                  Paste SVG code. <a href="https://icons.getbootstrap.com" target="_blank" rel="noopener">Copy SVG from Bootstrap Icons</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="edit-provider-api-key" class="form-label">API Key</label>
+            <input type="password" class="form-control" id="edit-provider-api-key" placeholder="Leave empty to keep current">
+            <div class="form-text">Leave empty to keep current API key</div>
+          </div>
+          <div class="mb-3 d-none" id="edit-base-url-group">
+            <label for="edit-provider-base-url" class="form-label">Base URL</label>
+            <input type="url" class="form-control" id="edit-provider-base-url">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="edit-provider-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Save Changes</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{/* Discover Models Modal */}
+<div class="modal fade" id="discoverModelsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Discover Models</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="discover-provider-id">
+        <div id="discover-loading" class="text-center py-4">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p class="text-muted mt-2">Fetching available models...</p>
+        </div>
+        <div id="discover-error" class="alert alert-danger d-none"></div>
+        <div id="discover-results" class="d-none">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="discover-filter" placeholder="Filter models by name...">
+          </div>
+          <p class="text-muted small mb-3">Select models to add:</p>
+          <div id="discover-models-list" class="list-group" style="max-height: 400px; overflow-y: auto;"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary d-none" id="add-selected-models-btn">
+          <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+          <span class="loading-content">Add Selected</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Create Custom Set Modal */}
+<div class="modal fade" id="createSetModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Custom Provider Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="create-set-form">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="set-display-name" class="form-label">Set Name</label>
+            <input type="text" class="form-control" id="set-display-name" required placeholder="e.g., My Custom Experts">
+          </div>
+          <div class="mb-3">
+            <label for="set-description" class="form-label">Description (optional)</label>
+            <textarea class="form-control" id="set-description" rows="2" placeholder="Describe the purpose of this set..."></textarea>
+          </div>
+          <p class="text-muted small mb-0">
+            <i class="bi bi-info-circle me-1"></i>
+            After creating the set, use the "Add Provider" button to add providers to it.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="create-set-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Create Set</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{/* Edit Custom Set Modal */}
+<div class="modal fade" id="editSetModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Provider Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="edit-set-form">
+        <input type="hidden" id="edit-set-id">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="edit-set-display-name" class="form-label">Set Name</label>
+            <input type="text" class="form-control" id="edit-set-display-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="edit-set-description" class="form-label">Description (optional)</label>
+            <textarea class="form-control" id="edit-set-description" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="edit-set-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Save Changes</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{/* Add Member to Set Modal */}
+<div class="modal fade" id="addMemberModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Provider to Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="add-member-set-id">
+        <p id="add-member-set-name" class="text-muted mb-3">Adding to: <strong></strong></p>
+        <div id="add-member-checkboxes" class="border rounded p-3" style="max-height: 350px; overflow-y: auto;">
+          <p class="text-muted mb-0">Loading providers...</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="add-member-btn">
+          <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+          <span class="loading-content">Add Selected</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

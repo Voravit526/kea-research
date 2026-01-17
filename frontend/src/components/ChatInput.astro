@@ -1,0 +1,224 @@
+---
+interface Props {
+  t: (key: string, vars?: Record<string, string | number>) => string;
+}
+
+const { t } = Astro.props;
+---
+
+<div class="d-flex flex-column align-items-center w-100 mt-5" id="chatInputContainer">
+  <div class="chat-input-row" id="chatInputRow">
+    <div class="mb-3 chat-input-wrapper" id="chatInputWrapper">
+      {/* Gradient border layer - separate from interactive elements */}
+      <div class="gradient-border-layer" aria-hidden="true"></div>
+      <textarea class="form-control rounded-4 shadow-sm pe-5" rows="3" placeholder={t('chat.placeholder')} id="chatInput"></textarea>
+      {/* Draft History Button - only shown when drafts exist, only for new chat */}
+      <div class="dropdown position-absolute bottom-0 end-0 mb-2 chat-btn-overlay d-none" id="draftHistoryWrapper" style="right: 5.5rem !important;">
+        <button class="btn btn-link text-body-secondary p-1" type="button"
+                id="draftHistoryBtn" data-bs-toggle="dropdown" aria-expanded="false"
+                title={t('chat.savedDrafts') || 'Saved drafts'}>
+          <i class="bi bi-chat-dots fs-5"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end p-2" id="draftHistoryDropdown" style="min-width: 320px; max-height: 350px; overflow-y: auto;">
+          <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+            <small class="text-muted fw-semibold">{t('chat.savedDrafts') || 'Saved Drafts'}</small>
+            <button class="btn btn-sm btn-link text-danger p-0 text-decoration-none" id="clearAllDrafts" type="button">
+              {t('common.clearAll') || 'Clear all'}
+            </button>
+          </div>
+          <div id="draftHistoryList">
+            {/* Populated dynamically */}
+          </div>
+        </div>
+      </div>
+      {/* Microphone Button */}
+      <button class="btn btn-link text-body-secondary p-1 position-absolute bottom-0 end-0 me-5 mb-2 chat-btn-overlay"
+              type="button" id="micBtn" title={t('chat.voiceInput') || 'Voice input'}>
+        <i class="bi bi-mic fs-5" id="micIcon"></i>
+      </button>
+      {/* Attachment Dropdown */}
+      <div class="dropdown position-absolute bottom-0 end-0 m-2 chat-btn-overlay">
+        <button class="btn btn-link text-body-secondary p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" title={t('chat.addAttachment')}>
+          <i class="bi bi-plus-circle fs-5"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="attachImage" disabled>
+              <i class="bi bi-image text-success opacity-50"></i> {t('attachments.attachImage')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="attachFile" disabled>
+              <i class="bi bi-files text-kea opacity-50"></i> {t('attachments.attachFile')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="addYoutube" disabled>
+              <i class="bi bi-youtube text-danger opacity-50"></i> {t('attachments.youtubeLink')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="addWikipedia" disabled>
+              <i class="bi bi-wikipedia text-body-secondary opacity-50"></i> {t('attachments.wikipediaLink')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="toggleDatabase" disabled>
+              <i class="bi bi-database text-info opacity-50"></i> {t('attachments.vectorDatabase')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="toggleSearch" disabled>
+              <i class="bi bi-search text-warning opacity-50"></i> {t('attachments.useSearch')}
+              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      {/* Hidden file inputs */}
+      <input type="file" id="imageInput" class="d-none" accept="image/*">
+      <input type="file" id="fileInput" class="d-none">
+    </div>
+    <button class="btn btn-kea rounded-4 chat-send-btn" id="sendBtn">
+      <i class="bi bi-search me-1"></i> <span class="send-btn-text">{t('chat.research') || 'Research'}</span>
+    </button>
+    <button class="btn btn-danger rounded-4 chat-send-btn" id="stopBtn" style="display: none;">
+      <i class="bi bi-stop-fill"></i> <span class="send-btn-text">Stop</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  /* Animated gradient border using @property for angle animation */
+  @property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes spin-gradient {
+    to { --gradient-angle: 360deg; }
+  }
+
+  /* Main wrapper */
+  .chat-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 730px;
+  }
+
+  /* Gradient border layer - positioned behind textarea */
+  .gradient-border-layer {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      #9fa251,
+      #ef7a2a,
+      #da5e2a,
+      #a03c24,
+      #858642,
+      #76573a,
+      #8a8b47,
+      #999a4a,
+      #b85832,
+      #9fa251
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    animation: spin-gradient 6s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Gradient border container - only for new chat */
+  :global(#chatInputContainer:not(.chat-active)) .chat-input-wrapper {
+    border-radius: var(--bs-border-radius-xl);
+    padding: 2px;
+  }
+
+  /* Show gradient on hover/focus */
+  :global(#chatInputContainer:not(.chat-active)) .chat-input-wrapper:hover .gradient-border-layer,
+  :global(#chatInputContainer:not(.chat-active)) .chat-input-wrapper:focus-within .gradient-border-layer {
+    opacity: 1;
+  }
+
+  :global(#chatInputContainer:not(.chat-active)) .chat-input-wrapper:focus-within {
+    box-shadow: 0 0 15px 2px rgba(159, 162, 81, 0.4);
+  }
+
+  /* Textarea fills the wrapper with its own background */
+  :global(#chatInputContainer:not(.chat-active)) #chatInput {
+    position: relative;
+    z-index: 1;
+    border: none;
+    background-color: var(--bs-tertiary-bg);
+  }
+
+  :global(#chatInputContainer:not(.chat-active)) #chatInput:focus {
+    box-shadow: none;
+    background-color: var(--bs-body-bg);
+  }
+
+  /* Buttons z-index */
+  .chat-btn-overlay {
+    z-index: 10;
+  }
+
+  /* Default layout (welcome/new chat) */
+  .chat-input-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .chat-send-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .chat-send-btn .send-btn-text {
+    display: inline;
+  }
+
+  /* Chat active layout */
+  :global(.chat-active) .chat-input-row {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  :global(.chat-active) .chat-input-wrapper {
+    max-width: none;
+    flex: 1;
+    margin-bottom: 0 !important;
+    padding: 0;
+  }
+
+  :global(.chat-active) .chat-send-btn {
+    margin-top: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+
+  :global(.chat-active) #chatInput {
+    min-height: auto;
+    resize: none;
+  }
+</style>

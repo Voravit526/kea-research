@@ -1,0 +1,32 @@
+---
+/**
+ * Admin Login Form Component
+ * Login view with password input
+ */
+---
+
+<div id="login-view" class="min-vh-100 d-flex align-items-center justify-content-center bg-body-tertiary">
+  <div class="text-center" style="max-width: 400px; width: 100%;">
+    <img src="https://cdn.jsdelivr.net/gh/keabase/web@main/dist/img/logo/KEA-research-logo-light.svg" alt="KEA Research" height="48" id="loginLogo" class="mb-4">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <div class="text-center mb-4">
+          <i class="bi bi-shield-lock text-primary" style="font-size: 3rem;"></i>
+          <h4 class="mt-3">KEA Research Admin</h4>
+          <p class="text-muted small">Enter password to access admin panel</p>
+        </div>
+        <form id="login-form">
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required autocomplete="current-password">
+          </div>
+          <div id="login-error" class="alert alert-danger d-none" role="alert"></div>
+          <button type="submit" class="btn btn-primary w-100" id="login-btn">
+            <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status"></span>
+            <span class="loading-content">Login</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

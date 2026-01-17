@@ -1,0 +1,704 @@
+# KEA Frontend Translations
+# Language: fa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KEA Frontend\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Attachment menu - attach file
+msgctxt "attachments.attachFile"
+msgid "Attach File"
+msgstr "پیوست فایل"
+
+#. Attachment menu - attach image
+msgctxt "attachments.attachImage"
+msgid "Attach Image"
+msgstr "پیوست تصویر"
+
+#. Attachment menu - use search
+msgctxt "attachments.useSearch"
+msgid "Use Search"
+msgstr "از جستجو استفاده کنید"
+
+#. Attachment menu - vector database
+#, fuzzy
+msgctxt "attachments.vectorDatabase"
+msgid "Vector Database"
+msgstr "پایگاه داده برداری"
+
+#. Attachment menu - Wikipedia link
+msgctxt "attachments.wikipediaLink"
+msgid "Wikipedia Link"
+msgstr "لینک ویکیپدیا"
+
+#. Attachment menu - YouTube link
+msgctxt "attachments.youtubeLink"
+msgid "YouTube Link"
+msgstr "لینک یوتیوب"
+
+#. Bookmarks empty state message
+#, fuzzy
+msgctxt "bookmarks.empty"
+msgid "No bookmarked chats yet"
+msgstr "هنوز هیچ چت بوکمارک شده‌ای وجود ندارد"
+
+#. Bookmarks empty state hint
+#, fuzzy
+msgctxt "bookmarks.emptyHint"
+msgid "Click the bookmark icon on a chat to save it here"
+msgstr "برای ذخیره آن در اینجا، روی نماد نشانک در یک چت کلیک کنید"
+
+#. Bookmarks modal title
+#, fuzzy
+msgctxt "bookmarks.title"
+msgid "Bookmarked Chats"
+msgstr "چت‌های بوک‌مارک‌شده"
+
+#. Remove bookmark button title
+msgctxt "bookmarks.unbookmark"
+msgid "Remove bookmark"
+msgstr "حذف نشانک"
+
+#. Add attachment button title
+msgctxt "chat.addAttachment"
+msgid "Add attachment"
+msgstr "افزودن پیوست "
+
+#. Copy to clipboard button title
+msgctxt "chat.copyToClipboard"
+msgid "Copy to clipboard"
+msgstr "کپی به کلیپ بورد"
+
+#. Download as markdown button title
+#, fuzzy
+msgctxt "chat.downloadMarkdown"
+msgid "Download as Markdown"
+msgstr "دانلود به صورت Markdown"
+
+#. Expand chat button title
+#, fuzzy
+msgctxt "chat.expandChat"
+msgid "Expand chat"
+msgstr "گسترش چت"
+
+#. Listen/TTS button title
+msgctxt "chat.listen"
+msgid "Listen"
+msgstr "گوش کردن"
+
+#. Chat input placeholder
+msgctxt "chat.placeholder"
+msgid "Type your message..."
+msgstr "پیام خود را تایپ کنید..."
+
+#. Research button
+msgctxt "chat.research"
+msgid "Research"
+msgstr "تحقیق"
+
+#. Saved drafts button title
+#, fuzzy
+msgctxt "chat.savedDrafts"
+msgid "Saved Drafts"
+msgstr "پیش‌نویس‌های ذخیره‌شده"
+
+#. Send button
+msgctxt "chat.send"
+msgid "Send"
+msgstr "ارسال"
+
+#. Stop listening button title
+msgctxt "chat.stopListening"
+msgid "Stop"
+msgstr "توقف"
+
+#. Voice input button title
+#, fuzzy
+msgctxt "chat.voiceInput"
+msgid "Voice input"
+msgstr "ورودی صوتی"
+
+#. Welcome greeting
+#, fuzzy
+msgctxt "chat.welcomeGreeting"
+msgid "Welcome to KEA research, {userName}"
+msgstr "به تحقیقات KEA خوش آمدید، {userName}"
+
+#. Welcome subtitle
+#, fuzzy
+msgctxt "chat.welcomeSubtitle"
+msgid "Ask anything and get AI-powered research with web search, fact-checking, and more"
+msgstr "هر چیزی بپرسید و با جستجوی وب، بررسی واقعیت و موارد دیگر، تحقیقات مبتنی بر هوش مصنوعی دریافت کنید"
+
+#. Cancel button
+msgctxt "common.cancel"
+msgid "Cancel"
+msgstr "لغو"
+
+#. Clear all button
+msgctxt "common.clearAll"
+msgid "Clear all"
+msgstr "پاک کردن همه"
+
+#. Close button
+msgctxt "common.close"
+msgid "Close"
+msgstr "بستن"
+
+#. Save changes button
+msgctxt "common.saveChanges"
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#. Coming soon badge
+msgctxt "common.soon"
+msgid "Soon"
+msgstr "به زودی"
+
+#. 404 error - back to home button
+msgctxt "error.backToHome"
+msgid "Back to Home"
+msgstr "بازگشت به صفحه اصلی"
+
+#. 404 error - page not found title
+msgctxt "error.pageNotFound"
+msgid "Page Not Found"
+msgstr "صفحه پیدا نشد"
+
+#. 404 error - page not found description
+#, fuzzy
+msgctxt "error.pageNotFoundDesc"
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "صفحه مورد نظر شما وجود ندارد یا منتقل شده است."
+
+#. Description
+#, fuzzy
+msgctxt "export.description"
+msgid "Choose export format for your chat history."
+msgstr "قالب خروجی برای تاریخچه چت خود را انتخاب کنید."
+
+#. Export button
+msgctxt "export.exportButton"
+msgid "Export"
+msgstr "برون ریزی"
+
+#. HTML format
+msgctxt "export.formatHTML"
+msgid "HTML (.html)"
+msgstr "HTML (.html) "
+
+#. HTML description
+#, fuzzy
+msgctxt "export.formatHTMLDesc"
+msgid "Styled output, viewable in browsers"
+msgstr "خروجی استایل‌دار، قابل مشاهده در مرورگرها"
+
+#. JSON format
+#, fuzzy
+msgctxt "export.formatJSON"
+msgid "JSON (.json)"
+msgstr "جی‌سون (.json)"
+
+#. JSON description
+#, fuzzy
+msgctxt "export.formatJSONDesc"
+msgid "For backup/import, includes metadata"
+msgstr "برای پشتیبان‌گیری/وارد کردن، شامل فراداده می‌شود"
+
+#. Format label
+msgctxt "export.formatLabel"
+msgid "Export Format"
+msgstr "فرمت برون ریزی"
+
+#. Markdown format
+#, fuzzy
+msgctxt "export.formatMarkdown"
+msgid "Markdown (.md)"
+msgstr "Markdown (.md)"
+
+#. Markdown description
+#, fuzzy
+msgctxt "export.formatMarkdownDesc"
+msgid "Recommended - Human readable, preserves formatting"
+msgstr "توصیه می‌شود - قابل خواندن توسط انسان، حفظ قالب‌بندی"
+
+#. Plain text format
+#, fuzzy
+msgctxt "export.formatText"
+msgid "Plain Text (.txt)"
+msgstr "متن ساده (.txt)"
+
+#. Plain text description
+#, fuzzy
+msgctxt "export.formatTextDesc"
+msgid "Simple, universal compatibility"
+msgstr "سازگاری ساده و جهانی"
+
+#. Include metadata option
+#, fuzzy
+msgctxt "export.includeMetadata"
+msgid "Include metadata (chat title, export date)"
+msgstr "شامل فراداده (عنوان چت، تاریخ خروجی)"
+
+#. Include timestamps option
+#, fuzzy
+msgctxt "export.includeTimestamps"
+msgid "Include timestamps"
+msgstr "شامل مهرهای زمانی"
+
+#. Options label
+msgctxt "export.optionsLabel"
+msgid "Options"
+msgstr "تنظیمات"
+
+#. Preparing export status
+#, fuzzy
+msgctxt "export.preparing"
+msgid "Preparing export..."
+msgstr "آماده سازی صادرات ..."
+
+#. Modal title
+#, fuzzy
+msgctxt "export.title"
+msgid "Export Chat"
+msgstr "خروجی گرفتن از چت"
+
+#. Copyright footer
+msgctxt "footer.allRightsReserved"
+msgid "All rights reserved"
+msgstr "کلیه حقوق محفوظ است"
+
+#. Chat label
+msgctxt "js.chat"
+msgid "Chat"
+msgstr "چت"
+
+#. Chat export title
+#, fuzzy
+msgctxt "js.chatExport"
+msgid "Chat Export"
+msgstr "خروجی چت"
+
+#. Chat not found
+#, fuzzy
+msgctxt "js.chatNotFound"
+msgid "Chat not found"
+msgstr "چت پیدا نشد"
+
+#. Compressing status
+#, fuzzy
+msgctxt "js.compressing"
+msgid "Compressing..."
+msgstr "فشرده سازی..."
+
+#. Storage clear confirmation dialog
+#, fuzzy
+msgctxt "js.confirmClearStorage"
+msgid "Are you sure you want to clear all storage? This will delete all your chats, messages, and custom assets. This action cannot be undone."
+msgstr "آیا مطمئن هستید که می‌خواهید تمام فضای ذخیره‌سازی را پاک کنید؟ این کار تمام چت‌ها، پیام‌ها و فایل‌های سفارشی شما را حذف می‌کند. این اقدام قابل بازگشت نیست."
+
+#. Enter Wikipedia URL prompt
+#, fuzzy
+msgctxt "js.enterWikipediaUrl"
+msgid "Enter Wikipedia article URL:"
+msgstr "آدرس مقاله ویکی پدیا را وارد کنید:"
+
+#. Enter YouTube URL prompt
+#, fuzzy
+msgctxt "js.enterYoutubeUrl"
+msgid "Enter YouTube video URL:"
+msgstr "آدرس ویدیوی یوتیوب را وارد کنید:"
+
+#. Error status
+msgctxt "js.error"
+msgid "Error"
+msgstr "خطا"
+
+#. Export date label
+#, fuzzy
+msgctxt "js.exportDate"
+msgid "Export Date"
+msgstr "تاریخ صادرات"
+
+#. Export failed message
+#, fuzzy
+msgctxt "js.exportFailed"
+msgid "Export failed: {error}"
+msgstr "خروجی ناموفق بود: {error}"
+
+#. Export success message
+#, fuzzy
+msgctxt "js.exportSuccess"
+msgid "Exported successfully as {filename}"
+msgstr "با موفقیت به عنوان {filename} صادر شد"
+
+#. Invalid Wikipedia URL
+#, fuzzy
+msgctxt "js.invalidWikipediaUrl"
+msgid "Please enter a valid Wikipedia URL"
+msgstr "لطفاً یک آدرس اینترنتی معتبر از ویکی‌پدیا وارد کنید"
+
+#. Invalid YouTube URL
+#, fuzzy
+msgctxt "js.invalidYoutubeUrl"
+msgid "Please enter a valid YouTube URL"
+msgstr "لطفا یک آدرس اینترنتی معتبر یوتیوب وارد کنید"
+
+#. Message label
+msgctxt "js.message"
+msgid "Message"
+msgstr "پیام"
+
+#. Messages count label
+msgctxt "js.messages"
+msgid "Messages"
+msgstr "پیام ها"
+
+#. No chat to export
+#, fuzzy
+msgctxt "js.noChatToExport"
+msgid "No chat to export. Start a conversation first."
+msgstr "چتی برای خروجی گرفتن وجود ندارد. ابتدا مکالمه را شروع کنید."
+
+#. Assistant role label
+msgctxt "js.roleAssistant"
+msgid "Assistant"
+msgstr "دستیار"
+
+#. User role label
+msgctxt "js.roleUser"
+msgid "User"
+msgstr "کاربر"
+
+#. Storage cleared success
+#, fuzzy
+msgctxt "js.storageClearedSuccess"
+msgid "Storage cleared successfully!"
+msgstr "فضای ذخیره‌سازی با موفقیت پاک شد!"
+
+#. Storage clear failed
+#, fuzzy
+msgctxt "js.storageClearFailed"
+msgid "Failed to clear storage. Please try again."
+msgstr "پاک کردن فضای ذخیره‌سازی ناموفق بود. لطفاً دوباره امتحان کنید."
+
+#. Time label
+msgctxt "js.time"
+msgid "Time"
+msgstr "زمان"
+
+#. Untitled chat
+msgctxt "js.untitled"
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#. Uploaded status
+msgctxt "js.uploaded"
+msgid "Uploaded"
+msgstr "بارگذاری شد"
+
+#. Page title
+#, fuzzy
+msgctxt "meta.title"
+msgid "KEA research"
+msgstr "تحقیقات KEA"
+
+#. Bookmarks navbar button title
+msgctxt "navbar.bookmarks"
+msgid "Bookmarks"
+msgstr "نشانک ها"
+
+#. Export button title
+#, fuzzy
+msgctxt "navbar.exportChat"
+msgid "Export Chat"
+msgstr "خروجی گرفتن از چت"
+
+#. Logout button title
+msgctxt "navbar.logout"
+msgid "Logout"
+msgstr "خروج"
+
+#. Sidebar toggle button title
+msgctxt "navbar.toggleSidebar"
+msgid "Toggle Sidebar"
+msgstr "نمایش/مخفی کردن نوار کناری"
+
+#. Avatar label
+msgctxt "settings.avatar"
+msgid "Avatar"
+msgstr "آواتار"
+
+#. No background option
+msgctxt "settings.backgroundNone"
+msgid "None"
+msgstr "هیچکدام"
+
+#. Calculating storage
+msgctxt "settings.calculating"
+msgid "Calculating..."
+msgstr "در حال محاسبه..."
+
+#. Chat background label
+#, fuzzy
+msgctxt "settings.chatBackground"
+msgid "Chat Background"
+msgstr "پس‌زمینه چت"
+
+#. Clear all storage button
+#, fuzzy
+msgctxt "settings.clearStorage"
+msgid "Clear All Storage"
+msgstr "پاک کردن همه فضای ذخیره‌سازی"
+
+#. Compress images toggle
+#, fuzzy
+msgctxt "settings.compressImages"
+msgid "Compress attached images"
+msgstr "فشرده‌سازی تصاویر پیوست‌شده"
+
+#. Compress images description
+#, fuzzy
+msgctxt "settings.compressImagesDesc"
+msgid "Reduces file size of images attached in chat (JPEG, PNG, WebP supported)"
+msgstr "کاهش حجم تصاویر پیوست شده در چت (پشتیبانی از JPEG، PNG، WebP)"
+
+#. Current usage label
+#, fuzzy
+msgctxt "settings.currentUsage"
+msgid "Current Usage:"
+msgstr "میزان مصرف فعلی:"
+
+#. Language label
+msgctxt "settings.language"
+msgid "Language"
+msgstr "زبان"
+
+#. Max dimension label
+msgctxt "settings.maxDimension"
+msgid "Max"
+msgstr "حداکثر"
+
+#. Quality label
+msgctxt "settings.quality"
+msgid "Quality"
+msgstr "کیفیت"
+
+#. Send on enter toggle label
+#, fuzzy
+msgctxt "settings.sendOnEnter"
+msgid "Send message on Enter"
+msgstr "ارسال پیام با Enter"
+
+#. Send on enter hint - disabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintDisabled"
+msgid "Press {modKey}+Enter to send, Enter for new line"
+msgstr "برای ارسال {modKey}+Enter را فشار دهید، برای خط جدید Enter را بزنید"
+
+#. Send on enter hint - enabled
+#, fuzzy
+msgctxt "settings.sendOnEnterHintEnabled"
+msgid "Press Enter to send, Shift+Enter for new line"
+msgstr "برای ارسال، Enter و برای خط جدید، Shift+Enter را فشار دهید"
+
+#. Storage limit label
+#, fuzzy
+msgctxt "settings.storageLimit"
+msgid "Storage Limit"
+msgstr "محدودیت ذخیره‌سازی"
+
+#. Tab - Appearance
+msgctxt "settings.tabAppearance"
+msgid "Appearance"
+msgstr "ظاهر"
+
+#. Tab - General
+msgctxt "settings.tabGeneral"
+msgid "General"
+msgstr "عمومی"
+
+#. Tab - Storage
+msgctxt "settings.tabStorage"
+msgid "Storage"
+msgstr "ذخیره سازی"
+
+#. Tab - Text-to-Speech
+#, fuzzy
+msgctxt "settings.tabTts"
+msgid "Text-to-Speech"
+msgstr "تبدیل متن به گفتار"
+
+#. Theme label
+msgctxt "settings.theme"
+msgid "Theme"
+msgstr "قالب"
+
+#. Theme option - auto
+msgctxt "settings.themeAuto"
+msgid "Auto"
+msgstr "خودکار"
+
+#. Theme option - dark
+msgctxt "settings.themeDark"
+msgid "Dark"
+msgstr "تیره"
+
+#. Theme option - light
+msgctxt "settings.themeLight"
+msgid "Light"
+msgstr "روشن"
+
+#. Modal title
+msgctxt "settings.title"
+msgid "Settings"
+msgstr "تنظیمات"
+
+#. TTS - Coming soon message
+#, fuzzy
+msgctxt "settings.ttsComingSoon"
+msgid "Text-to-Speech coming soon"
+msgstr "تبدیل متن به گفتار به زودی"
+
+#. TTS - Device label
+msgctxt "settings.ttsDevice"
+msgid "Device"
+msgstr "دستگاه"
+
+#. TTS - Device Auto option
+#, fuzzy
+msgctxt "settings.ttsDeviceAuto"
+msgid "Auto (Recommended)"
+msgstr "خودکار (توصیه می‌شود)"
+
+#. TTS - Device CPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceCpu"
+msgid "CPU (WASM)"
+msgstr "پردازنده (WASM)"
+
+#. TTS - Device description
+#, fuzzy
+msgctxt "settings.ttsDeviceDesc"
+msgid "Auto detects WebGPU support, falls back to CPU"
+msgstr "پشتیبانی از WebGPU را به طور خودکار تشخیص می‌دهد و به CPU برمی‌گردد"
+
+#. TTS - Device GPU option
+#, fuzzy
+msgctxt "settings.ttsDeviceGpu"
+msgid "GPU (WebGPU)"
+msgstr "GPU (WebGPU)"
+
+#. TTS - Disabled by admin warning
+#, fuzzy
+msgctxt "settings.ttsDisabledByAdmin"
+msgid "Text-to-Speech has been disabled by the administrator."
+msgstr "قابلیت تبدیل متن به گفتار توسط مدیر غیرفعال شده است."
+
+#. TTS - Enable toggle
+#, fuzzy
+msgctxt "settings.ttsEnabled"
+msgid "Enable Text-to-Speech"
+msgstr "فعال کردن تبدیل متن به گفتار"
+
+#. TTS - Enable description
+#, fuzzy
+msgctxt "settings.ttsEnabledDesc"
+msgid "Read AI responses aloud"
+msgstr "پاسخ‌های هوش مصنوعی را با صدای بلند بخوانید"
+
+#. TTS - Language label
+msgctxt "settings.ttsLanguage"
+msgid "Language"
+msgstr "زبان"
+
+#. TTS - British English
+msgctxt "settings.ttsLanguageEnGb"
+msgid "British English"
+msgstr "انگلیسی بریتانیایی"
+
+#. TTS - American English
+msgctxt "settings.ttsLanguageEnUs"
+msgid "American English"
+msgstr "انگلیسی آمریکایی"
+
+#. TTS - Preview button
+#, fuzzy
+msgctxt "settings.ttsPreview"
+msgid "Preview Voice"
+msgstr "پیش‌نمایش صدا"
+
+#. TTS - Speed label
+msgctxt "settings.ttsSpeed"
+msgid "Speed"
+msgstr "سرعت"
+
+#. TTS - Voice label
+msgctxt "settings.ttsVoice"
+msgid "Voice"
+msgstr "صدا"
+
+#. TTS - Voice Bella
+#, fuzzy
+msgctxt "settings.ttsVoiceBella"
+msgid "Bella (High Quality)"
+msgstr "بلا (کیفیت بالا)"
+
+#. TTS - Voice Heart
+#, fuzzy
+msgctxt "settings.ttsVoiceHeart"
+msgid "Heart (Best Quality)"
+msgstr "Heart (بهترین کیفیت)"
+
+#. TTS - Voice Nicole
+#, fuzzy
+msgctxt "settings.ttsVoiceNicole"
+msgid "Nicole (Good Quality)"
+msgstr "نیکول (کیفیت خوب)"
+
+#. Upload custom avatar
+msgctxt "settings.uploadAvatar"
+msgid "Upload Custom Avatar"
+msgstr "بارگذاری آواتار سفارشی"
+
+#. Upload custom background
+#, fuzzy
+msgctxt "settings.uploadBackground"
+msgid "Upload Custom Background"
+msgstr "بارگذاری پس‌زمینه سفارشی"
+
+#. Username label
+msgctxt "settings.username"
+msgid "Username"
+msgstr "نام کاربری"
+
+#. Username placeholder
+msgctxt "settings.usernamePlaceholder"
+msgid "Enter your name"
+msgstr "نام خود را وارد کنید"
+
+#. Delete chat confirmation
+msgctxt "sidebar.deleteConfirm"
+msgid "Delete this conversation?"
+msgstr "آیا این مکالمه را حذف می‌کنید؟"
+
+#. New research button
+#, fuzzy
+msgctxt "sidebar.newResearch"
+msgid "New research"
+msgstr "تحقیقات جدید"
+
+#. No conversations message
+#, fuzzy
+msgctxt "sidebar.noConversations"
+msgid "No conversations yet"
+msgstr "هنوز مکالمه‌ای وجود ندارد"

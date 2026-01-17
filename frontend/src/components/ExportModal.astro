@@ -1,0 +1,86 @@
+---
+interface Props {
+  t: (key: string, vars?: Record<string, string | number>) => string;
+}
+
+const { t } = Astro.props;
+---
+
+<div class="modal fade" id="exportModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">
+          <i class="bi bi-download text-kea"></i> {t('export.title')}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-body-secondary">{t('export.description')}</p>
+
+        <div class="mb-4">
+          <label class="form-label fw-semibold">{t('export.formatLabel')}</label>
+          <div class="list-group">
+            <label class="list-group-item d-flex align-items-center">
+              <input class="form-check-input me-3" type="radio" name="exportFormat" value="markdown" checked>
+              <div class="flex-grow-1">
+                <div class="fw-semibold">{t('export.formatMarkdown')}</div>
+                <small class="text-body-secondary">{t('export.formatMarkdownDesc')}</small>
+              </div>
+            </label>
+            <label class="list-group-item d-flex align-items-center">
+              <input class="form-check-input me-3" type="radio" name="exportFormat" value="html">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">{t('export.formatHTML')}</div>
+                <small class="text-body-secondary">{t('export.formatHTMLDesc')}</small>
+              </div>
+            </label>
+            <label class="list-group-item d-flex align-items-center">
+              <input class="form-check-input me-3" type="radio" name="exportFormat" value="json">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">{t('export.formatJSON')}</div>
+                <small class="text-body-secondary">{t('export.formatJSONDesc')}</small>
+              </div>
+            </label>
+            <label class="list-group-item d-flex align-items-center">
+              <input class="form-check-input me-3" type="radio" name="exportFormat" value="txt">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">{t('export.formatText')}</div>
+                <small class="text-body-secondary">{t('export.formatTextDesc')}</small>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">{t('export.optionsLabel')}</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="includeTimestamps" checked>
+            <label class="form-check-label" for="includeTimestamps">
+              {t('export.includeTimestamps')}
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="includeMetadata" checked>
+            <label class="form-check-label" for="includeMetadata">
+              {t('export.includeMetadata')}
+            </label>
+          </div>
+        </div>
+
+        <div id="exportStatus" class="alert alert-info d-none">
+          <div class="d-flex align-items-center">
+            <div class="spinner-border spinner-border-sm me-2"></div>
+            <span>{t('export.preparing')}</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">{t('common.cancel')}</button>
+        <button type="button" class="btn btn-kea rounded-pill" id="exportChatBtn">
+          <i class="bi bi-download"></i> {t('export.exportButton')}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

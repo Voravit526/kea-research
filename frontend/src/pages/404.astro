@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { detectLocale } from '../i18n';
+import { createTranslator } from '../i18n/translations';
+
+const locale = detectLocale(Astro.request);
+const t = createTranslator(locale);
+---
+
+<BaseLayout title={t('error.pageNotFound')}>
+  <div class="min-vh-100 d-flex align-items-center justify-content-center bg-body-tertiary">
+    <div class="text-center p-4">
+      <div class="mb-4">
+        <i class="bi bi-exclamation-triangle text-warning" style="font-size: 5rem;"></i>
+      </div>
+      <h1 class="display-1 fw-bold text-body-secondary">404</h1>
+      <h2 class="mb-3">{t('error.pageNotFound')}</h2>
+      <p class="text-muted mb-4">{t('error.pageNotFoundDesc')}</p>
+      <a href="/" class="btn btn-kea">
+        <i class="bi bi-house me-2"></i>{t('error.backToHome')}
+      </a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+/**
+ * Admin Sidebar Component
+ * Navigation sidebar with section links
+ */
+---
+
+<aside class="admin-sidebar bg-body-tertiary d-none d-lg-block">
+  <nav class="nav flex-column py-3">
+    <a href="#providers-section" class="nav-link active" data-section="providers">
+      <i class="bi bi-cpu me-2"></i>Providers
+    </a>
+    <a href="#users-section" class="nav-link" data-section="users">
+      <i class="bi bi-people me-2"></i>Users
+    </a>
+    <a href="#settings-section" class="nav-link" data-section="settings">
+      <i class="bi bi-gear me-2"></i>Settings
+    </a>
+  </nav>
+</aside>
+
+<script>
+  // Sidebar navigation - show only selected section
+  const sections = ['providers', 'users', 'settings'];
+
+  function showSection(sectionName: string): void {
+    // Hide all sections, show only the selected one
+    sections.forEach(section => {
+      const el = document.getElementById(`${section}-section`);
+      if (el) {
+        if (section === sectionName) {
+          el.classList.remove('d-none');
+        } else {
+          el.classList.add('d-none');
+        }
+      }
+    });
+
+    // Update active state in sidebar
+    document.querySelectorAll('.admin-sidebar .nav-link').forEach(link => {
+      link.classList.toggle('active', link.getAttribute('data-section') === sectionName);
+    });
+  }
+
+  // Setup click handlers for sidebar links
+  document.querySelectorAll('.admin-sidebar .nav-link[data-section]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const section = (e.currentTarget as HTMLElement).dataset.section;
+      if (!section || (e.currentTarget as HTMLElement).classList.contains('disabled')) return;
+
+      e.preventDefault();
+      showSection(section);
+    });
+  });
+
+  // Initialize: show only providers section by default
+  showSection('providers');
+</script>
