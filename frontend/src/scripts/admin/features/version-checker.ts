@@ -87,12 +87,18 @@ export const VersionCheckerModule = {
     if (latestEl) latestEl.textContent = versionInfo.latest_version;
 
     if (notesEl && versionInfo.release_notes) {
-      // Simple markdown rendering (newlines to <br>)
-      notesEl.innerHTML = versionInfo.release_notes
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\n/g, '<br>');
+      // Render markdown using marked.js
+      if (typeof (window as any).marked?.parse === 'function') {
+        try {
+          notesEl.innerHTML = (window as any).marked.parse(versionInfo.release_notes);
+        } catch {
+          // Fallback to escaped plain text
+          notesEl.textContent = versionInfo.release_notes;
+        }
+      } else {
+        // Fallback if marked.js not loaded
+        notesEl.textContent = versionInfo.release_notes;
+      }
     }
 
     if (linkEl && versionInfo.release_url) {
