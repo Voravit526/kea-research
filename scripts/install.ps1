@@ -239,8 +239,8 @@ Write-Host $ADMIN_PASSWORD -ForegroundColor Yellow
 Write-Host "  (saved in .env file)" -ForegroundColor Cyan
 Write-Host ""
 if ($DOMAIN -eq "localhost") {
-    Write-Host "  Access: http://localhost"
+    Write-Host "  Access: http://localhost:8080"
 } else {
-    Write-Host "  Access: https://$DOMAIN"
+    Write-Host "  Access: https://$DOMAIN:8443"
 }
 Write-Host ""
