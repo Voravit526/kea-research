@@ -61,7 +61,7 @@ const { t, locale } = Astro.props;
               </div>
               <div class="col-md-4">
                 <label class="form-label fw-semibold">{t('settings.language')}</label>
-                <!-- Custom searchable language dropdown -->
+                {/* Custom searchable language dropdown  */}
                 <div class="language-dropdown position-relative" id="languageDropdown">
                   <input type="text" class="form-control" id="languageSearch" autocomplete="off" readonly>
                   <input type="hidden" id="languageSelect" value={locale}>

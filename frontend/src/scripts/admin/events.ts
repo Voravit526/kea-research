@@ -180,6 +180,12 @@ export const AdminEvents = {
       case 'settings:toggle-tts':
         return { type: 'settings:toggle-tts', enabled: checked ?? false };
 
+      // Version actions
+      case 'version:check':
+        return { type: 'version:check' };
+      case 'version:show-modal':
+        return { type: 'version:show-modal' };
+
       default:
         console.warn(`[AdminEvents] Unknown action type: ${actionType}`);
         return null;

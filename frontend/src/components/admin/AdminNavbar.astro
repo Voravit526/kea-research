@@ -25,6 +25,12 @@
       <a href="/" class="btn btn-outline-primary btn-sm" title="Go to Research" target="_blank">
         <i class="bi bi-chat-dots me-1"></i>Research
       </a>
+      <button class="btn btn-outline-secondary btn-sm position-relative" id="version-navbar-btn" data-action="version:show-modal" title="Check for Updates" style="display: none;">
+        <i class="bi bi-arrow-up-circle"></i>
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" id="version-navbar-badge" style="display: none;">
+          <span class="visually-hidden">New update available</span>
+        </span>
+      </button>
       <button class="btn btn-outline-secondary btn-sm" id="reload-btn" title="Reload Providers">
         <i class="bi bi-arrow-clockwise"></i>
       </button>

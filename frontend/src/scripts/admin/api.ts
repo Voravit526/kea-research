@@ -324,6 +324,18 @@ export const SettingsApi = {
   },
 };
 
+/**
+ * Version Check API
+ */
+const VersionApi = {
+  /**
+   * Check for software updates from GitHub
+   */
+  async check(): Promise<VersionInfo> {
+    return adminApiRequest<VersionInfo>('/version-check');
+  },
+};
+
 // ============================================================================
 // Unified Admin API Export
 // ============================================================================
@@ -338,4 +350,5 @@ export const AdminApi = {
   models: ModelsApi,
   users: UsersApi,
   settings: SettingsApi,
+  version: VersionApi,
 };

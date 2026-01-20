@@ -101,6 +101,18 @@ export interface AppSettings {
   tts_enabled: boolean;
 }
 
+/**
+ * Version information from GitHub
+ */
+export interface VersionInfo {
+  current_version: string;
+  latest_version: string;
+  has_update: boolean;
+  release_notes: string | null;
+  release_url: string | null;
+  last_checked: string;
+}
+
 // ============================================================================
 // Form Data Types (for create/update operations)
 // ============================================================================
@@ -242,7 +254,10 @@ export type AdminAction =
   | { type: 'user:delete'; id: number }
   // Settings actions
   | { type: 'settings:toggle-guest'; enabled: boolean }
-  | { type: 'settings:toggle-tts'; enabled: boolean };
+  | { type: 'settings:toggle-tts'; enabled: boolean }
+  // Version actions
+  | { type: 'version:check' }
+  | { type: 'version:show-modal' };
 
 /**
  * Action handler function signature

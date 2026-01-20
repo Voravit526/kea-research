@@ -1,0 +1,90 @@
+---
+/**
+ * Version Check Modal
+ * Shows current version, latest version, and release notes
+ */
+---
+
+<div class="modal fade" id="versionModal" tabindex="-1" aria-labelledby="versionModalLabel">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      {/* Header with gradient  */}
+      <div class="modal-header border-0 pb-0">
+        <div class="d-flex align-items-center gap-2">
+          <div class="bg-primary bg-opacity-10 p-2 rounded-3">
+            <i class="bi bi-arrow-up-circle fs-4 text-primary"></i>
+          </div>
+          <div>
+            <h5 class="modal-title mb-0" id="versionModalLabel">KEA Research Updates</h5>
+            <small class="text-muted">Stay up to date with the latest version</small>
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body pt-3">
+        {/* Status Banner  */}
+        <div id="version-status" class="alert alert-info mb-4 d-flex align-items-center">
+          <i class="bi bi-info-circle me-2"></i>
+          <span>Checking for updates...</span>
+        </div>
+
+        {/* Version Info  */}
+        <div class="row g-2 mb-3">
+          <div class="col-6">
+            <div class="border rounded px-2 py-1 text-center bg-body-tertiary">
+              <small class="text-muted d-block">
+                <i class="bi bi-laptop me-1"></i>Current
+              </small>
+              <span id="current-version" class="fw-semibold text-primary">-</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="border rounded px-2 py-1 text-center bg-body-tertiary">
+              <small class="text-muted d-block">
+                <i class="bi bi-cloud-download me-1"></i>Latest
+              </small>
+              <span id="latest-version" class="fw-semibold text-success">-</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Release Notes Section  */}
+        <div class="mb-3">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-journal-text me-2 text-muted"></i>
+            <h6 class="mb-0">What's New</h6>
+          </div>
+          <div
+            id="release-notes"
+            class="border rounded-3 p-3 bg-body-secondary"
+            style="max-height: 300px; overflow-y: auto; white-space: pre-wrap; line-height: 1.6;"
+          >
+            No release notes available.
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer border-0 pt-0">
+        <a
+          href="https://github.com/keabase/kea-research/releases"
+          target="_blank"
+          class="btn btn-outline-primary"
+        >
+          <i class="bi bi-github me-1"></i>View All Releases
+        </a>
+        <a
+          id="update-instructions-link"
+          href=""
+          target="_blank"
+          class="btn btn-primary d-none"
+        >
+          <i class="bi bi-box-arrow-up-right me-1"></i>View Latest Release
+        </a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

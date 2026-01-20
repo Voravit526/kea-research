@@ -14,6 +14,7 @@ import { ProviderSetsModule, setProviderSetsUIDeps } from './features/provider-s
 import { ModelsModule, setModelsUIDeps } from './features/models';
 import { UsersModule, setUsersUIDeps } from './features/users';
 import { SettingsModule, setSettingsUIDeps } from './features/settings';
+import { VersionCheckerModule, setVersionCheckerUIDeps } from './features/version-checker';
 
 // UI modules
 import { Toast, showToast } from './ui/toast';
@@ -73,6 +74,7 @@ function injectUIDependencies(): void {
   setModelsUIDeps(deps);
   setUsersUIDeps(deps);
   setSettingsUIDeps({ toast: showToast });
+  setVersionCheckerUIDeps({ toast: showToast, modal: showModal });
 }
 
 // ============================================================================
@@ -146,6 +148,7 @@ async function loadAdminData(): Promise<void> {
     ProviderSetsModule.load(),
     UsersModule.load(),
     SettingsModule.load(),
+    VersionCheckerModule.checkVersion(),
   ]);
 }
 

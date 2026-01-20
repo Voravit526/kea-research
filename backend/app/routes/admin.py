@@ -981,4 +981,139 @@ async def remove_provider_from_set(
     await session.delete(member)
     await session.commit()
 
+    logger.info(f"Removed provider from set: set_id={set_id}, member_id={member_id}")
+
+
+# ============================================================================
+# Version Check
+# ============================================================================
+
+
+class VersionCheckResponse(BaseModel):
+    current_version: str
+    latest_version: str
+    has_update: bool
+    release_notes: Optional[str] = None
+    release_url: Optional[str] = None
+    last_checked: str  # ISO 8601 timestamp
+
+
+@router.get("/version-check", response_model=VersionCheckResponse)
+async def check_version(
+    _: str = Depends(require_admin_auth),
+):
+    """Check for software updates from GitHub."""
+    import orjson
+    import httpx
+    from pathlib import Path
+    from datetime import datetime, timedelta, timezone
+
+    # Paths
+    version_file = Path("/app/VERSION")  # VERSION file is copied to /app in Docker
+    data_dir = Path(__file__).parent.parent / "data"
+    cache_file = data_dir / "version.json"
+
+    # Ensure data directory exists
+    data_dir.mkdir(exist_ok=True)
+
+    # Read current version
+    try:
+        current_version = version_file.read_text().strip()
+    except Exception as e:
+        logger.error(f"Failed to read VERSION file: {e}")
+        raise_bad_request("VERSION file not found")
+
+    # Helper to parse version (v0.1.0 -> (0, 1, 0))
+    def parse_version(v: str) -> tuple[int, int, int]:
+        try:
+            clean = v.lstrip('v')
+            parts = clean.split('.')
+            return (int(parts[0]), int(parts[1]), int(parts[2]))
+        except Exception as e:
+            logger.error(f"Failed to parse version '{v}': {e}")
+            raise
+
+    # Load cache
+    cache_data = None
+    should_fetch = True
+
+    if cache_file.exists():
+        try:
+            cache_data = orjson.loads(cache_file.read_bytes())
+            last_check = datetime.fromisoformat(cache_data["last_check_time"])
+            # Check if cache is less than 24 hours old
+            if datetime.now(timezone.utc) - last_check < timedelta(hours=24):
+                should_fetch = False
+        except Exception:
+            # Corrupted cache, will refetch
+            cache_data = None
+
+    # Fetch from GitHub if needed
+    if should_fetch:
+        try:
+            async with httpx.AsyncClient(timeout=10.0) as client:
+                # Get latest tag
+                tags_resp = await client.get(
+                    "https://api.github.com/repos/keabase/kea-research/tags"
+                )
+                tags_resp.raise_for_status()
+                tags = tags_resp.json()
+
+                if not tags:
+                    logger.error("No tags found in GitHub repository")
+                    raise_bad_request("No tags found in repository")
+
+                latest_version = tags[0]["name"]
+
+                # Get release notes
+                release_resp = await client.get(
+                    f"https://api.github.com/repos/keabase/kea-research/releases/tags/{latest_version}"
+                )
+                release_resp.raise_for_status()
+                release_data = release_resp.json()
+
+                release_notes = release_data.get("body", "No release notes available.")
+                release_url = release_data.get("html_url", f"https://github.com/keabase/kea-research/releases/tag/{latest_version}")
+
+                # Update cache
+                cache_data = {
+                    "last_check_time": datetime.now(timezone.utc).isoformat(),
+                    "latest_version": latest_version,
+                    "current_version": current_version,
+                    "release_notes": release_notes,
+                    "release_url": release_url,
+                }
+                cache_file.write_bytes(orjson.dumps(cache_data))
+
+        except Exception as e:
+            # On error, use cache if available, otherwise return current version only
+            if cache_data:
+                logger.warning(f"GitHub API error, using cache: {e}")
+            else:
+                logger.error(f"GitHub API error, no cache available: {e}")
+                return VersionCheckResponse(
+                    current_version=current_version,
+                    latest_version=current_version,
+                    has_update=False,
+                    release_notes=None,
+                    release_url=None,
+                    last_checked=datetime.now(timezone.utc).isoformat(),
+                )
+
+    # Compare versions
+    try:
+        has_update = parse_version(cache_data["latest_version"]) > parse_version(current_version)
+    except Exception as e:
+        logger.error(f"Failed to compare versions: {e}")
+        raise_bad_request(f"Version comparison failed: {str(e)}")
+
+    return VersionCheckResponse(
+        current_version=current_version,
+        latest_version=cache_data["latest_version"],
+        has_update=has_update,
+        release_notes=cache_data.get("release_notes"),
+        release_url=cache_data.get("release_url"),
+        last_checked=cache_data["last_check_time"],
+    )
+
     logger.info(f"Removed member {member_id} from set {set_id}")
