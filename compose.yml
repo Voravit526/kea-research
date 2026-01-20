@@ -35,6 +35,7 @@ services:
       - "8000"
     volumes:
       - kea-research-data:/app/data
+      - ./VERSION:/app/VERSION:ro
     environment:
       # Admin password (REQUIRED - app will not start without this)
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
