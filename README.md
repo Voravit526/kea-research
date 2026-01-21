@@ -90,6 +90,10 @@ KEA processes every question through a structured 4-step pipeline:
 
 ## Key Features
 
+### Visual Intelligence
+- Add images directly to chat context
+- Models can analyze screenshots, diagrams, and photos
+
 ### Multi-AI Consensus
 - Combines responses from 5 AI providers(Can be more than 5, up to you)
 - Supports OpenAI, Anthropic, Google, Mistral, xAI, and Ollama
