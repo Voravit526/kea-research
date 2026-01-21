@@ -8,35 +8,7 @@ Write-Host "KEA Research Installer" -ForegroundColor Cyan
 Write-Host "=======================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Check for git
-$gitInstalled = $false
-try { git --version | Out-Null; $gitInstalled = $true } catch { }
-
-if (-not $gitInstalled) {
-    Write-Host "Git is not installed." -ForegroundColor Yellow
-    $installGit = Read-Host "Install git now? (Y/n)"
-
-    if ($installGit -ne "n" -and $installGit -ne "N") {
-        # Check if winget is available
-        try {
-            winget --version | Out-Null
-            Write-Host "Installing git via winget..." -ForegroundColor Yellow
-            winget install --id Git.Git -e --source winget --accept-package-agreements --accept-source-agreements
-            Write-Host ""
-            Write-Host "Git has been installed successfully!" -ForegroundColor Green
-            Write-Host "You must restart PowerShell and run this script again." -ForegroundColor Yellow
-            Write-Host ""
-            Read-Host "Press Enter to exit"
-            exit 0
-        } catch {
-            Write-Host "Error: winget not available. Please install git manually from https://git-scm.com/download/win" -ForegroundColor Red
-            exit 1
-        }
-    } else {
-        Write-Host "Error: git is required. Please install it manually." -ForegroundColor Red
-        exit 1
-    }
-}
+# No git required - we'll use zip downloads to avoid line ending issues
 
 # Check for docker (manual install required)
 try { docker --version | Out-Null } catch {
@@ -45,44 +17,105 @@ try { docker --version | Out-Null } catch {
     exit 1
 }
 
-# Checkout latest version tag
-# Returns $true if checkout performed, $false if already on latest
-function Get-LatestVersion {
+# Get latest version tag from GitHub API
+function Get-LatestVersionTag {
+    try {
+        $response = Invoke-RestMethod -Uri "https://api.github.com/repos/KeaBase/kea-research/releases/latest" -ErrorAction Stop
+        return $response.tag_name
+    } catch {
+        Write-Host "Error: Could not fetch latest version from GitHub API." -ForegroundColor Red
+        Write-Host "Please check your internet connection and try again." -ForegroundColor Yellow
+        exit 1
+    }
+}
+
+# Get current installed version from VERSION file
+function Get-CurrentVersion {
+    if (Test-Path "VERSION") {
+        return (Get-Content "VERSION" -Raw).Trim()
+    }
+    return $null
+}
+
+# Download and extract version
+# Returns $true if download performed, $false if already on latest
+function Download-Version {
+    param([string]$version)
+
     Write-Host "Fetching latest version..." -ForegroundColor Yellow
 
-    $tagsOutput = git ls-remote --tags origin 2>$null
-    $tags = $tagsOutput | Select-String -Pattern "v(\d+)\.(\d+)\.(\d+)$" -AllMatches | ForEach-Object { $_.Matches.Value }
-    
-    if (-not $tags) {
-        Write-Host "No version tags found, staying on current branch" -ForegroundColor Yellow
-        return $true
-    }
-    
-    $latestTag = $tags | Sort-Object { 
-        $v = $_ -replace '^v',''
-        $parts = $v -split '\.'
-        [int]$parts[0] * 10000 + [int]$parts[1] * 100 + [int]$parts[2]
-    } | Select-Object -Last 1
-    
-    # Get current tag (if on a tag) or branch name
-    $currentTag = git describe --tags --exact-match 2>$null
-    $currentBranch = git rev-parse --abbrev-ref HEAD 2>$null
-    
+    $latestTag = Get-LatestVersionTag
+    $currentTag = Get-CurrentVersion
+
     if ($currentTag -eq $latestTag) {
         Write-Host "Already on latest version ($latestTag)" -ForegroundColor Green
         return $false  # Signal: no update needed
     }
-    
+
     if ($currentTag) {
         Write-Host "Updating from $currentTag to $latestTag" -ForegroundColor Yellow
-    } elseif ($currentBranch -eq "main") {
-        Write-Host "Switching from main branch to $latestTag" -ForegroundColor Yellow
     } else {
-        Write-Host "Checking out version $latestTag" -ForegroundColor Yellow
+        Write-Host "Installing version $latestTag" -ForegroundColor Yellow
     }
 
-    cmd /c "git fetch origin tag $latestTag >nul 2>&1"
-    cmd /c "git checkout $latestTag >nul 2>&1"
+    $zipUrl = "https://github.com/KeaBase/kea-research/archive/refs/tags/$latestTag.zip"
+    $zipFile = "kea-temp.zip"
+
+    Write-Host "Downloading $zipUrl..." -ForegroundColor Yellow
+    Invoke-WebRequest -Uri $zipUrl -OutFile $zipFile -ErrorAction Stop
+
+    Write-Host "Extracting..." -ForegroundColor Yellow
+
+    # Extract to temp location
+    Expand-Archive -Path $zipFile -DestinationPath "kea-temp" -Force
+
+    # The extracted folder will be named kea-research-{version} (e.g., kea-research-0.1.1)
+    $extractedFolder = "kea-temp\kea-research-$($latestTag -replace '^v','')"
+
+    # Preserve .env if it exists
+    $preserveEnv = $false
+    if (Test-Path ".env") {
+        Copy-Item ".env" "kea-temp\.env.backup"
+        $preserveEnv = $true
+    }
+
+    # Copy all files from extracted folder to current directory
+    Get-ChildItem -Path $extractedFolder -Recurse | ForEach-Object {
+        $dest = $_.FullName -replace [regex]::Escape($extractedFolder), "."
+        if ($_.PSIsContainer) {
+            if (-not (Test-Path $dest)) {
+                New-Item -ItemType Directory -Path $dest -Force | Out-Null
+            }
+        } else {
+            Copy-Item $_.FullName -Destination $dest -Force
+        }
+    }
+
+    # Fix line endings for shell scripts (convert CRLF to LF for Docker)
+    Get-ChildItem -Path "." -Recurse -Include "*.sh" -File | ForEach-Object {
+        $bytes = [System.IO.File]::ReadAllBytes($_.FullName)
+        $content = [System.Text.Encoding]::UTF8.GetString($bytes)
+        if ($content) {
+            $content = $content -replace "`r`n", "`n" -replace "`r", ""
+            $content = $content.TrimEnd() + "`n"
+            $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
+            [System.IO.File]::WriteAllText($_.FullName, $content, $utf8NoBom)
+        }
+    }
+
+    # Restore .env if it was preserved
+    if ($preserveEnv) {
+        Copy-Item "kea-temp\.env.backup" ".env" -Force
+        Remove-Item "kea-temp\.env.backup"
+    }
+
+    # Save version file
+    $latestTag | Set-Content "VERSION" -NoNewline
+
+    # Cleanup
+    Remove-Item $zipFile -Force
+    Remove-Item "kea-temp" -Recurse -Force
+
     return $true  # Signal: update performed
 }
 
@@ -92,10 +125,10 @@ if (Test-Path "kea-research") {
         # Folder + .env = Update mode
         Write-Host "Existing installation found. Checking for updates..." -ForegroundColor Yellow
         Set-Location kea-research
-        $updatePerformed = Get-LatestVersion
+        $updatePerformed = Download-Version
         if ($updatePerformed) {
             Write-Host ""
-            Write-Host "Rebuilding containers..." -ForegroundColor Yellow
+            Write-Host "Rebuilding containers with new version..." -ForegroundColor Yellow
             try {
                 docker compose version | Out-Null
                 docker compose up -d --build
@@ -120,14 +153,14 @@ if (Test-Path "kea-research") {
         # Folder but no .env = Incomplete install, continue setup
         Write-Host "Incomplete installation found. Continuing setup..." -ForegroundColor Yellow
         Set-Location kea-research
-        Get-LatestVersion | Out-Null
+        Download-Version | Out-Null
     }
 } else {
     # No folder = Fresh install
-    Write-Host "Cloning repository..." -ForegroundColor Yellow
-    git clone https://github.com/keabase/kea-research.git
+    Write-Host "Downloading KEA Research..." -ForegroundColor Yellow
+    New-Item -ItemType Directory -Path "kea-research" -Force | Out-Null
     Set-Location kea-research
-    Get-LatestVersion | Out-Null
+    Download-Version | Out-Null
 }
 
 # Copy environment file
@@ -248,4 +281,8 @@ if ($DOMAIN -eq "localhost") {
     Write-Host "  Access: https://$DOMAIN:8443"
 }
 Write-Host ""
+
+# Return to parent directory
+Set-Location ..
+
 Read-Host "Press Enter to exit"

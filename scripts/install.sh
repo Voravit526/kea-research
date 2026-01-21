@@ -116,7 +116,7 @@ if [ -d "kea-research" ]; then
         cd kea-research
         if checkout_latest_version; then
             echo ""
-            printf "${YELLOW}Rebuilding containers...${NC}\n"
+            printf "${YELLOW}Rebuilding containers with new version...${NC}\n"
             if command -v docker compose >/dev/null 2>&1; then
                 docker compose up -d --build
             else
@@ -134,6 +134,7 @@ if [ -d "kea-research" ]; then
             printf "${GREEN}${BOLD}════════════════════════════════════════════${NC}\n"
             echo ""
         fi
+        cd ..
         exit 0
     else
         # Folder but no .env = Incomplete install, continue setup
@@ -263,3 +264,6 @@ else
     printf "  Access: ${BOLD}https://$DOMAIN:8443${NC}\n"
 fi
 echo ""
+
+# Return to parent directory
+cd ..
