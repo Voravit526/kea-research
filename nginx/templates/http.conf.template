@@ -6,6 +6,9 @@ server {
 
     root /var/www/html;
 
+    # Allow larger uploads for image attachments
+    client_max_body_size 48M;
+
     gzip on;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/event-stream;
 

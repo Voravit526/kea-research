@@ -117,6 +117,16 @@ const isRTL = RTL_LOCALES.includes(locale);
     [data-bs-theme="dark"] #settingsModal .nav-link{color:#a68d6f;}
     [data-bs-theme="dark"] #settingsModal .nav-link:hover,[data-bs-theme="dark"] #settingsModal .nav-link:focus{color:#9a7c5a;}
     [data-bs-theme="dark"] #settingsModal .nav-link.active{color:#a68d6f;border-bottom-color:#a68d6f;}
+
+    /* Dropdown active item - use theme-aware colors instead of blue */
+    .dropdown-item.active, .dropdown-item:active {
+      background-color: var(--bs-secondary-bg);
+      color: var(--bs-body-color);
+    }
+    .dropdown-item.active:hover, .dropdown-item.active:focus {
+      background-color: var(--bs-tertiary-bg);
+      color: var(--bs-body-color);
+    }
   </style>
 </head>
 <body class="d-flex flex-column vh-100 overflow-hidden">
@@ -124,7 +134,7 @@ const isRTL = RTL_LOCALES.includes(locale);
 
   {/* Bootstrap JS */}
   <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script is:inline src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/compressorjs@1.2.1/dist/compressor.min.js"></script>
   {/* Markdown rendering */}
   <script is:inline src="https://cdn.jsdelivr.net/npm/marked@17.0.1/lib/marked.umd.min.js"></script>
   {/* PDF and DOCX export */}

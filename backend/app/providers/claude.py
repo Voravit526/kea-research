@@ -32,11 +32,28 @@ class ClaudeProvider(BaseProvider):
     async def stream_chat(
         self, messages: list[dict], system_prompt: Optional[str] = None
     ) -> AsyncIterator[StreamChunk]:
+        """Stream chat responses from Claude API with vision support."""
         try:
+            # Prepare messages (Claude accepts our universal format directly)
+            # Content can be string or array of content blocks
+            prepared_messages = []
+            for msg in messages:
+                # Ensure content is in correct format
+                content = msg.get("content")
+                if isinstance(content, str):
+                    # Text-only message
+                    prepared_messages.append({"role": msg["role"], "content": content})
+                elif isinstance(content, list):
+                    # Multimodal message (text + images)
+                    prepared_messages.append({"role": msg["role"], "content": content})
+                else:
+                    # Fallback
+                    prepared_messages.append({"role": msg["role"], "content": str(content)})
+
             payload = {
                 "model": self.model,
                 "max_tokens": 4096,
-                "messages": messages,
+                "messages": prepared_messages,
                 "stream": True,
             }
             if system_prompt:

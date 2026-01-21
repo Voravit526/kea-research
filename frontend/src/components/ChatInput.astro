@@ -8,18 +8,21 @@ const { t } = Astro.props;
 
 <div class="d-flex flex-column align-items-center w-100 mt-5" id="chatInputContainer">
   <div class="chat-input-row" id="chatInputRow">
-    <div class="mb-3 chat-input-wrapper" id="chatInputWrapper">
-      {/* Gradient border layer - separate from interactive elements */}
-      <div class="gradient-border-layer" aria-hidden="true"></div>
-      <textarea class="form-control rounded-4 shadow-sm pe-5" rows="3" placeholder={t('chat.placeholder')} id="chatInput"></textarea>
-      {/* Draft History Button - only shown when drafts exist, only for new chat */}
-      <div class="dropdown position-absolute bottom-0 end-0 mb-2 chat-btn-overlay d-none" id="draftHistoryWrapper" style="right: 5.5rem !important;">
+    {/* Attachment Preview - placed above textarea */}
+    <div id="attachmentPreview" class="d-none attachment-preview-container"></div>
+    <div class="chat-input-content-wrapper">
+      <div class="mb-3 chat-input-wrapper" id="chatInputWrapper">
+        {/* Gradient border layer - separate from interactive elements */}
+        <div class="gradient-border-layer" aria-hidden="true"></div>
+        <textarea class="form-control rounded-4 shadow-sm pe-5" rows="3" placeholder={t('chat.placeholder')} id="chatInput"></textarea>
+        {/* Draft History Button - only shown when drafts exist, only for new chat */}
+        <div class="dropdown position-absolute bottom-0 end-0 mb-2 chat-btn-overlay d-none draft-history-dropdown" id="draftHistoryWrapper">
         <button class="btn btn-link text-body-secondary p-1" type="button"
                 id="draftHistoryBtn" data-bs-toggle="dropdown" aria-expanded="false"
                 title={t('chat.savedDrafts') || 'Saved drafts'}>
           <i class="bi bi-chat-dots fs-5"></i>
         </button>
-        <div class="dropdown-menu dropdown-menu-end p-2" id="draftHistoryDropdown" style="min-width: 320px; max-height: 350px; overflow-y: auto;">
+        <div class="dropdown-menu dropdown-menu-end p-2 draft-history-menu" id="draftHistoryDropdown">
           <div class="d-flex justify-content-between align-items-center mb-2 px-1">
             <small class="text-muted fw-semibold">{t('chat.savedDrafts') || 'Saved Drafts'}</small>
             <button class="btn btn-sm btn-link text-danger p-0 text-decoration-none" id="clearAllDrafts" type="button">
@@ -41,11 +44,10 @@ const { t } = Astro.props;
         <button class="btn btn-link text-body-secondary p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" title={t('chat.addAttachment')}>
           <i class="bi bi-plus-circle fs-5"></i>
         </button>
-        <ul class="dropdown-menu dropdown-menu-end">
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
           <li>
-            <button class="dropdown-item d-flex align-items-center gap-2 disabled" type="button" id="attachImage" disabled>
-              <i class="bi bi-image text-success opacity-50"></i> {t('attachments.attachImage')}
-              <span class="badge bg-secondary ms-auto">{t('common.soon')}</span>
+            <button class="dropdown-item d-flex align-items-center gap-2" type="button" id="attachImage">
+              <i class="bi bi-image text-success"></i> {t('attachments.attachImage')}
             </button>
           </li>
           <li>
@@ -82,16 +84,17 @@ const { t } = Astro.props;
           </li>
         </ul>
       </div>
-      {/* Hidden file inputs */}
-      <input type="file" id="imageInput" class="d-none" accept="image/*">
-      <input type="file" id="fileInput" class="d-none">
+        {/* Hidden file inputs */}
+        <input type="file" id="imageInput" class="d-none" accept="image/*" multiple>
+        <input type="file" id="fileInput" class="d-none">
+      </div>
+      <button class="btn btn-kea rounded-4 chat-send-btn" id="sendBtn">
+        <i class="bi bi-search me-1"></i> <span class="send-btn-text">{t('chat.research') || 'Research'}</span>
+      </button>
+      <button class="btn btn-danger rounded-4 chat-send-btn d-none" id="stopBtn">
+        <i class="bi bi-stop-fill"></i> <span class="send-btn-text">Stop</span>
+      </button>
     </div>
-    <button class="btn btn-kea rounded-4 chat-send-btn" id="sendBtn">
-      <i class="bi bi-search me-1"></i> <span class="send-btn-text">{t('chat.research') || 'Research'}</span>
-    </button>
-    <button class="btn btn-danger rounded-4 chat-send-btn" id="stopBtn" style="display: none;">
-      <i class="bi bi-stop-fill"></i> <span class="send-btn-text">Stop</span>
-    </button>
   </div>
 </div>
 
@@ -105,6 +108,33 @@ const { t } = Astro.props;
 
   @keyframes spin-gradient {
     to { --gradient-angle: 360deg; }
+  }
+
+  /* Attachment preview positioning */
+  .attachment-preview-container {
+    max-width: 730px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Draft history dropdown positioning */
+  .draft-history-dropdown {
+    right: 5.5rem !important;
+  }
+
+  /* Draft history menu sizing */
+  .draft-history-menu {
+    min-width: 320px;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+
+  /* Wrapper for textarea and buttons together */
+  .chat-input-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   /* Main wrapper */
@@ -173,6 +203,47 @@ const { t } = Astro.props;
     z-index: 10;
   }
 
+  /* Attachment preview thumbnail */
+  :global(.attachment-preview-thumbnail) {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+  /* Attachment preview item */
+  :global(.attachment-preview-item) {
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
+  }
+
+  /* Attachment preview close button */
+  :global(.attachment-preview-close) {
+    font-size: 0.75rem;
+  }
+
+  /* Chat message image */
+  :global(.chat-message-image) {
+    height: 120px;
+    width: auto;
+    cursor: pointer;
+    object-fit: cover;
+  }
+
+  /* Chat message image container */
+  :global(.chat-message-images) {
+    max-width: 100%;
+  }
+
+  /* Synthesis result container */
+  :global(.synthesis-result) {
+    max-width: 80%;
+  }
+
+  /* Draft content clickable */
+  :global(.draft-content) {
+    cursor: pointer;
+  }
+
   /* Default layout (welcome/new chat) */
   .chat-input-row {
     display: flex;
@@ -192,12 +263,23 @@ const { t } = Astro.props;
 
   /* Chat active layout */
   :global(.chat-active) .chat-input-row {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  :global(.chat-active) .attachment-preview-container {
+    max-width: 1100px;
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.chat-active) .chat-input-content-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   :global(.chat-active) .chat-input-wrapper {

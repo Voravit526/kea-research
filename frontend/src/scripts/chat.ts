@@ -11,9 +11,27 @@ import { escapeHtml, isMacOS, isTextAreaElement, isInputElement } from './utils'
 import { fetchStream, ApiRequestError } from './api';
 import { getActiveSetId, getActiveSetName, lockSelector, unlockSelector } from './provider-set-selector';
 
+interface TextContent {
+  type: 'text';
+  text: string;
+}
+
+interface ImageSource {
+  type: 'base64';
+  media_type: string;
+  data: string;
+}
+
+interface ImageContent {
+  type: 'image';
+  source: ImageSource;
+}
+
+type MessageContent = string | Array<TextContent | ImageContent>;
+
 interface Message {
   role: 'user' | 'assistant';
-  content: string;
+  content: MessageContent;
 }
 
 const CHAT_EXPANDED_KEY = 'kea_chat_expanded';
@@ -210,7 +228,7 @@ export const ChatManager = {
         // Lock provider set selector and capture set name for this chat
         this.currentSetName = getActiveSetName();
 
-        // Create chat with provider set name
+        // Create chat with provider set name (use text-only for title)
         this.currentChatId = await StorageUtils.createChat(message, this.currentSetName || undefined);
 
         lockSelector();
@@ -228,8 +246,59 @@ export const ChatManager = {
       }
     }
 
+    // Build message content (text-only or multimodal)
+    let messageContent: MessageContent;
+    const imageAttachments = attachments.filter(att => att.type === 'image');
+
+    if (imageAttachments.length > 0) {
+      // Multimodal message: array of content blocks
+      const contentBlocks: Array<TextContent | ImageContent> = [];
+
+      // Add text block (if any)
+      if (message) {
+        contentBlocks.push({ type: 'text', text: message });
+      }
+
+      // Add image blocks
+      for (const att of imageAttachments) {
+        if (!att.file) continue;
+
+        try {
+          // Convert image to base64 data URL
+          const dataUrl = await AttachmentManager.convertImageToBase64(att.file);
+
+          // Split data URL into media type and base64 data
+          // Format: "data:image/jpeg;base64,iVBORw0..."
+          const match = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
+          if (!match) {
+            console.error('Invalid data URL format for image:', att.name);
+            continue;
+          }
+
+          const [, mediaType, base64Data] = match;
+
+          // Add image content block
+          contentBlocks.push({
+            type: 'image',
+            source: {
+              type: 'base64',
+              media_type: mediaType,
+              data: base64Data
+            }
+          });
+        } catch (error) {
+          console.error('Failed to convert image to base64:', att.name, error);
+        }
+      }
+
+      messageContent = contentBlocks;
+    } else {
+      // Text-only message
+      messageContent = message;
+    }
+
     // Add user message to history
-    this.messages.push({ role: 'user', content: message });
+    this.messages.push({ role: 'user', content: messageContent });
 
     // Save user message to IndexedDB
     if (this.currentChatId !== null) {
@@ -237,7 +306,7 @@ export const ChatManager = {
         await StorageUtils.saveMessage({
           chatId: this.currentChatId,
           role: 'user',
-          content: message,
+          content: messageContent,
           timestamp: new Date().toISOString(),
         });
       } catch (error) {
@@ -246,7 +315,7 @@ export const ChatManager = {
     }
 
     // Display user message
-    this.displayUserMessage(message);
+    this.displayUserMessage(messageContent);
 
     // Clear input
     input.value = '';
@@ -347,8 +416,8 @@ export const ChatManager = {
   toggleSendStop(streaming: boolean): void {
     const sendBtn = document.getElementById('sendBtn');
     const stopBtn = document.getElementById('stopBtn');
-    if (sendBtn) sendBtn.style.display = streaming ? 'none' : 'inline-flex';
-    if (stopBtn) stopBtn.style.display = streaming ? 'inline-flex' : 'none';
+    if (sendBtn) sendBtn.classList.toggle('d-none', streaming);
+    if (stopBtn) stopBtn.classList.toggle('d-none', !streaming);
   },
 
   async runPipeline(): Promise<void> {
@@ -431,15 +500,57 @@ export const ChatManager = {
     }
   },
 
-  displayUserMessage(message: string): void {
+  displayUserMessage(content: MessageContent): void {
     const chatArea = document.getElementById('chatMessages');
     if (!chatArea) return;
+
+    let contentHTML = '';
+
+    if (typeof content === 'string') {
+      // Text-only message
+      contentHTML = `<div>${escapeHtml(content)}</div>`;
+    } else {
+      // Multimodal message - separate text and images
+      const textParts: string[] = [];
+      const imageParts: string[] = [];
+
+      for (const block of content) {
+        if (block.type === 'text') {
+          textParts.push(escapeHtml(block.text));
+        } else if (block.type === 'image') {
+          // Reconstruct data URL for display
+          const dataUrl = `data:${block.source.media_type};base64,${block.source.data}`;
+          imageParts.push(`
+            <img
+              src="${dataUrl}"
+              class="rounded chat-message-image"
+              alt="User image"
+              onclick="window.open(this.src, '_blank')"
+            />
+          `);
+        }
+      }
+
+      // Display text first (if any)
+      if (textParts.length > 0) {
+        contentHTML += `<div class="mb-2">${textParts.join('<br>')}</div>`;
+      }
+
+      // Display images in horizontal scrollable row (if any)
+      if (imageParts.length > 0) {
+        contentHTML += `
+          <div class="d-flex gap-2 overflow-x-auto pb-1 chat-message-images">
+            ${imageParts.join('')}
+          </div>
+        `;
+      }
+    }
 
     const messageHTML = `
       <div class="user-message mb-3">
         <div class="d-flex justify-content-end">
-          <div class="bg-kea text-white rounded-3 p-3" style="max-width: 80%;">
-            ${escapeHtml(message)}
+          <div class="bg-kea text-white rounded-3 p-3 synthesis-result">
+            ${contentHTML}
           </div>
         </div>
       </div>
@@ -549,7 +660,7 @@ export const ChatManager = {
               <i class="bi bi-x-lg"></i>
             </button>
           </div>
-          <div class="draft-content small text-body cursor-pointer restore-draft-btn" data-content="${escapeHtml(draft.content).replace(/"/g, '&quot;')}" style="cursor: pointer;">
+          <div class="draft-content small text-body restore-draft-btn" data-content="${escapeHtml(draft.content).replace(/"/g, '&quot;')}">
             ${escapeHtml(preview)}
           </div>
         </div>

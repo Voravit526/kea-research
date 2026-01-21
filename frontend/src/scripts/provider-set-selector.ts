@@ -119,15 +119,16 @@ function renderDropdown(): void {
   menu.innerHTML = providerSets
     .map(set => {
       const isActive = set.id === activeSetId;
-      const systemBadge = set.is_system ? '<span class="badge bg-secondary ms-2">System</span>' : '';
-      const countBadge = `<span class="badge bg-primary ms-1">${set.provider_count}</span>`;
+      const systemBadge = set.is_system ? '<span class="badge text-bg-secondary ms-2">System</span>' : '';
+      const countBadge = `<span class="badge text-bg-secondary ms-1">${set.provider_count}</span>`;
 
       return `
         <li>
           <button class="dropdown-item d-flex align-items-center justify-content-between ${isActive ? 'active' : ''}"
-                  data-set-id="${set.id}">
+                  data-set-id="${set.id}"
+                  type="button">
             <span>${set.display_name}${systemBadge}${countBadge}</span>
-            ${isActive ? '<i class="bi bi-check2 ms-2"></i>' : ''}
+            ${isActive ? '<i class="bi bi-check2 ms-2 text-success"></i>' : ''}
           </button>
         </li>
       `;

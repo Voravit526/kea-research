@@ -50,7 +50,35 @@ export const AttachmentManager = {
       });
     }
 
-    // All attachment features are disabled (Coming Soon)
+    // === Wire up image attachment button ===
+    const attachImageBtn = document.getElementById('attachImage');
+    const imageInput = document.getElementById('imageInput') as HTMLInputElement | null;
+
+    if (attachImageBtn && imageInput) {
+      // Click button -> trigger file input
+      attachImageBtn.addEventListener('click', () => {
+        imageInput.click();
+      });
+
+      // File input change -> process selected files
+      imageInput.addEventListener('change', async (e) => {
+        const files = (e.target as HTMLInputElement).files;
+        if (!files || files.length === 0) return;
+
+        for (const file of Array.from(files)) {
+          if (file.type.startsWith('image/')) {
+            await this.addAttachment('image', file);
+          } else {
+            console.warn(`Skipping non-image file: ${file.name}`);
+          }
+        }
+
+        // Reset input to allow selecting same file again
+        imageInput.value = '';
+      });
+    }
+
+    console.log('AttachmentManager initialized (images enabled)');
   },
 
   updateIndicator(): void {
@@ -69,20 +97,65 @@ export const AttachmentManager = {
   },
 
   async addAttachment(type: 'image' | 'file', file: File): Promise<void> {
-    let processedFile = file;
+    // Validate image type
+    if (type === 'image') {
+      const SUPPORTED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+      if (!SUPPORTED_TYPES.includes(file.type)) {
+        alert(`Unsupported image format: ${file.type}. Please use JPEG, PNG, WebP, or GIF.`);
+        return;
+      }
 
-    if (type === 'image' && this.compressImages && file.type.startsWith('image/')) {
-      try {
-        console.log(`Compressing image: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`);
-        const compressedBlob = await ImageCompressor.compressAttachment(file, this.compressionOptions);
-        processedFile = new File([compressedBlob], file.name, { type: compressedBlob.type });
-        console.log(`Compressed to: ${(processedFile.size / 1024).toFixed(1)} KB`);
-      } catch (error) {
-        console.error('Image compression failed, using original:', error);
+      // Check file size (max 10MB before compression)
+      const MAX_SIZE_BYTES = 10 * 1024 * 1024;
+      if (file.size > MAX_SIZE_BYTES) {
+        alert(`Image too large: ${(file.size / 1024 / 1024).toFixed(1)}MB. Maximum is 10MB.`);
+        return;
+      }
+
+      // Limit: 5 images per message (Claude's limit)
+      const MAX_IMAGES = 5;
+      const currentImageCount = this.attachments.filter((att) => att.type === 'image').length;
+      if (currentImageCount >= MAX_IMAGES) {
+        alert(`Maximum ${MAX_IMAGES} images per message. Please remove some images first.`);
+        return;
       }
     }
 
-    this.attachments.push({ type, file: processedFile, name: file.name });
+    let processedFile = file;
+
+    // Compress image if enabled
+    if (type === 'image' && this.compressImages && file.type.startsWith('image/')) {
+      try {
+        console.log(`Compressing: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`);
+
+        const compressedBlob = await ImageCompressor.compressAttachment(
+          file,
+          this.compressionOptions
+        );
+
+        // Only use compressed if it's actually smaller
+        if (compressedBlob.size < file.size) {
+          processedFile = new File([compressedBlob], file.name, { type: compressedBlob.type });
+          console.log(
+            `Compressed: ${file.name} - ${(file.size / 1024).toFixed(1)}KB → ${(processedFile.size / 1024).toFixed(1)}KB`
+          );
+        } else {
+          console.warn(`Compression increased size for ${file.name}, using original`);
+        }
+      } catch (error) {
+        console.error('Compression failed, using original:', error);
+        // Continue with original file
+      }
+    }
+
+    // Add to attachments array
+    this.attachments.push({
+      type,
+      file: processedFile,
+      name: file.name,
+    });
+
+    // Update UI preview
     this.updateAttachmentPreview();
   },
 
@@ -97,57 +170,94 @@ export const AttachmentManager = {
   },
 
   updateAttachmentPreview(): void {
-    let preview = document.getElementById('attachmentPreview');
-    if (!preview) {
-      preview = document.createElement('div');
-      preview.id = 'attachmentPreview';
-      preview.className = 'd-flex flex-wrap gap-2 mt-2';
-      const wrapper = document.getElementById('chatInputWrapper');
-      if (wrapper) {
-        wrapper.after(preview);
-      }
+    const previewContainer = document.getElementById('attachmentPreview');
+    if (!previewContainer) return;
+
+    if (this.attachments.length === 0) {
+      previewContainer.innerHTML = '';
+      previewContainer.classList.add('d-none');
+      return;
     }
 
-    preview.innerHTML = this.attachments.map((att, index) => {
-      let icon: string, label: string;
-      switch (att.type) {
-        case 'image':
-          icon = '<i class="bi bi-image text-success"></i>';
-          label = att.name || 'Image';
-          break;
-        case 'file':
-          icon = '<i class="bi bi-files text-kea"></i>';
-          label = att.name || 'File';
-          break;
-        case 'youtube':
-          icon = '<i class="bi bi-youtube text-danger"></i>';
-          label = 'YouTube';
-          break;
-        case 'wikipedia':
-          icon = '<i class="bi bi-wikipedia text-body-secondary"></i>';
-          label = 'Wikipedia';
-          break;
-        default:
-          icon = '<i class="bi bi-file"></i>';
-          label = 'Attachment';
-      }
-      return `<span class="badge bg-body-secondary text-body d-flex align-items-center gap-1">
-        ${icon} <span class="text-truncate" style="max-width: 100px;">${label}</span>
-        <button type="button" class="btn-close btn-close-sm ms-1" data-index="${index}" aria-label="Remove"></button>
-      </span>`;
-    }).join('');
+    previewContainer.classList.remove('d-none');
 
-    preview.querySelectorAll('.btn-close').forEach(btn => {
+    const previewHTML = this.attachments
+      .map((att, index) => {
+        let icon = '<i class="bi bi-paperclip"></i>';
+        let preview = '';
+
+        // Show thumbnail for images
+        if (att.type === 'image' && att.file) {
+          const imgUrl = URL.createObjectURL(att.file);
+          preview = `
+            <img
+              src="${imgUrl}"
+              class="img-thumbnail me-2 attachment-preview-thumbnail"
+              alt="${att.name}"
+            >
+          `;
+
+          // Clean up object URL after a delay
+          setTimeout(() => URL.revokeObjectURL(imgUrl), 60000);
+        } else {
+          preview = icon;
+        }
+
+        return `
+          <div class="d-inline-flex align-items-center rounded px-2 py-1 me-2 mb-2 attachment-preview-item">
+            ${preview}
+            <span class="small me-2 text-body">${att.name}</span>
+            <button
+              type="button"
+              class="btn-close attachment-preview-close"
+              aria-label="Remove"
+              data-attachment-index="${index}"
+            ></button>
+          </div>
+        `;
+      })
+      .join('');
+
+    previewContainer.innerHTML = previewHTML;
+
+    // Wire up remove buttons
+    previewContainer.querySelectorAll('.btn-close').forEach((btn) => {
       btn.addEventListener('click', (e) => {
-        const index = parseInt((e.target as HTMLElement).dataset.index || '0');
-        this.attachments.splice(index, 1);
-        this.updateAttachmentPreview();
+        const target = e.target as HTMLElement;
+        const index = parseInt(target.dataset.attachmentIndex || '0', 10);
+        this.removeAttachment(index);
       });
     });
+  },
 
-    if (this.attachments.length === 0 && preview) {
-      preview.remove();
-    }
+  removeAttachment(index: number): void {
+    this.attachments.splice(index, 1);
+    this.updateAttachmentPreview();
+  },
+
+  /**
+   * Convert image file to base64 data URL
+   * @param file Image file
+   * @returns Promise resolving to base64 data URL (e.g., "data:image/jpeg;base64,...")
+   */
+  async convertImageToBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        if (typeof reader.result === 'string') {
+          resolve(reader.result);
+        } else {
+          reject(new Error('FileReader result is not a string'));
+        }
+      };
+
+      reader.onerror = () => {
+        reject(reader.error || new Error('FileReader error'));
+      };
+
+      reader.readAsDataURL(file);
+    });
   },
 
   showYoutubeModal(): void {
@@ -168,10 +278,12 @@ export const AttachmentManager = {
     }
   },
 
+  /**
+   * Clear all attachments (called after message is sent)
+   */
   clearAttachments(): void {
     this.attachments = [];
-    const preview = document.getElementById('attachmentPreview');
-    if (preview) preview.remove();
+    this.updateAttachmentPreview();
   }
 };
 

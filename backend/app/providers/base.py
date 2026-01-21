@@ -57,6 +57,21 @@ class BaseProvider(ABC):
         """
         return 3.0 if self.is_free_tier else 1.0
 
+    @property
+    def supports_vision(self) -> bool:
+        """Whether this provider supports image inputs (vision capabilities)."""
+        # Override in providers that don't support vision
+        return True
+
+    def _prepare_message_content(self, message: dict) -> dict:
+        """
+        Prepare message content for this provider.
+        Override in subclasses for provider-specific formatting.
+
+        Default: pass through as-is (works for Claude format)
+        """
+        return message
+
     @abstractmethod
     async def stream_chat(
         self, messages: list[dict], system_prompt: Optional[str] = None
@@ -147,12 +162,19 @@ class OpenAIFormatProvider(BaseProvider):
     async def stream_chat(
         self, messages: list[dict], system_prompt: Optional[str] = None
     ) -> AsyncIterator[StreamChunk]:
-        """Stream chat completion using OpenAI API format."""
+        """Stream chat completion using OpenAI API format with vision support."""
         try:
+            # Import here to avoid circular dependency
+            from app.utils.message_helpers import format_for_openai
+
             formatted_messages = []
             if system_prompt:
                 formatted_messages.append({"role": "system", "content": system_prompt})
-            formatted_messages.extend(messages)
+
+            # Format messages for OpenAI (converts images to image_url format)
+            for msg in messages:
+                formatted_msg = format_for_openai(msg)
+                formatted_messages.append(formatted_msg)
 
             payload = {
                 "model": self.model,

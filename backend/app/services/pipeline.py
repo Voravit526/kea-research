@@ -39,6 +39,7 @@ from app.services.prompts import (
 from app.config import settings
 from app.utils.sse import format_pipeline_sse
 from app.utils.normalize import normalize_string_list, normalize_to_string, repair_llm_json
+from app.utils.message_helpers import extract_text_only, has_images
 
 logger = logging.getLogger(__name__)
 
@@ -97,6 +98,9 @@ class PipelineOrchestrator:
         """
         Run the complete 4-step pipeline with SSE streaming.
 
+        IMPORTANT: Images are only sent in Step 1.
+        Steps 2-4 use text-only message history.
+
         Yields SSE events for frontend to display progress.
         """
         # Initialize pipeline state
@@ -109,13 +113,38 @@ class PipelineOrchestrator:
             self.state.provider_to_label[provider.name] = label
 
         # =========================================================================
-        # STEP 1: Initial Responses
+        # STEP 1: Initial Responses (with images if present)
         # =========================================================================
         yield format_pipeline_sse("step_start", "system", {"step": 1, "name": "Initial Responses"})
         self.state.current_step = 1
 
+        # Check if any messages have images
+        has_any_images = any(has_images(msg) for msg in messages)
+
+        if has_any_images:
+            # Filter to only vision-capable providers
+            vision_providers = [p for p in self.providers if p.supports_vision]
+            if not vision_providers:
+                yield format_pipeline_sse("error", "system", {
+                    "message": "No vision-capable providers available for image analysis"
+                })
+                return
+            logger.info(f"Image(s) detected. Using {len(vision_providers)} vision-capable providers: {[p.name for p in vision_providers]}")
+            # Temporarily use only vision providers for Step 1
+            original_providers = self.providers
+            original_providers_by_name = self.providers_by_name.copy()
+            self.providers = vision_providers
+            # Update provider lookup dictionary
+            self.providers_by_name = {p.name: p for p in vision_providers}
+
+        # Step 1: Use original messages (WITH images)
         async for event in self._run_step1(messages):
             yield event
+
+        # Restore original provider list if we filtered
+        if has_any_images:
+            self.providers = original_providers
+            self.providers_by_name = original_providers_by_name
 
         yield format_pipeline_sse(
             "step_complete",
@@ -134,12 +163,21 @@ class PipelineOrchestrator:
             return
 
         # =========================================================================
-        # STEP 2: MoA Refinement
+        # CONVERT TO TEXT-ONLY FOR STEPS 2-4
+        # =========================================================================
+        # This is CRITICAL: remove images to avoid redundant API calls
+        text_only_messages = [
+            extract_text_only(msg) if msg.get("role") == "user" else msg
+            for msg in messages
+        ]
+
+        # =========================================================================
+        # STEP 2: MoA Refinement (text-only)
         # =========================================================================
         yield format_pipeline_sse("step_start", "system", {"step": 2, "name": "MoA Refinement"})
         self.state.current_step = 2
 
-        async for event in self._run_step2(messages):
+        async for event in self._run_step2(text_only_messages):
             yield event
 
         yield format_pipeline_sse(
@@ -158,12 +196,12 @@ class PipelineOrchestrator:
             return
 
         # =========================================================================
-        # STEP 3: Peer Evaluation
+        # STEP 3: Peer Evaluation (text-only)
         # =========================================================================
         yield format_pipeline_sse("step_start", "system", {"step": 3, "name": "Peer Evaluation"})
         self.state.current_step = 3
 
-        async for event in self._run_step3(messages):
+        async for event in self._run_step3(text_only_messages):
             yield event
 
         yield format_pipeline_sse(
@@ -173,12 +211,12 @@ class PipelineOrchestrator:
         )
 
         # =========================================================================
-        # STEP 4: KEA Synthesis
+        # STEP 4: KEA Synthesis (text-only)
         # =========================================================================
         yield format_pipeline_sse("step_start", "system", {"step": 4, "name": "KEA Synthesis"})
         self.state.current_step = 4
 
-        async for event in self._run_step4(messages):
+        async for event in self._run_step4(text_only_messages):
             yield event
 
         yield format_pipeline_sse(

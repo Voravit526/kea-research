@@ -47,12 +47,19 @@ class OpenRouterProvider(BaseProvider):
     async def stream_chat(
         self, messages: list[dict], system_prompt: Optional[str] = None
     ):
-        """Stream chat completion using OpenRouter API (OpenAI-compatible format)."""
+        """Stream chat completion using OpenRouter API (OpenAI-compatible format) with vision support."""
         try:
+            # Import here to avoid circular dependency
+            from app.utils.message_helpers import format_for_openai
+
             formatted_messages = []
             if system_prompt:
                 formatted_messages.append({"role": "system", "content": system_prompt})
-            formatted_messages.extend(messages)
+
+            # Format messages for OpenAI (converts images to image_url format)
+            for msg in messages:
+                formatted_msg = format_for_openai(msg)
+                formatted_messages.append(formatted_msg)
 
             payload = {
                 "model": self.model,

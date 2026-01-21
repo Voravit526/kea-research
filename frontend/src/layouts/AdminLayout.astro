@@ -121,6 +121,16 @@ const { title = 'KEA Research Admin' } = Astro.props;
     .bg-kea-subtle{background-color:rgba(50, 59, 28, 0.15) !important;}
     [data-bs-theme="dark"] .bg-kea-subtle{background-color:rgba(166, 141, 111, 0.2) !important;}
 
+    /* Dropdown active item - use theme-aware colors instead of blue */
+    .dropdown-item.active, .dropdown-item:active {
+      background-color: var(--bs-secondary-bg);
+      color: var(--bs-body-color);
+    }
+    .dropdown-item.active:hover, .dropdown-item.active:focus {
+      background-color: var(--bs-tertiary-bg);
+      color: var(--bs-body-color);
+    }
+
     /* Admin sidebar (future use) */
     .admin-sidebar {
       width: 250px;

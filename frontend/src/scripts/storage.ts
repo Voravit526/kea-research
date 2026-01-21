@@ -46,11 +46,30 @@ export interface PipelineData {
   errors: Record<string, string[]>;
 }
 
+// Multimodal content types (matches backend format)
+export interface TextContent {
+  type: 'text';
+  text: string;
+}
+
+export interface ImageSource {
+  type: 'base64';
+  media_type: string;
+  data: string;
+}
+
+export interface ImageContent {
+  type: 'image';
+  source: ImageSource;
+}
+
+export type MessageContent = string | Array<TextContent | ImageContent>;
+
 export interface ChatMessage {
   id?: number;
   chatId: number;
   role: 'user' | 'assistant';
-  content: string;
+  content: MessageContent;  // Updated to support multimodal content
   providerResponses?: Record<string, ProviderResponseData>;
   timestamp: string;
   pipelineData?: PipelineData;

@@ -22,6 +22,9 @@ server {
     add_header X-Frame-Options DENY always;
     add_header Referrer-Policy strict-origin-when-cross-origin always;
 
+    # Allow larger uploads for image attachments
+    client_max_body_size 48M;
+
     gzip on;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/event-stream;
 

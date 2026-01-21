@@ -57,22 +57,31 @@ declare namespace bootstrap {
   }
 }
 
-// Image Compression Library
-interface ImageCompressionOptions {
-  maxSizeMB?: number;
-  maxWidthOrHeight?: number;
-  useWebWorker?: boolean;
-  initialQuality?: number;
-  exifOrientation?: number;
-  fileType?: string;
+// Compressor.js - Image Compression Library
+interface CompressorOptions {
+  strict?: boolean;
+  checkOrientation?: boolean;
+  retainExif?: boolean;
+  maxWidth?: number;
+  maxHeight?: number;
+  minWidth?: number;
+  minHeight?: number;
+  width?: number;
+  height?: number;
+  resize?: 'none' | 'contain' | 'cover';
+  quality?: number;
+  mimeType?: string;
+  convertTypes?: string | string[];
+  convertSize?: number;
+  beforeDraw?(context: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void;
+  drew?(context: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void;
+  success?(result: File | Blob): void;
+  error?(error: Error): void;
 }
 
-declare function imageCompression(
-  file: File,
-  options: ImageCompressionOptions
-): Promise<Blob>;
-
-declare namespace imageCompression {
-  function getExifOrientation(file: File): Promise<number>;
-  function drawImageInCanvas(img: HTMLImageElement): HTMLCanvasElement;
+declare class Compressor {
+  constructor(file: File | Blob, options?: CompressorOptions);
+  abort(): void;
+  static noConflict(): typeof Compressor;
+  static setDefaults(options: CompressorOptions): void;
 }

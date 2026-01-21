@@ -27,19 +27,36 @@ class GeminiProvider(BaseProvider):
     async def stream_chat(
         self, messages: list[dict], system_prompt: Optional[str] = None
     ) -> AsyncIterator[StreamChunk]:
+        """Stream chat responses from Gemini API with vision support."""
         try:
+            # Import here to avoid circular dependency
+            from app.utils.message_helpers import format_for_gemini
+
             # Convert messages to Gemini format
             contents = []
             for msg in messages:
+                # Get Gemini-formatted message (with parts array)
+                formatted = format_for_gemini(msg)
+
+                # Remap role: "assistant" -> "model"
                 role = "user" if msg["role"] == "user" else "model"
-                contents.append({"role": role, "parts": [{"text": msg["content"]}]})
+
+                contents.append({
+                    "role": role,
+                    "parts": formatted["parts"]
+                })
 
             payload = {
                 "contents": contents,
-                "generationConfig": {"maxOutputTokens": 4096},
+                "generationConfig": {
+                    "maxOutputTokens": 4096,
+                },
             }
+
             if system_prompt:
-                payload["systemInstruction"] = {"parts": [{"text": system_prompt}]}
+                payload["systemInstruction"] = {
+                    "parts": [{"text": system_prompt}]
+                }
 
             url = f"/models/{self.model}:streamGenerateContent?key={self.api_key}&alt=sse"
 

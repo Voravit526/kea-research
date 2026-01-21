@@ -91,7 +91,16 @@ async def chat(
     question = ""
     for msg in reversed(request.messages):
         if msg.role == "user":
-            question = msg.content
+            # Extract text from content (handle both string and multimodal)
+            if isinstance(msg.content, str):
+                question = msg.content
+            elif isinstance(msg.content, list):
+                # Multimodal: extract text parts
+                text_parts = []
+                for block in msg.content:
+                    if isinstance(block, dict) and block.get("type") == "text":
+                        text_parts.append(block.get("text", ""))
+                question = " ".join(text_parts).strip() or "(image)"
             break
 
     if not question:
@@ -100,8 +109,18 @@ async def chat(
     # Create pipeline orchestrator
     orchestrator = PipelineOrchestrator(providers=providers)
 
-    # Convert messages to dict format
-    messages = [{"role": m.role, "content": m.content} for m in request.messages]
+    # Convert messages to dict format (properly serialize Pydantic models)
+    messages = []
+    for m in request.messages:
+        # If content is a list of Pydantic models, convert to dicts
+        if isinstance(m.content, list):
+            content = [
+                item.model_dump() if hasattr(item, 'model_dump') else item
+                for item in m.content
+            ]
+        else:
+            content = m.content
+        messages.append({"role": m.role, "content": content})
 
     return StreamingResponse(
         orchestrator.run_pipeline(messages, question),
