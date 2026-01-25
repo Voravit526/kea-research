@@ -90,6 +90,15 @@ KEA processes every question through a structured 4-step pipeline:
 
 ## Key Features
 
+### KEA Research Layers
+- Create focused sub-conversations from any message
+- Explore specific topics in depth without cluttering main chat
+- Each research layer maintains its own independent research thread
+- Learn more about [Research Layers methodology](https://anvme.substack.com/p/research-layers)
+
+### Notes per Answer
+- Add personal notes to any AI response
+
 ### Visual Intelligence
 - Add images directly to chat context
 - Models can analyze screenshots, diagrams, and photos
