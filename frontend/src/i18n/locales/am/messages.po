@@ -394,6 +394,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "ወደ ውጭ ለመላክ ምንም ውይይት የለም። መጀመሪያ ውይይት ይጀምሩ።"
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "አጽዳ"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "ማስታወሻዎን ያክሉ..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "ማስታወሻ"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -434,6 +458,41 @@ msgstr "ርዕስ አልባ"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "የተሰቀለ"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "የምርምር ንብርብር ይፍጠሩ"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "ይህ የምርምር ንብርብር እና ሁሉንም መልእክቶቹን ይሰርዙ?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "ዋና ውይይት"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "የምርምር ንብርብር"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "የምርምር ንብርብር ይምረጡ"
 
 #. Page title
 #, fuzzy

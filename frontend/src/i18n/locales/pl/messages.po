@@ -372,6 +372,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Brak czatu do wyeksportowania. Najpierw rozpocznij rozmowę."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Wyczyść"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Dodaj swoją notatkę..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Zapisz"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Uwaga"
+
 #. Assistant role label
 msgctxt "js.roleAssistant"
 msgid "Assistant"
@@ -408,6 +429,41 @@ msgstr "Bez nazwy"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Przesłano"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Utwórz warstwę badawczą"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Czy chcesz usunąć tę warstwę badawczą i wszystkie jej wiadomości?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Usuń"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Główny czat"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Warstwa badawcza"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Wybierz warstwę badawczą"
 
 #. Page title
 #, fuzzy

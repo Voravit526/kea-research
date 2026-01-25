@@ -15,6 +15,45 @@ const { t } = Astro.props;
 </button>
 
 <div class="d-flex flex-column align-items-center justify-content-start pt-3 px-4 bg-body overflow-auto h-100" id="mainContent">
+  {/* Research Layer Breadcrumb and Quoted Text - Hidden by default, shown for layer chats */}
+  <div id="layerView" class="d-flex flex-column align-items-center w-100">
+    {/* Breadcrumb Navigation */}
+    <div class="w-100 chat-container-max mb-3">
+      <nav aria-label="breadcrumb" class="d-flex justify-content-between align-items-center py-2 d-none">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="#" id="backToMainChat" class="text-decoration-none">
+              <i class="bi bi-arrow-left me-1"></i>
+              <span>{t('layers.mainChat') || 'Main Chat'}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item active" id="layerBreadcrumbTitle" aria-current="page">
+            {t('layers.researchLayer') || 'Research Layer'}
+          </li>
+        </ol>
+        <button class="btn btn-link btn-sm text-danger p-0" id="deleteLayerBtn" title={t('layers.deleteLayer') || 'Delete'}>
+          <i class="bi bi-trash me-1"></i>
+          <span class="d-none d-sm-inline">{t('layers.deleteLayer') || 'Delete'}</span>
+        </button>
+      </nav>
+    </div>
+
+    {/* Quoted Text Card - Shows the selected text that started this layer */}
+    <div class="w-100 chat-container-max mb-3 d-none" id="layerQuotedTextCard">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-start">
+            <i class="bi bi-quote text-primary me-2 fs-4"></i>
+            <div class="flex-grow-1">
+              <p class="mb-0 fst-italic text-muted" id="layerQuotedText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Main Chat Area - Used by both regular chats and research layer chats */}
   <div class="d-flex flex-column align-items-center w-100" id="chatScrollArea">
     {/* Welcome section (hidden when chat starts) */}
     <div class="mt-5 mb-3 text-center" id="welcomeSection">
@@ -188,6 +227,29 @@ const { t } = Astro.props;
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Text Selection Tooltip for Research Layers */
+  :global(.text-selection-tooltip) {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: auto;
+    animation: fadeIn 0.15s ease-out;
+  }
+
+  :global(.text-selection-tooltip .btn) {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+  }
+
+  /* Research Layer View */
+  :global(#layerQuotedTextCard) {
+    background: rgba(var(--bs-primary-rgb), 0.05);
+  }
+
+  :global(#layerQuotedText) {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* Tab styling for better readability with custom backgrounds */

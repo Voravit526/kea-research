@@ -4,7 +4,7 @@
 
 export const KeaResearchDB = {
   dbName: 'KeaResearchDB',
-  version: 3,
+  version: 4,
   db: null as IDBDatabase | null,
 
   async init(): Promise<IDBDatabase> {
@@ -35,6 +35,7 @@ export const KeaResearchDB = {
           const assetStore = db.createObjectStore('assets', { keyPath: 'id' });
           assetStore.createIndex('type', 'type', { unique: false });
         }
+        // Note: Research layers now use regular chats table with parentMessageId field
       };
     });
   },

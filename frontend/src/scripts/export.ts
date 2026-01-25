@@ -194,7 +194,7 @@ export const ExportManager = {
     return `kea_${sanitizedTitle}_${date}.${format}`;
   },
 
-  exportMarkdown(chat: Chat, messages: ChatMessage[], options: ExportOptions): string {
+  async exportMarkdown(chat: Chat, messages: ChatMessage[], options: ExportOptions): Promise<string> {
     const lines: string[] = [];
     if (options.includeMetadata) {
       lines.push(`# ${chat.title || t('js.chatExport')}`);
@@ -202,7 +202,9 @@ export const ExportManager = {
       lines.push(`**${t('js.messages')}**: ${messages.length}`);
       lines.push('', '---', '');
     }
-    messages.forEach((msg, index) => {
+
+    for (let index = 0; index < messages.length; index++) {
+      const msg = messages[index];
       lines.push(`## ${t('js.message')} ${index + 1}`);
       lines.push(`**${msg.role === 'user' ? t('js.roleUser') : t('js.roleAssistant')}**`);
       if (options.includeTimestamps && msg.timestamp) {
@@ -226,8 +228,35 @@ export const ExportManager = {
         }
       }
 
-      lines.push(this.getMessageContent(msg), '', '---', '');
-    });
+      lines.push(this.getMessageContent(msg), '');
+
+      // Check for research layer chats (for assistant messages only)
+      if (msg.role === 'assistant' && msg.id) {
+        try {
+          const layerChats = await StorageUtils.getLayerChatsForMessage(msg.id);
+          if (layerChats.length > 0) {
+            lines.push('', '### 🔬 Research Layers', '');
+            for (const layerChat of layerChats) {
+              lines.push(`#### "${layerChat.title.substring(0, 80)}${layerChat.title.length > 80 ? '...' : ''}"`, '');
+              const layerMessages = await StorageUtils.getMessages(layerChat.id!);
+              layerMessages.forEach((layerMsg, lIdx) => {
+                const role = layerMsg.role === 'user' ? t('js.roleUser') : t('js.roleAssistant');
+                lines.push(`**${role} ${lIdx + 1}:**`);
+                if (layerMsg.timestamp) {
+                  lines.push(`*${new Date(layerMsg.timestamp).toLocaleString()}*`);
+                }
+                lines.push('');
+                lines.push(extractText(layerMsg.content), '');
+              });
+            }
+          }
+        } catch (error) {
+          console.error('Error exporting research layers:', error);
+        }
+      }
+
+      lines.push('---', '');
+    }
     return lines.join('\n');
   },
 
@@ -408,7 +437,7 @@ export const ExportManager = {
     let content: string, mimeType: string, extension: string;
     switch (format) {
       case 'markdown':
-        content = this.exportMarkdown(chat, messages, options);
+        content = await this.exportMarkdown(chat, messages, options);
         mimeType = 'text/markdown';
         extension = 'md';
         break;

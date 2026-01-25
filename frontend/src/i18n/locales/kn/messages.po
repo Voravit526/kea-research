@@ -397,6 +397,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "ರಫ್ತು ಮಾಡಲು ಯಾವುದೇ ಚಾಟ್ ಇಲ್ಲ. ಮೊದಲು ಸಂಭಾಷಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ."
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "ಸ್ಪಷ್ಟ"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "ನಿಮ್ಮ ಟಿಪ್ಪಣಿಯನ್ನು ಸೇರಿಸಿ..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "ಉಳಿಸಿ"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "ಸೂಚನೆ"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -438,6 +462,42 @@ msgstr "ಶೀರ್ಷಿಕೆರಹಿತ"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "ಸಂಶೋಧನಾ ಪದರವನ್ನು ರಚಿಸಿ"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "ಈ ಸಂಶೋಧನಾ ಪದರ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಸಂದೇಶಗಳನ್ನು ಅಳಿಸುವುದೇ?"
+
+#. layers.deleteLayer
+#, fuzzy
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "ಅಳಿಸಿ"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "ಮುಖ್ಯ ಚಾಟ್"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "ಸಂಶೋಧನಾ ಪದರ"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "ಸಂಶೋಧನಾ ಪದರವನ್ನು ಆಯ್ಕೆಮಾಡಿ"
 
 #. Page title
 msgctxt "meta.title"

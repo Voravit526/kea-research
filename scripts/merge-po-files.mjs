@@ -85,8 +85,8 @@ function parsePOFile(content) {
       if (line.startsWith('#. ')) {
         comment = line.substring(3);
       }
-      // Fuzzy flag
-      else if (line.startsWith('#, fuzzy')) {
+      // Fuzzy flag (check anywhere in flags line)
+      else if (line.startsWith('#,') && line.includes('fuzzy')) {
         fuzzy = true;
       }
       // Skip other comments
@@ -212,8 +212,9 @@ function getExistingTranslations(locale) {
     const entries = parsePOFile(content);
 
     for (const entry of entries) {
-      // Only store if there's an actual translation
-      if (entry.msgstr && entry.msgstr !== entry.msgid) {
+      // Store if there's ANY translation OR if it's marked as fuzzy
+      // Many words are the same across languages (e.g., "YouTube", "Stop", "Export")
+      if (entry.msgstr || entry.fuzzy) {
         translations.set(entry.msgctxt, {
           msgstr: entry.msgstr,
           fuzzy: entry.fuzzy,

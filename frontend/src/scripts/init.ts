@@ -17,6 +17,10 @@ import { Bookmarks } from './bookmarks';
 import { setProviderCache } from './constants';
 import { PipelineManager } from './pipeline';
 import { initProviderSetSelector } from './provider-set-selector';
+import { LayerManager } from './layer-manager';
+import { TextSelectionTooltip } from './text-selection-tooltip';
+import { LayerSelectionModal } from './layer-selection-modal';
+import { NotesEditor } from './notes-editor';
 
 declare function t(key: string, vars?: Record<string, string | number>): string;
 
@@ -130,6 +134,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   await safeInit('VoiceInput', () => VoiceInput.init());
   await safeInit('Bookmarks', () => Bookmarks.init());
   await safeInit('PipelineManager', () => PipelineManager.loadViewPreference());
+
+  // Initialize research layer modules
+  await safeInit('LayerManager', () => LayerManager.init());
+  await safeInit('TextSelectionTooltip', () => TextSelectionTooltip.init());
+  await safeInit('LayerSelectionModal', () => LayerSelectionModal.init());
+  await safeInit('NotesEditor', () => NotesEditor.init());
 
   // Setup logout button if user is authenticated
   const logoutBtn = document.getElementById('logoutBtn');

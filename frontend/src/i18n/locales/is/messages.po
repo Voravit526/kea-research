@@ -384,6 +384,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Ekkert spjall til að flytja út. Byrjaðu fyrst samtal."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Hreinsa"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Bættu við athugasemdinni þinni..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Vista"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Athugasemd"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -423,6 +444,41 @@ msgstr "Án titils"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Hlaðið upp"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Búa til rannsóknarlag"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Eyða þessu rannsóknarlagi og öllum skilaboðum þess?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Eyða"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Aðalspjall"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Rannsóknarlag"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Veldu rannsóknarlag"
 
 #. Page title
 msgctxt "meta.title"

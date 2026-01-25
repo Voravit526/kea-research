@@ -398,6 +398,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "No chat to export. Start a conversation first."
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Clear"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Add your note..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Save"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Note"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -439,6 +463,42 @@ msgstr "Untitled"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Uploaded"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Create research layer"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Delete this research layer and all its messages?"
+
+#. layers.deleteLayer
+#, fuzzy
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Delete"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Main Chat"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Research Layer"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Select Research Layer"
 
 #. Page title
 #, fuzzy

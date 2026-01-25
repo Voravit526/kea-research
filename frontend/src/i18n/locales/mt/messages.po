@@ -396,6 +396,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "M'hemm l-ebda chat biex tesporta. Ibda konverżazzjoni l-ewwel."
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Ċar"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Żid in-nota tiegħek..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Issejvja"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Nota"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -437,6 +461,42 @@ msgstr "Bla Titlu"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Imtella'"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Oħloq saff ta' riċerka"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Tħassar dan is-saff tar-riċerka u l-messaġġi kollha tiegħu?"
+
+#. layers.deleteLayer
+#, fuzzy
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Ħassar"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Chat Prinċipali"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Saff tar-Riċerka"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Agħżel Saff tar-Riċerka"
 
 #. Page title
 #, fuzzy

@@ -374,6 +374,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Ingen chatt att exportera. Starta en konversation först."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Rensa"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Lägg till din anteckning..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Spara"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Anteckning"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -411,6 +432,42 @@ msgstr "Saknar rubrik"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Uppladdat"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Skapa forskningslager"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Ska du radera detta forskningslager och alla dess meddelanden?"
+
+#. layers.deleteLayer
+#, fuzzy
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Radera"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Huvudchatt"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Forskningslager"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Välj forskningslager"
 
 #. Page title
 msgctxt "meta.title"

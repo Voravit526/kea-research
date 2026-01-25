@@ -379,6 +379,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "No hi ha cap xat per exportar. Primer inicia una conversa."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Esborrar"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Afegeix la teva nota..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Desar"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Nota"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -416,6 +437,41 @@ msgstr "Sense títol"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Pujat"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Crea una capa de recerca"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Voleu suprimir aquesta capa de recerca i tots els seus missatges?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Esborrar"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Xat principal"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Capa de recerca"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Selecciona la capa de recerca"
 
 #. Page title
 #, fuzzy

@@ -390,6 +390,29 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "एक्सपोर्ट करण्यासाठी कोणतेही चॅट नाही. प्रथम संभाषण सुरू करा."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "साफ"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "तुमची टीप जोडा..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "जतन करा"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "टीप"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -430,6 +453,41 @@ msgstr "शीर्षकहीन"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "अपलोड केले"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "संशोधन स्तर तयार करा"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "हा संशोधन स्तर आणि त्याचे सर्व संदेश हटवायचे का?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "हटवा"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "मुख्य गप्पा"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "संशोधन स्तर"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "संशोधन स्तर निवडा"
 
 #. Page title
 #, fuzzy

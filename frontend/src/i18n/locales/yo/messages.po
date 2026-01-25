@@ -395,6 +395,29 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Kò sí ìfọ̀rọ̀wérọ̀ láti gbé jáde. Bẹ̀rẹ̀ ìfọ̀rọ̀wérọ̀ ní àkọ́kọ́."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Ko o"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Fi àkọsílẹ̀ rẹ kún un..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Fipamọ"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Àkíyèsí"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -436,6 +459,41 @@ msgstr "Àìní àkọlé"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Àwọn tí a gbé sórí ayélujára"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Ṣẹ̀dá ipele ìwádìí"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Pa ìpele ìwádìí yìí àti gbogbo àwọn ìránṣẹ́ rẹ̀ rẹ́?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Paarẹ data Ti ṣee"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Ìfọ̀rọ̀wérọ̀ Pàtàkì"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Ipele Iwadi"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Yan Layer Iwadi"
 
 #. Page title
 #, fuzzy

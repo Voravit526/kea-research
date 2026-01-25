@@ -372,6 +372,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Không có cuộc trò chuyện để xuất. Hãy bắt đầu cuộc trò chuyện trước."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Xóa"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Thêm ghi chú của bạn..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Lưu"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Ghi chú"
+
 #. Assistant role label
 msgctxt "js.roleAssistant"
 msgid "Assistant"
@@ -408,6 +429,41 @@ msgstr "Chưa có tiêu đề"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Đã tải lên"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Tạo lớp nghiên cứu"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Xóa lớp nghiên cứu này và tất cả các tin nhắn của nó?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Xóa"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Trò chuyện chính"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Lớp Nghiên cứu"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Chọn Lớp Nghiên Cứu"
 
 #. Page title
 #, fuzzy

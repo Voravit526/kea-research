@@ -30,6 +30,8 @@ export interface Chat {
   updatedAt: string;
   isBookmarked?: boolean;
   providerSetName?: string; // Provider set name used for this chat (e.g., "Deep Thinking")
+  parentMessageId?: number; //NEW: null/undefined = top-level chat, number = layer chat attached to a message
+  layerQuotedText?: string;
 }
 
 export interface ProviderResponseData {
@@ -84,6 +86,7 @@ export interface ChatMessage {
   providerResponses?: Record<string, ProviderResponseData>;
   timestamp: string;
   pipelineData?: PipelineData;
+  note?: string;  // User note for assistant messages
 }
 
 export interface DraftItem {
@@ -215,13 +218,15 @@ export const StorageUtils = {
 
   // ========== Chat CRUD ==========
 
-  async createChat(title: string, providerSetName?: string): Promise<number> {
+  async createChat(title: string, providerSetName?: string, parentMessageId?: number, layerQuotedText?: string): Promise<number> {
     const now = new Date().toISOString();
     const chat: Chat = {
       title: title.substring(0, 100), // Truncate title
       createdAt: now,
       updatedAt: now,
       providerSetName: providerSetName || undefined,
+      parentMessageId: parentMessageId || undefined,
+      layerQuotedText: layerQuotedText || undefined,
     };
     const id = await KeaResearchDB.put('chats', chat);
     return id as number;
@@ -241,9 +246,22 @@ export const StorageUtils = {
   },
 
   async deleteChat(chatId: number): Promise<void> {
-    // Delete all messages first
+    // Delete all layer chats (chats with this chat's messages as parentMessageId)
+    const allChats = await this.getAllChats();
+    const messages = await this.getMessages(chatId);
+    for (const message of messages) {
+      if (message.id) {
+        const layerChats = allChats.filter((c: Chat) => c.parentMessageId === message.id);
+        for (const layerChat of layerChats) {
+          if (layerChat.id) {
+            await this.deleteChat(layerChat.id); // Recursive delete
+          }
+        }
+      }
+    }
+    // Delete all messages for this chat
     await this.deleteMessages(chatId);
-    // Then delete the chat
+    // Then delete the chat itself
     await KeaResearchDB.delete('chats', chatId);
   },
 
@@ -257,6 +275,33 @@ export const StorageUtils = {
 
   async getChat(chatId: number): Promise<Chat | null> {
     return await KeaResearchDB.get('chats', chatId);
+  },
+
+  /**
+   * Get all layer chats for a specific message (chats with parentMessageId = messageId)
+   */
+  async getLayerChatsForMessage(parentMessageId: number): Promise<Chat[]> {
+    const allChats = await this.getAllChats();
+    return allChats
+      .filter((c: Chat) => c.parentMessageId === parentMessageId)
+      .sort((a: Chat, b: Chat) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+  },
+
+  /**
+   * Get count of layer chats for a specific message
+   */
+  async getLayerCountForMessage(parentMessageId: number): Promise<number> {
+    const allChats = await this.getAllChats();
+    return allChats.filter((c: Chat) => c.parentMessageId === parentMessageId).length;
+  },
+
+  /**
+   * Get parent message for a layer chat
+   */
+  async getParentMessage(chatId: number): Promise<ChatMessage | null> {
+    const chat = await this.getChat(chatId);
+    if (!chat || !chat.parentMessageId) return null;
+    return await KeaResearchDB.get('messages', chat.parentMessageId);
   },
 
   // ========== Message CRUD ==========
@@ -280,6 +325,14 @@ export const StorageUtils = {
   async deleteMessages(chatId: number): Promise<void> {
     // Use index-based deletion for efficiency (avoids loading all messages)
     await KeaResearchDB.deleteAllByIndex('messages', 'chatId', chatId);
+  },
+
+  async updateMessageNote(messageId: number, note: string): Promise<void> {
+    const message = await KeaResearchDB.get('messages', messageId) as ChatMessage | undefined;
+    if (message) {
+      message.note = note;
+      await KeaResearchDB.put('messages', message);
+    }
   },
 
   // ========== Bookmark Operations ==========

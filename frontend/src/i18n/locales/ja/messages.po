@@ -371,6 +371,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "エクスポートするチャットがありません。まず会話を開始してください。"
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "クリア"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "メモを追加..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "保存"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "備考"
+
 #. Assistant role label
 msgctxt "js.roleAssistant"
 msgid "Assistant"
@@ -407,6 +428,41 @@ msgstr "無題"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "アップロード"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "研究レイヤーを作成する"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "この調査レイヤーと、そのすべてのメッセージを削除しますか？"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "削除"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "メインチャット"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "研究レイヤー"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "研究レイヤーを選択"
 
 #. Page title
 msgctxt "meta.title"

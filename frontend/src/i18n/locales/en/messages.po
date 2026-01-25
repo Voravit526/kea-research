@@ -334,6 +334,26 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "No chat to export. Start a conversation first."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Clear"
+
+#. js.notes.placeholder
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Add your note..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Save"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Note"
+
 #. Assistant role label
 msgctxt "js.roleAssistant"
 msgid "Assistant"
@@ -368,6 +388,36 @@ msgstr "Untitled"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Uploaded"
+
+#. layers.createLayer
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Create research layer"
+
+#. layers.deleteConfirm
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Delete this research layer and all its messages?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Delete"
+
+#. layers.mainChat
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Main Chat"
+
+#. layers.researchLayer
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Research Layer"
+
+#. layers.selectLayer
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Select Research Layer"
 
 #. Page title
 msgctxt "meta.title"

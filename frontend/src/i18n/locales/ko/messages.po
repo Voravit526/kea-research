@@ -373,6 +373,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "내보낼 채팅이 없습니다. 먼저 대화를 시작하세요."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "지우기"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "메모를 추가하세요..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "저장"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "메모"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -410,6 +431,41 @@ msgstr "제목 없음"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "업로드됨"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "연구 계층 생성"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "이 연구 레이어와 그 안에 있는 모든 메시지를 삭제하시겠습니까?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "삭제"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "메인 채팅"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "연구 계층"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "연구 계층 선택"
 
 #. Page title
 msgctxt "meta.title"

@@ -9,7 +9,7 @@ interface Props {
 const { locale } = Astro.props;
 
 // Load translations needed for client-side JavaScript
-const jsTranslations = getClientTranslations(locale, ['js.', 'chat.']);
+const jsTranslations = getClientTranslations(locale, ['js.', 'chat.', 'layers.']);
 ---
 
 <script define:vars={{ locale, translations: jsTranslations }}>

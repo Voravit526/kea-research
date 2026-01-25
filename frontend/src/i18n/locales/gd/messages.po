@@ -395,6 +395,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Chan eil cabadaich ann airson às-phortadh. Tòisich còmhradh an toiseach."
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Glan"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Cuir ris an nota agad..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Sàbhail"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Nota"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -435,6 +459,42 @@ msgstr "Gun tiotal"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Air a luchdachadh suas"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Cruthaich sreath rannsachaidh"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "A bheil thu airson an sreath rannsachaidh seo agus a h-uile teachdaireachd a sguabadh às?"
+
+#. layers.deleteLayer
+#, fuzzy
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Sguab às"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Prìomh Chat"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Sreath Rannsachaidh"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Tagh Sreath Rannsachaidh"
 
 #. Page title
 #, fuzzy

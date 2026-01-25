@@ -390,6 +390,29 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "برآمد کرنے کے لیے کوئی چیٹ نہیں ہے۔ پہلے بات چیت شروع کریں۔"
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "صاف"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "اپنا نوٹ شامل کریں..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "محفوظ کریں"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "نوٹ"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -429,6 +452,41 @@ msgstr "بلا عنوان"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "اپ لوڈ کیا گیا"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "تحقیقی پرت بنائیں"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "اس تحقیقی پرت اور اس کے تمام پیغامات کو حذف کریں؟"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "حذف"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "مین چیٹ"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "تحقیقی پرت"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "ریسرچ لیئر کو منتخب کریں۔"
 
 #. Page title
 #, fuzzy

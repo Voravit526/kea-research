@@ -387,6 +387,28 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Hakuna gumzo la kuhamisha. Anza mazungumzo kwanza."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Futa"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Ongeza dokezo lako..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Hifadhi"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Kumbuka"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -426,6 +448,41 @@ msgstr "Isiyo na Jina"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Imepakiwa"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Unda safu ya utafiti"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Ungependa kufuta safu hii ya utafiti na jumbe zake zote?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Futa"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Gumzo Kuu"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Tabaka la Utafiti"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Chagua Tabaka la Utafiti"
 
 #. Page title
 msgctxt "meta.title"

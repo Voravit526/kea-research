@@ -380,6 +380,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Nuk ka bisedë për eksport. Filloni një bisedë më parë."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Fshij"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Shtoni shënimin tuaj..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Ruaj"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Shënim"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -417,6 +438,41 @@ msgstr "Pa titull"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Ngarkuar"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Krijo shtresën e kërkimit"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Të fshihet kjo shtresë kërkimore dhe të gjitha mesazhet e saj?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Fshij"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Biseda kryesore"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Shtresa e Kërkimit"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Zgjidhni Shtresën e Kërkimit"
 
 #. Page title
 #, fuzzy
@@ -618,7 +674,7 @@ msgstr "GPU (WebGPU)"
 #, fuzzy
 msgctxt "settings.ttsDisabledByAdmin"
 msgid "Text-to-Speech has been disabled by the administrator."
-msgstr "Funksioni \"Tekst-në-Fjalë\" është çaktivizuar nga administratori."
+msgstr "Funksioni \\\"Tekst-në-Fjalë\\\" është çaktivizuar nga administratori."
 
 #. TTS - Enable toggle
 #, fuzzy

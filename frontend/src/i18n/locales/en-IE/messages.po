@@ -8,11 +8,11 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_IE\n"
+"Language: en-IE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: KEA po-merge\n"
 
 #. Attachment menu - attach file
 msgctxt "attachments.attachFile"
@@ -334,6 +334,26 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr ""
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr ""
+
+#. js.notes.placeholder
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr ""
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr ""
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr ""
+
 #. Assistant role label
 msgctxt "js.roleAssistant"
 msgid "Assistant"
@@ -367,6 +387,36 @@ msgstr ""
 #. Uploaded status
 msgctxt "js.uploaded"
 msgid "Uploaded"
+msgstr ""
+
+#. layers.createLayer
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr ""
+
+#. layers.deleteConfirm
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr ""
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr ""
+
+#. layers.mainChat
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr ""
+
+#. layers.researchLayer
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr ""
+
+#. layers.selectLayer
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
 msgstr ""
 
 #. Page title

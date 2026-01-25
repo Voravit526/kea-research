@@ -295,7 +295,7 @@ msgstr "ချတ်ကို ထုတ်ယူပါ"
 #, fuzzy
 msgctxt "footer.allRightsReserved"
 msgid "All rights reserved"
-msgstr "မူပိုင်ခွင့်ကိုလက်ဝယ်ထားသည်"
+msgstr "မူပိုင်ခွင့်ကိုလက်ဝယ်ထားသည်"
 
 #. Chat label
 msgctxt "js.chat"
@@ -390,6 +390,27 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "ထုတ်ယူရန် ချတ်မရှိပါ။ စကားဝိုင်းတစ်ခု အရင်စတင်ပါ။"
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "ရှင်းလင်းမည်"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "သင့်မှတ်စုကို ထည့်ပါ..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "သိမ်းရန်"
+
+#. js.notes.title
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "မှတ်စု"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -429,6 +450,41 @@ msgstr "ခေါင်းစဉ်မဲ့"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "အပ်လုဒ်လုပ်ထားသည်"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "သုတေသနအလွှာ ဖန်တီးပါ"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "ဤသုတေသနအလွှာနှင့် ၎င်း၏မက်ဆေ့ချ်အားလုံးကို ဖျက်ပစ်မလား။"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "ဖျက်"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "အဓိကချတ်"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "သုတေသနအလွှာ"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "သုတေသနအလွှာကို ရွေးချယ်ပါ"
 
 #. Page title
 #, fuzzy

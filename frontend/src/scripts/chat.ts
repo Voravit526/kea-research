@@ -230,6 +230,12 @@ export const ChatManager = {
 
     if (!message && attachments.length === 0) return;
 
+    // Check if we're in a research layer
+    if (window.LayerManager && window.LayerManager.isInLayer()) {
+      await this.sendMessageInLayer(message, attachments);
+      return;
+    }
+
     // Hide welcome message
     this.hideWelcome();
 
@@ -414,7 +420,7 @@ export const ChatManager = {
       try {
         const finalAnswer = PipelineManager.getFinalAnswer();
         if (finalAnswer && PipelineManager.state) {
-          await StorageUtils.saveMessage({
+          const messageId = await StorageUtils.saveMessage({
             chatId: this.currentChatId,
             role: 'assistant',
             content: finalAnswer,
@@ -435,6 +441,15 @@ export const ChatManager = {
             timestamp: new Date().toISOString(),
           });
 
+          // Update layer counter, notes button, and attach text selection for research layers
+          if (messageId && PipelineManager.updateLayerCounter && PipelineManager.attachTextSelectionToFinalAnswer) {
+            await PipelineManager.updateLayerCounter(messageId);
+            PipelineManager.attachTextSelectionToFinalAnswer(messageId);
+            if (PipelineManager.updateNotesButton) {
+              await PipelineManager.updateNotesButton(messageId);
+            }
+          }
+
           // Add to in-memory messages for context
           this.messages.push({ role: 'assistant', content: finalAnswer });
 
@@ -445,6 +460,202 @@ export const ChatManager = {
 
           // Remove sent message from draft history (only after successful send)
           this.removeDraftByContent(message);
+        }
+      } catch (error) {
+        console.error('Error saving assistant message:', error);
+      }
+    }
+  },
+
+  async sendMessageInLayer(message: string, attachments: any[]): Promise<void> {
+    const input = document.getElementById('chatInput');
+    if (!isTextAreaElement(input)) return;
+
+    // Retrieve full quoted text from layer
+    let quotedText = '';
+    if (this.currentChatId !== null) {
+      const chat = await StorageUtils.getChat(this.currentChatId);
+      quotedText = chat?.layerQuotedText || '';
+    }
+
+    // Validate: User must provide their own input in research layers
+    if (!message.trim() && attachments.length === 0) {
+      return; // Don't send if user hasn't typed anything or added attachments
+    }
+
+    // Build message content (text-only or multimodal)
+    let messageContent: MessageContent;
+    const imageAttachments = attachments.filter(att => att.type === 'image');
+    const fileAttachments = attachments.filter(att => att.type === 'file');
+
+    let combinedText = message;
+    if (quotedText && message) {
+      combinedText = `"${quotedText}"
+
+${message}`;
+    }
+
+    if (imageAttachments.length > 0 || fileAttachments.length > 0) {
+      // Multimodal message: array of content blocks
+      const contentBlocks: Array<TextContent | ImageContent | DocumentContent> = [];
+
+      // Build text for AI (user input + XML for files)
+      let aiText = combinedText;
+
+      // Convert files to base64
+      const fileDataMap = new Map<any, { dataUrl: string; mediaType: string; base64Data: string }>();
+
+      for (const att of fileAttachments) {
+        if (!att.file) continue;
+
+        try {
+          const fileData = await AttachmentManager.convertFileToBase64(att.file);
+          fileDataMap.set(att, fileData);
+
+          // Add XML for AI
+          aiText += `\n\n<document name="${att.name || att.file.name}" extension="${AttachmentManager.getFileExtension(att.name || att.file.name)}">\n${fileData.textContent || ''}\n</document>`;
+        } catch (error) {
+          console.error('Failed to process file:', att.name, error);
+          alert(`Failed to read file: ${att.name}\n${error instanceof Error ? error.message : 'Unknown error'}`);
+        }
+      }
+
+      // Add text content block (with AI-formatted text)
+      contentBlocks.push({
+        type: 'text',
+        text: aiText
+      });
+
+      // Add image blocks
+      for (const att of imageAttachments) {
+        if (!att.file) continue;
+
+        try {
+          const dataUrl = await AttachmentManager.convertImageToBase64(att.file);
+          const match = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
+          if (!match) {
+            console.error('Invalid data URL format for image:', att.name);
+            continue;
+          }
+
+          const [, mediaType, base64Data] = match;
+
+          contentBlocks.push({
+            type: 'image',
+            source: {
+              type: 'base64',
+              media_type: mediaType,
+              data: base64Data
+            }
+          });
+        } catch (error) {
+          console.error('Failed to convert image to base64:', att.name, error);
+          alert(`Failed to read image: ${att.name}\n${error instanceof Error ? error.message : 'Unknown error'}`);
+        }
+      }
+
+      // Add document blocks
+      for (const att of fileAttachments) {
+        const fileData = fileDataMap.get(att);
+        if (!fileData) continue;
+
+        const filename = att.name || att.file.name;
+        const extension = AttachmentManager.getFileExtension(filename);
+
+        contentBlocks.push({
+          type: 'document',
+          source: {
+            type: 'base64',
+            media_type: fileData.mediaType,
+            data: fileData.base64Data
+          },
+          name: filename,
+          extension: extension
+        });
+      }
+
+      messageContent = contentBlocks;
+    } else {
+      // Text-only message
+      messageContent = combinedText;
+    }
+
+    // Display user message
+    this.displayUserMessage(messageContent);
+
+    // Save user message to storage
+    if (this.currentChatId !== null) {
+      await StorageUtils.saveMessage({
+        chatId: this.currentChatId,
+        role: 'user',
+        content: messageContent,
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    // Add to in-memory messages for context
+    this.messages.push({ role: 'user', content: messageContent });
+
+    // Clear input and attachments
+    input.value = '';
+    AttachmentManager.clearAttachments();
+
+    // Show stop button, hide send button
+    this.toggleSendStop(true);
+
+    // Initialize pipeline state
+    PipelineManager.reset();
+    PipelineManager.state = PipelineManager.initState();
+
+    // Create pipeline UI container (layers use same chatMessages container)
+    const chatArea = document.getElementById('chatMessages');
+    if (chatArea) {
+      PipelineManager.createPipelineContainer(chatArea);
+    }
+
+    // Start pipeline streaming
+    await this.runPipeline();
+
+    // Hide stop button, show send button
+    this.toggleSendStop(false);
+
+    // Save assistant message with pipeline data
+    if (this.currentChatId !== null && PipelineManager.state?.step4Response) {
+      try {
+        const finalAnswer = PipelineManager.getFinalAnswer();
+        if (finalAnswer && PipelineManager.state) {
+          const messageId = await StorageUtils.saveMessage({
+            chatId: this.currentChatId,
+            role: 'assistant',
+            content: finalAnswer,
+            providerResponses: {
+              kea: {
+                content: finalAnswer,
+                error: undefined,
+              },
+            },
+            pipelineData: {
+              step1Responses: PipelineManager.state.step1Responses,
+              step2Responses: PipelineManager.state.step2Responses,
+              step3Responses: PipelineManager.state.step3Responses,
+              step4Response: PipelineManager.state.step4Response,
+              synthesizer: PipelineManager.state.synthesizer,
+              errors: PipelineManager.state.errors,
+            },
+            timestamp: new Date().toISOString(),
+          });
+
+          // Update layer counter, notes button, and attach text selection
+          if (messageId && PipelineManager.updateLayerCounter && PipelineManager.attachTextSelectionToFinalAnswer) {
+            await PipelineManager.updateLayerCounter(messageId);
+            PipelineManager.attachTextSelectionToFinalAnswer(messageId);
+            if (PipelineManager.updateNotesButton) {
+              await PipelineManager.updateNotesButton(messageId);
+            }
+          }
+
+          // Add to in-memory messages for context
+          this.messages.push({ role: 'assistant', content: finalAnswer });
         }
       } catch (error) {
         console.error('Error saving assistant message:', error);
@@ -952,6 +1163,16 @@ export const ChatManager = {
     // Unlock provider set selector for new chat
     unlockSelector();
 
+    // Hide breadcrumb and quoted text when creating new chat
+    const breadcrumbNav = document.querySelector('#layerView nav[aria-label="breadcrumb"]');
+    const quotedTextCard = document.getElementById('layerQuotedTextCard');
+    if (breadcrumbNav) {
+      breadcrumbNav.classList.add('d-none');
+    }
+    if (quotedTextCard) {
+      quotedTextCard.classList.add('d-none');
+    }
+
     const chatInput = document.getElementById('chatInput');
     if (isTextAreaElement(chatInput)) {
       chatInput.value = '';
@@ -1019,11 +1240,6 @@ export const ChatManager = {
       // Load messages from IndexedDB
       const messages = await StorageUtils.getMessages(chatId);
 
-      if (messages.length === 0) {
-        console.warn('No messages found for chat:', chatId);
-        return;
-      }
-
       // Load chat metadata to get provider set name
       const chat = await StorageUtils.getChat(chatId);
       const providerSetName = chat?.providerSetName || null;
@@ -1036,6 +1252,53 @@ export const ChatManager = {
 
       // Lock selector when loading existing chat
       lockSelector();
+
+      // Show/hide breadcrumb and quoted text based on chat.parentMessageId
+      // NOTE: Keep main chat UI visible - layer chats use the same UI as regular chats
+      const breadcrumbNav = document.querySelector('#layerView nav[aria-label="breadcrumb"]');
+      const quotedTextCard = document.getElementById('layerQuotedTextCard');
+
+      if (chat && chat.parentMessageId) {
+        // This is a layer chat - show breadcrumb and quoted text above main chat
+        if (breadcrumbNav) {
+          breadcrumbNav.classList.remove('d-none');
+        }
+        if (quotedTextCard) {
+          quotedTextCard.classList.remove('d-none');
+        }
+
+        // Update breadcrumb title with chat title (truncated)
+        const breadcrumbTitle = document.getElementById('layerBreadcrumbTitle');
+        if (breadcrumbTitle) {
+          breadcrumbTitle.textContent = chat.title;
+        }
+
+        // Show quoted text card with full quoted text
+        const quotedTextEl = document.getElementById('layerQuotedText');
+        if (quotedTextEl) {
+          quotedTextEl.textContent = chat.layerQuotedText || chat.title;
+        }
+
+        // Attach back button handler to load parent chat
+        const backBtn = document.getElementById('backToMainChat');
+        if (backBtn) {
+          backBtn.onclick = async (e) => {
+            e.preventDefault();
+            const parentMsg = await StorageUtils.getParentMessage(chatId);
+            if (parentMsg) {
+              await this.loadChat(parentMsg.chatId);
+            }
+          };
+        }
+      } else {
+        // Top-level chat - hide breadcrumb and quoted text
+        if (breadcrumbNav) {
+          breadcrumbNav.classList.add('d-none');
+        }
+        if (quotedTextCard) {
+          quotedTextCard.classList.add('d-none');
+        }
+      }
 
       // Hide welcome, clear chat area
       this.hideWelcome();
@@ -1070,6 +1333,15 @@ export const ChatManager = {
               this.displayAssistantMessage(content);
             }
             this.messages.push({ role: 'assistant', content });
+
+            // Attach text selection listener, update layer counter and notes button for research layers
+            if (msg.id && PipelineManager.updateLayerCounter && PipelineManager.attachTextSelectionToFinalAnswer) {
+              await PipelineManager.updateLayerCounter(msg.id);
+              PipelineManager.attachTextSelectionToFinalAnswer(msg.id);
+              if (PipelineManager.updateNotesButton) {
+                await PipelineManager.updateNotesButton(msg.id);
+              }
+            }
           }
         }
       }

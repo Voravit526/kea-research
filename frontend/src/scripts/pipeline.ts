@@ -127,6 +127,9 @@ export const PipelineManager = {
             <button class="btn btn-link btn-sm p-0 text-white d-none" id="tts-restart-btn-${id}" title="Restart from beginning">
               <i class="bi bi-skip-start-fill"></i>
             </button>
+            <button class="btn btn-link btn-sm p-0 text-white ms-2 notes-toggle-btn" id="notes-btn-${id}" data-message-id="" title="Add note">
+              <i class="bi bi-pencil-square"></i>
+            </button>
             <span class="badge bg-light text-dark ms-auto" id="final-confidence-${id}"></span>
           </div>
           <div class="card-body" id="final-answer-content-${id}"></div>
@@ -462,7 +465,7 @@ export const PipelineManager = {
       }
     }
 
-    // Set meta with provider icon
+    // Set meta with provider icon and layer counter
     const metaTextEl = document.getElementById(`final-meta-text-${id}`);
     if (metaTextEl) {
       const config = PROVIDER_CONFIG[provider] || { name: provider, icon: 'bi-robot', color: '#6c757d' };
@@ -472,7 +475,32 @@ export const PipelineManager = {
       const timestampHtml = timestamp
         ? `<span class="mx-2">•</span><i class="bi bi-calendar2-event me-1"></i>${new Date(timestamp).toLocaleString()}`
         : '';
-      metaTextEl.innerHTML = `${iconHtml} Synthesized by ${displayName}${timestampHtml}`;
+
+      // Add layer counter (will be populated when message ID is available)
+      // Don't show layer counter when inside a layer (no nested layers)
+      const isInLayer = window.LayerManager && window.LayerManager.isInLayer();
+      const layerCounterHtml = !isInLayer ? `
+        <span class="mx-2">•</span>
+        <button class="btn btn-link btn-sm p-0 text-muted layers-counter-btn" id="layers-btn-${id}" data-message-id="" style="text-decoration: none;">
+          <i class="bi bi-stack me-1"></i>
+          <span class="layers-count" id="layers-count-${id}">0</span>
+          <span class="ms-1">KEA Research layers</span>
+        </button>
+      ` : '';
+
+      metaTextEl.innerHTML = `${iconHtml} Synthesized by ${displayName}${timestampHtml}${layerCounterHtml}`;
+
+      // Attach layer counter click handler (only if not in layer)
+      if (!isInLayer) {
+        const layersBtn = document.getElementById(`layers-btn-${id}`);
+        if (layersBtn) {
+          layersBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.onLayerCounterClick(layersBtn);
+          });
+        }
+      }
     }
 
     // Attach action handlers (copy, export, TTS)
@@ -541,6 +569,19 @@ export const PipelineManager = {
         e.preventDefault();
         e.stopPropagation();
         window.TTS.restart();
+      });
+    }
+
+    // Attach notes button handler
+    const notesBtn = document.getElementById(`notes-btn-${id}`);
+    if (notesBtn && window.NotesEditor) {
+      notesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const messageId = notesBtn.getAttribute('data-message-id');
+        if (messageId) {
+          window.NotesEditor.showEditor(parseInt(messageId, 10), notesBtn);
+        }
       });
     }
 
@@ -933,6 +974,99 @@ export const PipelineManager = {
         countEl.classList.remove('bg-secondary');
         countEl.classList.add('bg-success');
       }
+    }
+  },
+
+  /**
+   * Handle layer counter button click
+   */
+  async onLayerCounterClick(buttonEl: HTMLElement): Promise<void> {
+    const messageId = buttonEl.getAttribute('data-message-id');
+    if (!messageId) {
+      console.warn('No message ID on layer counter button');
+      return;
+    }
+
+    const messageIdNum = parseInt(messageId, 10);
+    if (isNaN(messageIdNum)) return;
+
+    // Get layer chats for this message
+    if (!window.StorageUtils) return;
+    const layerChats = await window.StorageUtils.getLayerChatsForMessage(messageIdNum);
+
+    if (layerChats.length === 0) {
+      // No layers, do nothing
+      return;
+    } else if (layerChats.length === 1) {
+      // Single layer - load chat directly
+      if (window.ChatManager) {
+        await window.ChatManager.loadChat(layerChats[0].id!);
+      }
+    } else {
+      // Multiple layers - show selection modal
+      if (window.LayerSelectionModal) {
+        await window.LayerSelectionModal.show(messageIdNum);
+      }
+    }
+  },
+
+  /**
+   * Update layer counter for a specific message
+   * Call this after message is saved to IndexedDB
+   */
+  async updateLayerCounter(messageId: number, responseId?: number): Promise<void> {
+    if (!window.StorageUtils) return;
+
+    // Don't update layer counter when inside a layer (no nested layers)
+    const isInLayer = window.LayerManager && window.LayerManager.isInLayer();
+    if (isInLayer) return;
+
+    const count = await window.StorageUtils.getLayerCountForMessage(messageId);
+    const rid = responseId || this.responseCounter;
+
+    // Update counter text
+    const countEl = document.getElementById(`layers-count-${rid}`);
+    if (countEl) {
+      countEl.textContent = String(count);
+    }
+
+    // Update data-message-id attribute on button
+    const layersBtn = document.getElementById(`layers-btn-${rid}`);
+    if (layersBtn) {
+      layersBtn.setAttribute('data-message-id', String(messageId));
+    }
+  },
+
+  /**
+   * Update notes button with message ID and icon state
+   * Call this after message is saved to IndexedDB
+   */
+  async updateNotesButton(messageId: number, responseId?: number): Promise<void> {
+    if (!window.NotesEditor) return;
+
+    const rid = responseId || this.responseCounter;
+    const buttonId = `notes-btn-${rid}`;
+
+    await window.NotesEditor.updateNotesButton(messageId, buttonId);
+  },
+
+  /**
+   * Attach text selection listener to final answer card
+   * Call this after message is saved and message ID is available
+   */
+  attachTextSelectionToFinalAnswer(messageId: number, responseId?: number): void {
+    const rid = responseId || this.responseCounter;
+
+    // Add data-message-id to final answer card
+    const card = document.getElementById(`final-answer-card-${rid}`);
+    if (card) {
+      card.setAttribute('data-message-id', String(messageId));
+    }
+
+    // Attach text selection listener to content
+    const contentEl = document.getElementById(`final-answer-content-${rid}`);
+    if (contentEl && window.TextSelectionTooltip) {
+      window.TextSelectionTooltip.attachToElement(contentEl, messageId);
     }
   },
 

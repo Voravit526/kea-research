@@ -8,7 +8,7 @@
  * Usage: node scripts/extract-translations.mjs
  */
 
-import { readFileSync, readdirSync, existsSync, statSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from 'fs';
 import { join, dirname, relative } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -49,28 +49,38 @@ function getFiles(dir, extensions, files = []) {
 }
 
 /**
- * Extract translation keys from source code
+ * Extract translation keys and fallback values from source code
  */
 function extractKeysFromCode(content, filePath) {
-  const keys = new Map(); // key -> { file, line }
+  const keys = new Map(); // key -> { file, line, fallback }
 
-  // Pattern for t('key') or t("key") - captures the key
-  // Must be:
-  // - Preceded by word boundary, { or ( to avoid matching createElement('div') etc.
-  // - Key must contain a dot (namespace.key format)
-  // Matches: t('chat.send'), {t('settings.title')}, t("js.error", { vars })
-  const pattern = /(?:^|[{\s(,])t\(\s*['"]([a-zA-Z0-9]+\.[a-zA-Z0-9._]+)['"]/g;
+  // Pattern for t('key') || 'fallback text'
+  const fallbackPattern = /t\(\s*['"]([a-zA-Z0-9]+\.[a-zA-Z0-9._]+)['"]\s*[^)]*\)\s*\|\|\s*['"]([^'"]+)['"]/g;
+
+  // Pattern for t('key') without fallback
+  const noFallbackPattern = /(?:^|[{\s(,])t\(\s*['"]([a-zA-Z0-9]+\.[a-zA-Z0-9._]+)['"]/g;
 
   const lines = content.split('\n');
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+
+    // First, extract keys with fallbacks
+    fallbackPattern.lastIndex = 0;
     let match;
-    // Reset lastIndex for each line
-    pattern.lastIndex = 0;
-    while ((match = pattern.exec(line)) !== null) {
+    while ((match = fallbackPattern.exec(line)) !== null) {
+      const key = match[1];
+      const fallback = match[2];
+      if (!keys.has(key)) {
+        keys.set(key, { file: filePath, line: i + 1, fallback });
+      }
+    }
+
+    // Then, extract keys without fallbacks (if not already found)
+    noFallbackPattern.lastIndex = 0;
+    while ((match = noFallbackPattern.exec(line)) !== null) {
       const key = match[1];
       if (!keys.has(key)) {
-        keys.set(key, { file: filePath, line: i + 1 });
+        keys.set(key, { file: filePath, line: i + 1, fallback: null });
       }
     }
   }
@@ -152,6 +162,133 @@ function getLocales() {
 }
 
 /**
+ * Parse PO file and extract all entries with metadata
+ */
+function parsePOFileEntries(content) {
+  const entries = [];
+  const blocks = content.split(/\n\n+/);
+
+  for (const block of blocks) {
+    const lines = block.split('\n');
+    let comment = '';
+    let fuzzy = false;
+    let msgctxt = '';
+    let msgid = '';
+    let msgstr = '';
+    let currentField = null;
+    let isHeader = false;
+
+    for (const line of lines) {
+      if (line.startsWith('#. ')) {
+        comment = line.substring(3);
+      }
+      else if (line.startsWith('#,') && line.includes('fuzzy')) {
+        fuzzy = true;
+      }
+      else if (line.startsWith('#')) {
+        continue;
+      }
+      else if (line.startsWith('msgctxt ')) {
+        msgctxt = extractQuotedString(line.substring(8));
+        currentField = 'msgctxt';
+      }
+      else if (line.startsWith('msgid ')) {
+        msgid = extractQuotedString(line.substring(6));
+        currentField = 'msgid';
+        if (msgid === '' && msgctxt === '') {
+          isHeader = true;
+        }
+      }
+      else if (line.startsWith('msgstr ')) {
+        msgstr = extractQuotedString(line.substring(7));
+        currentField = 'msgstr';
+      }
+      else if (line.startsWith('"')) {
+        const continuation = extractQuotedString(line);
+        if (currentField === 'msgctxt') msgctxt += continuation;
+        else if (currentField === 'msgid') msgid += continuation;
+        else if (currentField === 'msgstr') msgstr += continuation;
+      }
+    }
+
+    if (isHeader) continue;
+
+    if (msgctxt) {
+      entries.push({ comment, fuzzy, msgctxt, msgid, msgstr });
+    }
+  }
+
+  return entries;
+}
+
+/**
+ * Escape string for PO format
+ */
+function escapeForPO(str) {
+  return str
+    .replace(/\\/g, '\\\\')
+    .replace(/"/g, '\\"')
+    .replace(/\n/g, '\\n')
+    .replace(/\t/g, '\\t');
+}
+
+/**
+ * Format a single PO entry
+ */
+function formatPOEntry(entry) {
+  const lines = [];
+  if (entry.comment) {
+    lines.push(`#. ${entry.comment}`);
+  }
+  if (entry.fuzzy) {
+    lines.push('#, fuzzy');
+  }
+  lines.push(`msgctxt "${escapeForPO(entry.msgctxt)}"`);
+  lines.push(`msgid "${escapeForPO(entry.msgid)}"`);
+  lines.push(`msgstr "${escapeForPO(entry.msgstr)}"`);
+  return lines.join('\n');
+}
+
+/**
+ * Add missing translations with fallback values to English .po file
+ */
+function addMissingTranslations(missingWithFallback) {
+  if (missingWithFallback.length === 0) return 0;
+
+  const enFile = join(LOCALES_DIR, 'en', 'messages.po');
+  if (!existsSync(enFile)) {
+    console.log(`${colors.red}English messages.po not found!${colors.reset}`);
+    return 0;
+  }
+
+  const content = readFileSync(enFile, 'utf-8');
+  const headerMatch = content.match(/([\s\S]*?)(#\. |msgctxt )/);
+  const header = headerMatch ? headerMatch[1].trimEnd() : '';
+
+  const existingEntries = parsePOFileEntries(content);
+
+  // Create new entries from fallback values
+  const newEntries = missingWithFallback.map(item => ({
+    comment: item.key,
+    fuzzy: false,
+    msgctxt: item.key,
+    msgid: item.fallback,
+    msgstr: item.fallback,
+  }));
+
+  // Combine and sort all entries alphabetically
+  const allEntries = [...existingEntries, ...newEntries];
+  allEntries.sort((a, b) => a.msgctxt.localeCompare(b.msgctxt));
+
+  // Generate new file content
+  const body = allEntries.map(formatPOEntry).join('\n\n');
+  const newContent = header + '\n\n' + body + '\n';
+
+  writeFileSync(enFile, newContent, 'utf-8');
+  return newEntries.length;
+}
+
+/**
  * Main execution
  */
 function main() {
@@ -186,10 +323,16 @@ function main() {
   console.log(`Found ${colors.green}${poKeys.size}${colors.reset} keys in English .po files.\n`);
 
   // 3. Find missing translations (in code but not in .po)
-  const missingInPO = [];
+  const missingWithFallback = [];
+  const missingWithoutFallback = [];
+
   for (const [key, info] of codeKeys) {
     if (!poKeys.has(key)) {
-      missingInPO.push({ key, ...info });
+      if (info.fallback) {
+        missingWithFallback.push({ key, ...info });
+      } else {
+        missingWithoutFallback.push({ key, ...info });
+      }
     }
   }
 
@@ -201,16 +344,29 @@ function main() {
     }
   }
 
-  // 5. Report results
-  if (missingInPO.length > 0) {
-    console.log(`${colors.red}Missing in .po files (${missingInPO.length}):${colors.reset}`);
-    for (const item of missingInPO) {
+  // 5. Auto-add translations with fallback values
+  if (missingWithFallback.length > 0) {
+    console.log(`${colors.blue}Auto-adding translations with fallback values (${missingWithFallback.length}):${colors.reset}`);
+    for (const item of missingWithFallback) {
+      const relPath = relative(FRONTEND_SRC, item.file);
+      console.log(`  ${colors.green}+ ${item.key}${colors.reset} = "${item.fallback}" ${colors.dim}(${relPath}:${item.line})${colors.reset}`);
+    }
+
+    const added = addMissingTranslations(missingWithFallback);
+    console.log(`${colors.green}✓ Added ${added} entries to English messages.po${colors.reset}\n`);
+  }
+
+  // 6. Report missing translations without fallbacks
+  if (missingWithoutFallback.length > 0) {
+    console.log(`${colors.red}Missing translations (no fallback) (${missingWithoutFallback.length}):${colors.reset}`);
+    for (const item of missingWithoutFallback) {
       const relPath = relative(FRONTEND_SRC, item.file);
       console.log(`  ${colors.yellow}- ${item.key}${colors.reset} ${colors.dim}(${relPath}:${item.line})${colors.reset}`);
     }
-    console.log();
+    console.log(`${colors.yellow}→ Add fallback values: t('key') || 'Fallback text'${colors.reset}\n`);
   }
 
+  // 7. Report unused translations
   if (unusedInCode.length > 0) {
     console.log(`${colors.yellow}Unused in code (${unusedInCode.length}):${colors.reset}`);
     for (const key of unusedInCode.sort()) {
@@ -219,7 +375,7 @@ function main() {
     console.log();
   }
 
-  // 6. Coverage stats per locale
+  // 8. Coverage stats per locale
   const locales = getLocales();
   if (locales.length > 0) {
     console.log(`${colors.cyan}Coverage by locale:${colors.reset}`);
@@ -234,18 +390,28 @@ function main() {
     console.log();
   }
 
-  // 7. Summary
-  if (missingInPO.length === 0 && unusedInCode.length === 0) {
-    console.log(`${colors.green}All translations are in sync!${colors.reset}\n`);
+  // 9. Summary
+  const totalMissing = missingWithFallback.length + missingWithoutFallback.length;
+
+  if (totalMissing === 0 && unusedInCode.length === 0) {
+    console.log(`${colors.green}✓ All translations are in sync!${colors.reset}\n`);
   } else {
-    console.log(`${colors.yellow}Summary:${colors.reset}`);
-    console.log(`  - Missing: ${missingInPO.length}`);
-    console.log(`  - Unused: ${unusedInCode.length}`);
+    console.log(`${colors.cyan}Summary:${colors.reset}`);
+    if (missingWithFallback.length > 0) {
+      console.log(`  ${colors.green}✓ Auto-added: ${missingWithFallback.length}${colors.reset}`);
+      console.log(`    ${colors.dim}→ Run merge-po-files.mjs to propagate to other locales${colors.reset}`);
+    }
+    if (missingWithoutFallback.length > 0) {
+      console.log(`  ${colors.red}✗ Needs fallback: ${missingWithoutFallback.length}${colors.reset}`);
+    }
+    if (unusedInCode.length > 0) {
+      console.log(`  ${colors.yellow}! Unused: ${unusedInCode.length}${colors.reset}`);
+    }
     console.log();
   }
 
-  // Exit with error code if there are missing translations
-  if (missingInPO.length > 0) {
+  // Exit with error code if there are missing translations without fallbacks
+  if (missingWithoutFallback.length > 0) {
     process.exit(1);
   }
 }

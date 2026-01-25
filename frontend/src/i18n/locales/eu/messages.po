@@ -155,10 +155,9 @@ msgid "Cancel"
 msgstr "Utzi"
 
 #. Clear all button
-#, fuzzy
 msgctxt "common.clearAll"
 msgid "Clear all"
-msgstr "Garbitu dena"
+msgstr "Garbitu guztia"
 
 #. Close button
 msgctxt "common.close"
@@ -387,6 +386,28 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "Ez dago esportatzeko txatarik. Hasi lehenik elkarrizketa bat."
 
+#. js.notes.clear
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "Garbitu"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "Gehitu zure oharra..."
+
+#. js.notes.save
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "Gorde"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "Oharra"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -425,6 +446,41 @@ msgstr "Izenbururik gabea"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "Kargatuta"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "Sortu ikerketa-geruza"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "Ikerketa-geruza hau eta bere mezu guztiak ezabatu?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "Ezabatu"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "Txat Nagusia"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "Ikerketa Geruza"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "Hautatu ikerketa-geruza"
 
 #. Page title
 #, fuzzy

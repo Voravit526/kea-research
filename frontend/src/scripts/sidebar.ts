@@ -126,7 +126,10 @@ export const SidebarManager = {
   renderChatList(chats: Chat[]): void {
     if (!this.chatHistoryList || !this.chatHistoryEmpty) return;
 
-    if (chats.length === 0) {
+    // Filter out layer chats (show only top-level chats)
+    const topLevelChats = chats.filter((c: Chat) => !c.parentMessageId);
+
+    if (topLevelChats.length === 0) {
       this.chatHistoryEmpty.classList.remove('d-none');
       // Remove all chat items but keep the empty message
       const chatItems = this.chatHistoryList.querySelectorAll('.chat-history-item');
@@ -137,7 +140,7 @@ export const SidebarManager = {
     this.chatHistoryEmpty.classList.add('d-none');
 
     // Generate HTML for chat items
-    const chatItemsHtml = chats.map(chat => {
+    const chatItemsHtml = topLevelChats.map(chat => {
       const isActive = chat.id === this.activeChatId;
       const isBookmarked = chat.isBookmarked === true;
       const title = escapeHtml(chat.title || 'Untitled');

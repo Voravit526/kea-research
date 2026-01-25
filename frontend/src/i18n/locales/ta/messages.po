@@ -395,6 +395,30 @@ msgctxt "js.noChatToExport"
 msgid "No chat to export. Start a conversation first."
 msgstr "ஏற்றுமதி செய்ய அரட்டை இல்லை. முதலில் ஒரு உரையாடலைத் தொடங்குங்கள்."
 
+#. js.notes.clear
+#, fuzzy
+msgctxt "js.notes.clear"
+msgid "Clear"
+msgstr "தெளிவு"
+
+#. js.notes.placeholder
+#, fuzzy
+msgctxt "js.notes.placeholder"
+msgid "Add your note..."
+msgstr "உங்கள் குறிப்பைச் சேர்க்கவும்..."
+
+#. js.notes.save
+#, fuzzy
+msgctxt "js.notes.save"
+msgid "Save"
+msgstr "சேமிக்கவும்"
+
+#. js.notes.title
+#, fuzzy
+msgctxt "js.notes.title"
+msgid "Note"
+msgstr "குறிப்பு"
+
 #. Assistant role label
 #, fuzzy
 msgctxt "js.roleAssistant"
@@ -436,6 +460,41 @@ msgstr "பெயரிடப்படாதது"
 msgctxt "js.uploaded"
 msgid "Uploaded"
 msgstr "பதிவேற்றப்பட்டது"
+
+#. layers.createLayer
+#, fuzzy
+msgctxt "layers.createLayer"
+msgid "Create research layer"
+msgstr "ஆராய்ச்சி அடுக்கை உருவாக்கு"
+
+#. layers.deleteConfirm
+#, fuzzy
+msgctxt "layers.deleteConfirm"
+msgid "Delete this research layer and all its messages?"
+msgstr "இந்த ஆராய்ச்சி அடுக்கையும் அதன் அனைத்து செய்திகளையும் நீக்கவா?"
+
+#. layers.deleteLayer
+msgctxt "layers.deleteLayer"
+msgid "Delete"
+msgstr "அழி"
+
+#. layers.mainChat
+#, fuzzy
+msgctxt "layers.mainChat"
+msgid "Main Chat"
+msgstr "முதன்மை அரட்டை"
+
+#. layers.researchLayer
+#, fuzzy
+msgctxt "layers.researchLayer"
+msgid "Research Layer"
+msgstr "ஆராய்ச்சி அடுக்கு"
+
+#. layers.selectLayer
+#, fuzzy
+msgctxt "layers.selectLayer"
+msgid "Select Research Layer"
+msgstr "ஆராய்ச்சி அடுக்கைத் தேர்ந்தெடுக்கவும்"
 
 #. Page title
 msgctxt "meta.title"
